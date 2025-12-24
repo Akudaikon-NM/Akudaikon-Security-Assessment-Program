@@ -21,13 +21,22 @@ def load_module(module_filename_stem: str, strict: bool = False):
         return None
 
     with open(path, "r", encoding="utf-8") as f:
-        module_data = yaml.safe_load(f) or {}
+        try:
+            module_data = yaml.safe_load(f)
+        except yaml.YAMLError as e:
+            module_data = {"__raw__": None, "__warnings__": [f"YAML parse error: {e}"]}
+
+        if module_data is None:
+            module_data = {}
+        elif not isinstance(module_data, dict):
+            module_data = {"__raw__": module_data}
 
     missing = [k for k in REQUIRED_KEYS if k not in module_data]
     if missing:
         if strict:
             raise ValueError(f"{module_filename_stem}.yaml missing required keys: {missing}")
-        module_data["__warnings__"] = missing
+        existing_warnings = module_data.get("__warnings__", [])
+        module_data["__warnings__"] = existing_warnings + missing
 
     # helpful metadata
     module_data["__file__"] = str(path)
@@ -48,7 +57,9 @@ def list_modules():
     if not BASE_PATH.exists():
         return modules
 
-    for f in sorted(BASE_PATH.glob("*.yaml")):
+    for f in sorted(BASE_PATH.glob("*.yaml"), key=lambda p: p.name):
+        if f.name.startswith("_"):
+            continue
         data = load_module(f.stem)
         if not data:
             continue
