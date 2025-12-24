@@ -1,21 +1,14 @@
-module_id: module03
-title: Module 03
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 03_asset_inventory
+title: 03 Asset Inventory
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 03 Asset Inventory?
+- Who owns and approves 03 Asset Inventory (role/title), and when was it last approved?
+- How is 03 Asset Inventory implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 03 Asset Inventory is operating effectively?
+- How often is 03 Asset Inventory reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/3. Asset Inventory.pdf
+__meta__:
+  questions_source: synthesized

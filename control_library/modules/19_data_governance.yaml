@@ -1,21 +1,131 @@
-module_id: module19
-title: Module 19
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 19_data_governance
+title: 19 Data Governance
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_19.1
+  prompt: 'Stmt 19.1: CORE+ Policy or Program Established'
+  checks: []
+  evidence: []
+- id: Stmt_19.2
+  prompt: 'Stmt 19.2: Data Inventory Established'
+  checks: []
+  evidence: []
+- id: Stmt_19.3
+  prompt: 'Stmt 19.3: Data Access List Established'
+  checks: []
+  evidence: []
+- id: Stmt_19.4
+  prompt: 'Stmt 19.4: Data Retention Enforced'
+  checks: []
+  evidence: []
+- id: Stmt_19.5
+  prompt: 'Stmt 19.5: Data Disposed of in Accordance with Its Sensitivity'
+  checks: []
+  evidence: []
+- id: Stmt_19.6
+  prompt: 'Stmt 19.6: Data Encrypted on End-User Devices'
+  checks: []
+  evidence: []
+- id: Stmt_19.7
+  prompt: 'Stmt 19.7: Sensitive Data Encrypted at Rest and in Transit'
+  checks: []
+  evidence: []
+- id: Stmt_19.8
+  prompt: 'Stmt 19.8: Remote Wipe Process in Place'
+  checks: []
+  evidence: []
+- id: Stmt_19.9
+  prompt: 'Stmt 19.9: Data Management Controls for Safeguarding Data'
+  checks: []
+  evidence: []
+- id: Stmt_19.10
+  prompt: 'Stmt 19.10: Documentation of Data Types, Owners, and Purpose'
+  checks: []
+  evidence: []
+- id: Stmt_19.11
+  prompt: 'Stmt 19.11: Controlling Non-Masked Data in Non-Production Environments'
+  checks: []
+  evidence: []
+- id: Stmt_19.12
+  prompt: 'Stmt 19.12: Data Removal or Destruction in Data Analytics Tools'
+  checks: []
+  evidence: []
+- id: Stmt_19.13
+  prompt: 'Stmt 19.13: Compliance with Applicable Laws and Regulations'
+  checks: []
+  evidence: []
+- id: Stmt_19.14
+  prompt: 'Stmt 19.14: Data Oversight Committee Composition'
+  checks: []
+  evidence: []
+- id: Stmt_19.15
+  prompt: 'Stmt 19.15: Oversight Committee Review of Metrics'
+  checks: []
+  evidence: []
+- id: Stmt_19
+  prompt: 'Stmt 19: Data Management Controls'
+  checks: []
+  evidence: []
+- id: Stmt_19.1
+  prompt: 'Stmt 19.1: Policy or Program for Data Management'
+  checks: []
+  evidence: []
+- id: Stmt_19.2
+  prompt: 'Stmt 19.2: Data Inventory Established'
+  checks: []
+  evidence: []
+- id: Stmt_19.3
+  prompt: 'Stmt 19.3: Data Access List Established'
+  checks: []
+  evidence: []
+- id: Stmt_19.4
+  prompt: 'Stmt 19.4: Data Retention Enforced'
+  checks: []
+  evidence: []
+- id: Stmt_19.5
+  prompt: 'Stmt 19.5: Data Disposal Based on Sensitivity'
+  checks: []
+  evidence: []
+- id: Stmt_19.6
+  prompt: 'Stmt 19.6: Encryption on End-User Devices'
+  checks: []
+  evidence: []
+- id: Stmt_19.7
+  prompt: 'Stmt 19.7: Encryption of Sensitive Data at Rest and in Transit'
+  checks: []
+  evidence: []
+- id: Stmt_19.8
+  prompt: 'Stmt 19.8: Remote Wipe Process for Portable Devices'
+  checks: []
+  evidence: []
+- id: Stmt_19.9
+  prompt: 'Stmt 19.9: Safeguarding Data in Physical and Digital Form'
+  checks: []
+  evidence: []
+- id: Stmt_19.10
+  prompt: 'Stmt 19.10: Documenting Data Types, Owners, Users, and Purpose'
+  checks: []
+  evidence: []
+- id: Stmt_19.11
+  prompt: 'Stmt 19.11: Controlling Non-Masked Data in Non-Production Environments'
+  checks: []
+  evidence: []
+- id: Stmt_19.12
+  prompt: 'Stmt 19.12: Removal or Destruction of Data in Analytics Tools'
+  checks: []
+  evidence: []
+- id: Stmt_19.13
+  prompt: 'Stmt 19.13: Compliance of Data Analytics Processes with Regulations'
+  checks: []
+  evidence: []
+- id: Stmt_19.14
+  prompt: 'Stmt 19.14: Oversight Committee with Board and Management Representation'
+  checks: []
+  evidence: []
+- id: Stmt_19.15
+  prompt: 'Stmt 19.15: Regular Review of Information Security Program Metrics'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/19. Data Governance.pdf

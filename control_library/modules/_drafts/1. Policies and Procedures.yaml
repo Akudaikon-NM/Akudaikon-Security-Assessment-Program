@@ -1,0 +1,142 @@
+title: 1. Policies and Procedures
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: Governance and Oversight?
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: Access Controls and Authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: Physical Access Restrictions?
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: Data Encryption?
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: Testing of Key Security Controls?
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: Segregation of Duties?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Data Destruction and Media Sanitization?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Responsibility for Security Program?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Board-approved ISP with comprehensive?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Robust access controls, including MFA for all sensitive?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: Well-documented and updated policies aligned with?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Effective physical and data security measures?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Proactive adjustments to address emerging risks?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: No material findings?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: ISP is Board-approved, with minor gaps in?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Access controls and encryption meet requirements but?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Training is provided but could be more frequent?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Security monitoring and incident response are?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Few minor findings?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: ISP lacks recent Board approval or documentation?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Inconsistent implementation of access controls or?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Training records are incomplete, with gaps in employee?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Incident response is reactive rather than proactive?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: Several moderate findings requiring corrective actions?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: ISP is outdated or lacks Board approval?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Significant gaps in access controls or encryption?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Security monitoring is irregular, with delayed responses?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: Policies are outdated and do not address current risks?
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Numerous findings with moderate to severe impact?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: No evidence of Board-approved ISP?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Critical gaps in access controls and encryption expose?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Training, monitoring, and testing are either absent or?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Policies and procedures are nonexistent or severely?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: Severe findings with material impact on member data?
+  reference: ''
+  evidence_requests: []

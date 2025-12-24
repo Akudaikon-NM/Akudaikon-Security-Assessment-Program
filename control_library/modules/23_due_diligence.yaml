@@ -1,0 +1,14 @@
+module_id: 23_due_diligence
+title: 23 Due Diligence
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 23 Due Diligence?
+- Who owns and approves 23 Due Diligence (role/title), and when was it last approved?
+- How is 23 Due Diligence implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 23 Due Diligence is operating effectively?
+- How often is 23 Due Diligence reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/23. Due Diligence.pdf
+__meta__:
+  questions_source: synthesized

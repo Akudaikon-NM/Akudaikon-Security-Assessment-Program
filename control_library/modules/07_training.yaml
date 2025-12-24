@@ -1,21 +1,14 @@
-module_id: module07
-title: Module 07
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 07_training
+title: 07 Training
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 07 Training?
+- Who owns and approves 07 Training (role/title), and when was it last approved?
+- How is 07 Training implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 07 Training is operating effectively?
+- How often is 07 Training reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/7. Training.pdf
+__meta__:
+  questions_source: synthesized

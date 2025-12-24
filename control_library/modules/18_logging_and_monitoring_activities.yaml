@@ -1,22 +1,24 @@
 module_id: module18
 title: Module 18
 source_pdf: 18_logging.pdf
-
 primary_requirements:
-  - Placeholder requirement
-
+- Placeholder requirement
 guidance_alignment:
-  - Placeholder guidance
-
+- Placeholder guidance
 control_objective: Placeholder objective
-
 evaluation_criteria:
-  - Placeholder criteria
-
+- Placeholder criteria
 required_evidence:
-  - Placeholder evidence
-
+- Placeholder evidence
 finding_templates:
   positive: Positive finding
   partial: Partial finding
   negative: Negative finding
+questions:
+- Does the organization have documented Placeholder evidence?
+- Who owns and approves Placeholder evidence (role/title), and when was it last approved?
+- How is Placeholder evidence implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates Placeholder evidence is operating effectively?
+- How often is Placeholder evidence reviewed/updated, and what triggers an update?
+__meta__:
+  questions_source: synthesized

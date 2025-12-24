@@ -1,0 +1,383 @@
+title: 3. Asset Inventory
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: Access the Web Interface by entering the IP address of the firewall in your
+    web browser?
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: Log in using an account with administrative privileges?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: 'Name: Name your rule (e.g., “Allowlisted Apps”)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: 'Source: Define the Source Zone (e.g., the internal or trusted network)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: 'Destination: Define the Destination Zone (e.g., external or untrusted network,
+    or a specific zone depending on your use case)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: 'Application: Use the App-ID feature to select which applications are allowed.
+    You can:?'
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Click on the “Application” tab in the rule editor?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Click “Add” and search for and select the applications you want to allow.
+    Palo Alto has a prebuilt database of application signatures?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: 'Action: Set the action to Allow?'
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Create a Deny-All Policy:?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: This will ensure that only the applications listed in your allowlist policy
+    are allowed, and all others will be blocked?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Enable logging for the allowlist and deny-all policies:?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Under each policy, go to the Actions tab?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Enable Log at Session Start and Log at Session End?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: Go to Monitor > Traffic Logs to review logs of allowed and denied traffic?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Once all configurations are completed, click on the Commit button in the
+    top-right corner of the interface to apply changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Test the allowlist by attempting to access allowed applications and verifying
+    that non-allowlisted applications are blocked?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Regularly update the allowlist to accommodate new applications or remove
+    old ones as your environment evolves?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Monitor traffic logs to ensure that applications are being correctly allowed
+    or blocked?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: 'Regularly Update Application Signatures: Palo Alto regularly updates its
+    App-ID database, so ensure that you are keeping it up-to-date to recognize new
+    applications or threats?'
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: 'Test Policies Before Full Deployment: Apply the allowlist policy to a small
+    group or environment first to ensure it doesn’t block critical applications?'
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: 'Backup Configuration: Always create a backup of your firewall configuration
+    before making significant changes?'
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: MAC address?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: Certificate-based authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Device fingerprinting (e.g., OS version, hardware type)?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Role-based access control (RBAC)?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: 'Create a Device Group: You can create a group of approved devices and allow
+    only these devices to connect to the network?'
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: 'Configure Policy Manager: Use ClearPass Policy Manager to define a policy
+    that permits devices that match the criteria (e.g., MAC address or device profile)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: 'Block All Other Devices: Set a default policy that denies network access
+    for any device not in the allowlist group?'
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: 802.1X Authentication (with credentials like username/password or certificates)?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: LDAP/Active Directory Integration to verify if the user is authorized?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: 'Role Assignment: Based on user attributes, ClearPass can assign roles and
+    permissions?'
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: 'Integrate with Identity Sources: Connect ClearPass to an identity source
+    like Active Directory, LDAP, or a RADIUS server?'
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: 'Create Access Control Policies: Define policies that allow only users in
+    certain groups (e.g., corporate employees, specific departments) to access network
+    resources?'
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: 'Default Deny: Set a default deny policy for users not in the allowlist
+    (e.g., guest users or unknown identities)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: 'Integrate with Aruba Network Devices: ClearPass works with Aruba switches,
+    wireless access points, and controllers to enforce application control policies?'
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: 'Define Roles and Policies: Use ClearPass to assign specific user or device
+    roles that are allowed to use certain applications (e.g., VoIP, web traffic, etc.)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: 'Allowlist Certain Applications: In conjunction with Aruba’s AppRF feature
+    (Application Recognition Firewall), you can allowlist specific applications based
+    on deep packet inspection, ensuring that only?'
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: Antivirus/anti-malware installed?
+  reference: ''
+  evidence_requests: []
+- id: Q-40
+  prompt: Device encryption enabled?
+  reference: ''
+  evidence_requests: []
+- id: Q-41
+  prompt: Operating system patches applied?
+  reference: ''
+  evidence_requests: []
+- id: Q-42
+  prompt: 'Set Posture Policies: Define compliance policies for devices (e.g., up-to-date
+    antivirus, latest OS patches)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-43
+  prompt: 'Allow Network Access Only for Compliant Devices: Create rules that allow
+    only devices meeting these posture checks to connect to the network. Devices that
+    don’t comply can be quarantined or denied?'
+  reference: ''
+  evidence_requests: []
+- id: Q-44
+  prompt: 'Guest User Role: Create specific guest roles and assign limited access
+    policies based on a predefined allowlist of approved guest users?'
+  reference: ''
+  evidence_requests: []
+- id: Q-45
+  prompt: 'MAC Authentication for Guests: After the guest is onboarded and approved,
+    ClearPass can allowlist their MAC address for future connections?'
+  reference: ''
+  evidence_requests: []
+- id: Q-46
+  prompt: 'Time-Based Allowlist: You can create temporary allowlists that expire after
+    a set time period for guests or contractors?'
+  reference: ''
+  evidence_requests: []
+- id: Q-47
+  prompt: Log into ClearPass Policy Manager?
+  reference: ''
+  evidence_requests: []
+- id: Q-48
+  prompt: Go to Configuration > Enforcement > Policies to create or modify policies
+    for access control?
+  reference: ''
+  evidence_requests: []
+- id: Q-49
+  prompt: Use conditions like MAC addresses, user roles, or device posture to define
+    what is allowed?
+  reference: ''
+  evidence_requests: []
+- id: Q-50
+  prompt: Go to Identity > Endpoints or Users and create groups for devices or users
+    that should be on the allowlist?
+  reference: ''
+  evidence_requests: []
+- id: Q-51
+  prompt: Associate these groups with the policies you created?
+  reference: ''
+  evidence_requests: []
+- id: Q-52
+  prompt: Integrate ClearPass with Aruba switches, access points, and controllers
+    to enforce policies?
+  reference: ''
+  evidence_requests: []
+- id: Q-53
+  prompt: In wired environments, ensure that ClearPass is communicating with the switches
+    via 802.1X or MAC authentication for allowlisting?
+  reference: ''
+  evidence_requests: []
+- id: Q-54
+  prompt: Test the allowlist by attempting to connect with both approved and unapproved
+    devices or users?
+  reference: ''
+  evidence_requests: []
+- id: Q-55
+  prompt: Monitor logs and reports to ensure the allowlist is functioning as expected?
+  reference: ''
+  evidence_requests: []
+- id: Q-56
+  prompt: Configure default deny policies in ClearPass to block all devices, users,
+    or traffic that is not explicitly allowed?
+  reference: ''
+  evidence_requests: []
+- id: Q-57
+  prompt: 'Inventory of Applications: Identify all legitimate applications in your
+    environment and create a baseline of what?'
+  reference: ''
+  evidence_requests: []
+- id: Q-58
+  prompt: 'Risk Assessment: Assess the security risks associated with certain applications.
+    Block applications known to be risky?'
+  reference: ''
+  evidence_requests: []
+- id: Q-59
+  prompt: Create policies that are centrally managed and automatically enforced across
+    endpoints. Avoid manually managing?
+  reference: ''
+  evidence_requests: []
+- id: Q-60
+  prompt: Combine application blocklisting with other security measures, such as firewalls,
+    antivirus, and endpoint protection?
+  reference: ''
+  evidence_requests: []
+- id: Q-61
+  prompt: Continuously update your blocklist to account for new threats, software
+    vulnerabilities, or unauthorized software?
+  reference: ''
+  evidence_requests: []
+- id: Q-62
+  prompt: Set up blocklist policies based on user roles. For example, block certain
+    applications for standard users but allow?
+  reference: ''
+  evidence_requests: []
+- id: Q-63
+  prompt: 'Create Application Control Policies: In the Windows Defender Security Center,
+    go to Application Control?'
+  reference: ''
+  evidence_requests: []
+- id: Q-64
+  prompt: 'Block Specific Applications: Use Publisher, File Hash, or Path Rules to
+    block specific applications?'
+  reference: ''
+  evidence_requests: []
+- id: Q-65
+  prompt: 'Set Enforcement Mode: Set the policy enforcement to block mode to prevent
+    the execution of disallowed applications?'
+  reference: ''
+  evidence_requests: []
+- id: Q-66
+  prompt: 'Deploy via Group Policy: Use Group Policy or Microsoft Endpoint Manager
+    to deploy the policy across multiple devices?'
+  reference: ''
+  evidence_requests: []
+- id: Q-67
+  prompt: 'Test and Deploy: Always test the blocklist in a non-production environment
+    first before full deployment?'
+  reference: ''
+  evidence_requests: []
+- id: Q-68
+  prompt: Deeply integrated into Windows, providing native security?
+  reference: ''
+  evidence_requests: []
+- id: Q-69
+  prompt: Allows granular control of applications based on file hashes, publishers,
+    and paths?
+  reference: ''
+  evidence_requests: []
+- id: Q-70
+  prompt: 'Access Application Control Settings: Log into the management console (e.g.,
+    Carbon Black, Symantec Endpoint?'
+  reference: ''
+  evidence_requests: []
+- id: Q-71
+  prompt: Create Blocklist Policies:?
+  reference: ''
+  evidence_requests: []
+- id: Q-72
+  prompt: Define the applications to block using file signatures, file paths, or file
+    hashes?
+  reference: ''
+  evidence_requests: []
+- id: Q-73
+  prompt: These platforms often include intelligence on potentially harmful applications,
+    so you can block based on threat?
+  reference: ''
+  evidence_requests: []
+- id: Q-74
+  prompt: 'Apply the Policy: Apply the blocklist policy to all endpoints, groups,
+    or specific users depending on your environment?'
+  reference: ''
+  evidence_requests: []
+- id: Q-75
+  prompt: 'Monitor and Update: Use the dashboard to monitor blocked applications and
+    update the blocklist regularly?'
+  reference: ''
+  evidence_requests: []
+- id: Q-76
+  prompt: Provides centralized control and advanced reporting capabilities?
+  reference: ''
+  evidence_requests: []
+- id: Q-77
+  prompt: Blocklists are often updated with real-time threat intelligence, making
+    them effective against new threats?
+  reference: ''
+  evidence_requests: []
+- id: Q-78
+  prompt: Log into the Firewall Management Console?
+  reference: ''
+  evidence_requests: []
+- id: Q-79
+  prompt: Create Application-Based Rules:?
+  reference: ''
+  evidence_requests: []
+- id: Q-80
+  prompt: Define rules in the firewall to block applications by category, such as
+    gaming, social media, file sharing, or specific?
+  reference: ''
+  evidence_requests: []

@@ -1,0 +1,24 @@
+title: 13 Access Controls
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: Citrix virtual desktop published by Patelco?
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: Patelco VPN?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: Mobile device with secure container controlled by PCU’s Mobile Device Management
+    Standard?
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: Endpoint Detection and Response (or “EDR”), SentinelOne, agents are installed
+    on all Domain?
+  reference: ''
+  evidence_requests: []

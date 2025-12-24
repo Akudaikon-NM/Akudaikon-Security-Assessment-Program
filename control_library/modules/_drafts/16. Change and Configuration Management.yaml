@@ -1,0 +1,317 @@
+title: 16. Change and Configuration Management
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: Is there a formal, documented change management policy in place that?
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: Does the policy clearly define the scope of changes, including software,?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: Is a Change Advisory Board (CAB) established, and is it responsible for?
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: Are all change requests, approvals, and testing results documented and?
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: Is the change management policy reviewed and updated periodically to?
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: Is access to change management tools and configuration settings restricted?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Are role-based access controls (RBAC) implemented to ensure that only?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Is there an up-to-date inventory of user roles, responsibilities, and?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Are periodic audits conducted to review and validate access permissions?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Is a ticketing system or change management tool (e.g., ServiceNow, JIRA,?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: Does the change documentation include detailed information such as the?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Are logs of all approved and rejected changes maintained for audit and?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Are rollback procedures and contingency plans documented and included as?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Is MFA implemented for all systems that are accessible externally, including?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: Is MFA enforced consistently for all users accessing sensitive systems?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Are regular audits conducted to ensure that MFA is properly configured and?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Is there a process in place for regularly reviewing system configurations
+    to?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Are baseline configurations maintained for all systems, including details
+    like •?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Are baseline configurations maintained for all systems, including details
+    like?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: Are regular audits conducted to review system configurations such as?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Are automated tools used to track configuration changes and alert the?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Are standard procedures for managing system configurations documented?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Are configurations validated before deployment to ensure compliance with?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: Are approved configurations documented, and are all systems configured?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Is there a process for promptly addressing and correcting misconfigurations,?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Are post-implementation reviews performed to verify that changes achieved?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Are post-implementation tests conducted to validate the effectiveness of?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: Are system logs and performance metrics reviewed after implementing?
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Are the results of post-implementation testing documented, and are any?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Are continuous monitoring tools (e.g., Splunk, SolarWinds, or Nagios)?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Are alerts configured to notify the security team of any unauthorized changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Is there a regular log review process to identify and investigate suspicious?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Are all changes properly logged, and are these logs available for audit?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: Are rollback procedures established for system changes, and are they?
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Are tests conducted to verify the effectiveness of rollback procedures and?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: Are rollback procedures included in change documentation and reviewed?
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: Are contingency plans tested to verify their effectiveness in minimizing?
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: Are regular audits conducted to review the change management process?
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: Is there a formal report on change management compliance prepared for?
+  reference: ''
+  evidence_requests: []
+- id: Q-40
+  prompt: Are audit findings or gaps addressed through documented remediation?
+  reference: ''
+  evidence_requests: []
+- id: Q-41
+  prompt: Is the change management process periodically reviewed and updated?
+  reference: ''
+  evidence_requests: []
+- id: Q-42
+  prompt: Are key metrics defined to measure the effectiveness of the change?
+  reference: ''
+  evidence_requests: []
+- id: Q-43
+  prompt: Are metrics such as time to approve changes or success rates tracked and?
+  reference: ''
+  evidence_requests: []
+- id: Q-44
+  prompt: Are the results of these metrics reported to the CAB and other relevant?
+  reference: ''
+  evidence_requests: []
+- id: Q-45
+  prompt: Are metrics used to optimize the change management process and align it?
+  reference: ''
+  evidence_requests: []
+- id: Q-46
+  prompt: Is there a formal, documented change management policy in place?
+  reference: ''
+  evidence_requests: []
+- id: Q-47
+  prompt: Does the policy clearly define the scope of changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-48
+  prompt: Is a Change Advisory Board (CAB) established?
+  reference: ''
+  evidence_requests: []
+- id: Q-49
+  prompt: Are all change requests documented and maintained for audit purposes?
+  reference: ''
+  evidence_requests: []
+- id: Q-50
+  prompt: Is the policy reviewed and updated periodically?
+  reference: ''
+  evidence_requests: []
+- id: Q-51
+  prompt: Is access to change management tools restricted based on roles and?
+  reference: ''
+  evidence_requests: []
+- id: Q-52
+  prompt: Are RBAC policies implemented to ensure authorized personnel manage?
+  reference: ''
+  evidence_requests: []
+- id: Q-53
+  prompt: Is there an up-to-date inventory of user roles and permissions?
+  reference: ''
+  evidence_requests: []
+- id: Q-54
+  prompt: Are periodic audits conducted to validate access permissions?
+  reference: ''
+  evidence_requests: []
+- id: Q-55
+  prompt: Is a ticketing system used to document and track all changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-56
+  prompt: Does the change documentation include necessary details like testing?
+  reference: ''
+  evidence_requests: []
+- id: Q-57
+  prompt: Are logs of approved and rejected changes maintained?
+  reference: ''
+  evidence_requests: []
+- id: Q-58
+  prompt: Are rollback procedures documented in change requests?
+  reference: ''
+  evidence_requests: []
+- id: Q-59
+  prompt: Is MFA implemented for all systems accessible externally?
+  reference: ''
+  evidence_requests: []
+- id: Q-60
+  prompt: Is MFA enforced consistently across all users?
+  reference: ''
+  evidence_requests: []
+- id: Q-61
+  prompt: Are regular audits conducted to verify MFA implementation?
+  reference: ''
+  evidence_requests: []
+- id: Q-62
+  prompt: Is there a process for reviewing system configurations regularly?•?
+  reference: ''
+  evidence_requests: []
+- id: Q-63
+  prompt: Is there a process for reviewing system configurations regularly?
+  reference: ''
+  evidence_requests: []
+- id: Q-64
+  prompt: Are baseline configurations maintained for all systems?
+  reference: ''
+  evidence_requests: []
+- id: Q-65
+  prompt: Are regular audits conducted for system configurations?
+  reference: ''
+  evidence_requests: []
+- id: Q-66
+  prompt: Are automated tools used for configuration tracking?
+  reference: ''
+  evidence_requests: []
+- id: Q-67
+  prompt: Are standard procedures for managing configurations documented?
+  reference: ''
+  evidence_requests: []
+- id: Q-68
+  prompt: Are configurations validated before deployment?
+  reference: ''
+  evidence_requests: []
+- id: Q-69
+  prompt: Are approved configurations documented?
+  reference: ''
+  evidence_requests: []
+- id: Q-70
+  prompt: Is there a process for addressing misconfigurations?
+  reference: ''
+  evidence_requests: []
+- id: Q-71
+  prompt: Are post-implementation reviews conducted to verify changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-72
+  prompt: Are system logs reviewed after changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-73
+  prompt: Are continuous monitoring tools deployed?
+  reference: ''
+  evidence_requests: []
+- id: Q-74
+  prompt: Are rollback procedures established and tested?
+  reference: ''
+  evidence_requests: []
+- id: Q-75
+  prompt: Are regular audits conducted?
+  reference: ''
+  evidence_requests: []
+- id: Q-76
+  prompt: Is a formal compliance report prepared?
+  reference: ''
+  evidence_requests: []
+- id: Q-77
+  prompt: Are key metrics defined and monitored?
+  reference: ''
+  evidence_requests: []

@@ -1,0 +1,170 @@
+title: 2. Governance
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: 'Stmt 2.5: Oversee Risk Mitigation Activities?'
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: 'Stmt 2.6: Implement a Risk Acceptance Process?'
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats
+    or?'
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management,
+    or?'
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: Risk assessments, controls, and incident responses are well-?
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: Service provider controls are exemplary?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Board reporting is comprehensive and fully aligned with Appendix?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: All aspects of the program, including risk assessments, control testing,
+    third-party?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Issues are negligible or resolved immediately?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Documentation is thorough, accurate, and up-to-date?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: Board engagement is proactive and well-informed?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Risk assessments, controls, and incident responses are?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Service provider reviews are adequate?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Board reporting is generally compliant but may lack some minor?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: The program is generally effective, though minor areas for improvement exist?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Risk mitigation and control testing processes are adequate but may not demonstrate?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Board reporting covers required areas but may miss advanced insights or
+    proactive?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Meets some but not all CORE and CORE+ requirements?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Risk assessments or control testing exhibit notable gaps?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: Service provider management lacks consistency?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Board reporting is incomplete or delayed, with missing elements?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Certain components of the program are underperforming, with deficiencies
+    in risk?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Documentation lacks detail, and follow-up actions for identified issues
+    may be?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: Board awareness and engagement are limited?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Risk assessments, controls, or incident responses are poorly?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Service provider controls are inadequate?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Board reporting is significantly lacking or non-compliant with?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: Deficiencies in the program present notable risks to information security?
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Service provider and risk acceptance processes lack thorough reviews or
+    documentation?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Risk thresholds or monitoring reports are unreliable or absent?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Board is not sufficiently informed of program issues?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Fails to meet most or all CORE and CORE+ requirements?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Risk assessments, controls, and incident responses are non-?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: Service provider controls are absent or severely lacking?
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Board reporting is absent or grossly non-compliant with Appendix?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: The program is in critical failure, with severe deficiencies in risk management,
+    control?
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: Service providers are unmanaged or pose unmitigated risks?
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: Board is unaware of systemic issues or program failures?
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: Immediate corrective actions are required?
+  reference: ''
+  evidence_requests: []

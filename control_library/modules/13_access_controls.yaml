@@ -1,21 +1,35 @@
-module_id: module13
-title: Module 13
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 13_access_controls
+title: 13 Access Controls
+control_objective: "Verify the existence of documented policies and procedures that\
+  \ support each access control \nstatement in line with regulatory requirements.\n\
+  •\nAction Steps:\nCollect Documentation: Ensure relevant documentation, including\
+  \ Information Security Policies, \nAccess Control Policies, and System Configuration\
+  \ Guides, is in place.\no\nVerify Compliance: Ensure these documents explicitly\
+  \ cover the requirements of 12 CFR 748.0(b) and \nAppendix A to Part 748, particularly\
+  \ regarding access controls that safeguard member information.\no\nFocus on Best\
+  \ Practices: Look for references to industry best practices, such as password \n\
+  management, multi-factor authentication (MFA), account management, and access control.\n\
+  o\n•\nRegulatory Reference:\n12 CFR 748.0(b): Requires federally insured credit\
+  \ unions to implement a written security program that \nensures the security and\
+  \ confidentiality of member information.\no\nAppendix A to Part 748, Section III(A):\
+  \ Requires the implementation of appropriate access controls to \nsafeguard member\
+  \ information.\no\n•\n2. System Configuration Audit\nObjective: Confirm that system\
+  \ configurations align with documented policies and meet regulatory and industry\
+  \ \nbest practices.\n•\nAction Steps:\nUse system administration tools (e.g., Active\
+  \ Directory, SSO providers) to check password policies, user \naccount statuses,\
+  \ MFA settings, and access controls.\no\nCheck Compliance with Access Control Policies:\
+  \ Ensure password policies comply with industry \nbest practices, enforcing unique,\
+  \ complex passwords in accordance with Appendix A to Part 748, \nSection III(B)(1)(c).\n\
+  o\nAccount Inactivity Controls: Verify that inactive user accounts are disabled\
+  \ in line with security \nprocedures ("
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 13 Access Controls?
+- Who owns and approves 13 Access Controls (role/title), and when was it last approved?
+- How is 13 Access Controls implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 13 Access Controls is operating effectively?
+- How often is 13 Access Controls reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/13 Access Controls.pdf
+__meta__:
+  questions_source: synthesized

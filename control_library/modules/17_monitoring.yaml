@@ -1,21 +1,43 @@
-module_id: module17
-title: Module 17
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 17_monitoring
+title: 17 Monitoring
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_17.3
+  prompt: 'Stmt 17.3: Monitoring Insider Malicious Activity'
+  checks: []
+  evidence: []
+- id: Stmt_17.6
+  prompt: 'Stmt 17.6: Centralized Security Event Alerting'
+  checks: []
+  evidence: []
+- id: Stmt_17.7
+  prompt: 'Stmt 17.7: Tuning Security Event Alerting Thresholds'
+  checks: []
+  evidence: []
+- id: Stmt_17.8
+  prompt: 'Stmt 17.8: Port Monitoring'
+  checks: []
+  evidence: []
+- id: Stmt_17.9
+  prompt: 'Stmt 17.9: Controls Over Wired and Wireless Networks'
+  checks: []
+  evidence: []
+- id: Stmt_17.10
+  prompt: 'Stmt 17.10: Host-Based Intrusion Detection'
+  checks: []
+  evidence: []
+- id: Stmt_17.11
+  prompt: 'Stmt 17.11: Traffic Filtering Between Network Segments'
+  checks: []
+  evidence: []
+- id: Stmt_17.13
+  prompt: 'Stmt 17.13: Encryption on Wireless Networks'
+  checks: []
+  evidence: []
+- id: Stmt_17.14
+  prompt: 'Stmt 17.14: Wireless Network Segmentation'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/17. Monitoring.pdf

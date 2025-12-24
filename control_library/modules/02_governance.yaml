@@ -1,45 +1,297 @@
-module_id: governance
-title: Governance and Board Oversight
-
-primary_requirements:
-  - GLBA 501(b)
-  - 12 CFR 748.0(b)(2)
-  - 12 CFR 748.1(a)
-
-guidance_alignment:
-  - NCUA Information Security Guidance (formerly Appendix A)
-
-control_objective: >
-  The credit union maintains effective governance and board oversight
-  over the information security program.
-
+module_id: 02_governance
+title: 02 Governance
+control_objective: "Ensure the report to the Board of Directors contains the required\
+  \ elements outlined in the statement, \nincluding risk assessments, testing results,\
+  \ information security controls, and security incidents.\n•"
 evaluation_criteria:
-  - The board has approved the written security program
-  - Management provides periodic security reporting to the board
-  - The program is reviewed and updated at least annually
-  - Roles and responsibilities are clearly defined
-
+- "Stmt 2.1: Results from the Information Security Risk Assessment — Ensure the report\
+  \ to the Board of Directors includes results from the information security risk\
+  \ assessment, covering \ninternal and external risks, their impacts, and mitigation\
+  \ strategies.\n•"
+- 'Stmt 2.1: Results from the Information Security Risk Assessment — The assessment
+  identifies both internal and external risks with detailed impact analysis and mitigation
+  strategies.o'
+- 'Stmt 2.1: Results from the Information Security Risk Assessment — Risks associated
+  with third-party relationships are clearly outlined and addressed.o'
+- "Stmt 2.2: Control Arrangements with Service Providers — Ensure the report to the\
+  \ Board of Directors includes details on control arrangements with service providers,\
+  \ including \nreviews of their security practices and compliance with contractual\
+  \ security requirements.\n•"
+- 'Stmt 2.2: Control Arrangements with Service Providers — All service provider contracts
+  include robust information security requirements.o'
+- 'Stmt 2.2: Control Arrangements with Service Providers — Periodic reviews demonstrate
+  strong security practices by third-party providers.o'
+- "Stmt 2.3: Results of Testing Key or Critical Controls — Ensure the report to the\
+  \ Board of Directors includes results of testing for key or critical controls, documenting\
+  \ \neffectiveness and remediation actions.\n•"
+- 'Stmt 2.3: Results of Testing Key or Critical Controls — Testing is conducted on
+  schedule, with detailed and actionable results documented.o'
+- 'Stmt 2.3: Results of Testing Key or Critical Controls — Identified issues are promptly
+  resolved, and control effectiveness is verified.o'
+- "Stmt 2.4: Security Incidents and Management’s Response — Ensure the report to the\
+  \ Board of Directors includes a summary of security incidents and management’s responses,\
+  \ \nalong with lessons learned.\n•"
+- 'Stmt 2.4: Security Incidents and Management’s Response — All incidents are documented
+  with clear analysis of scope, impact, and resolution.o'
+- 'Stmt 2.4: Security Incidents and Management’s Response — Lessons learned are incorporated
+  into updated security measures.o'
+- "Stmt 2.5: Oversee Risk Mitigation Activities — Ensure the report to the Board of\
+  \ Directors includes an overview of risk \nmitigation activities, progress, and\
+  \ alignment with the credit union’s information \nsecurity strategy.\n•"
+- 'Stmt 2.5: Oversee Risk Mitigation Activities — Mitigation activities are well-documented,
+  aligned with strategic goals,'
+- 'Stmt 2.5: Oversee Risk Mitigation Activities — and show measurable risk reduction.'
+- 'Stmt 2.5: Oversee Risk Mitigation Activities — o'
+- 'Stmt 2.5: Oversee Risk Mitigation Activities — Regular updates are provided to
+  the Board.o'
+- "Stmt 2.6: Implement a Risk Acceptance Process — Ensure the report to the Board\
+  \ of Directors includes details on \naccepted risks, their justification, monitoring\
+  \ activities, and instances of re-\nevaluated risks.\n•"
+- 'Stmt 2.6: Implement a Risk Acceptance Process — Accepted risks are documented with
+  clear justification and approved by'
+- 'Stmt 2.6: Implement a Risk Acceptance Process — stakeholders.'
+- 'Stmt 2.6: Implement a Risk Acceptance Process — o'
+- 'Stmt 2.6: Implement a Risk Acceptance Process — Monitoring activities are ongoing
+  and include updates to the Board.o'
+- "Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats or —\
+  \ Ensure the report to the Board of Directors includes approved risk \nthresholds,\
+  \ details of incidents exceeding these thresholds, and rationale for \nchanges to\
+  \ thresholds.\n•"
+- 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats or —
+  Risk thresholds are clearly defined, periodically reviewed, and'
+- 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats or —
+  communicated effectively.'
+- 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats or —
+  o'
+- 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats or —
+  Incidents exceeding thresholds are promptly escalated and documented.o'
+- "Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or\
+  \ — Ensure the report to the Board of Directors includes summaries of \nmonitoring\
+  \ reports related to patching, vulnerability management, and other critical \nareas.\n\
+  •"
+- 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or
+  — Positive Findings:'
+- 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or
+  — Monitoring reports are accurate, reliable, and include actionable insights.o'
+- 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or
+  — Regular updates are provided to the Board, including progress and'
+- 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or
+  — resolutions.'
+- 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management, or
+  — o'
 required_evidence:
-  - Board minutes
-  - Information Security Program document
-  - Annual security report to the board
-  - Risk assessment summary
-
-finding_templates:
-  positive: >
-    The credit union demonstrates effective governance and oversight
-    of its information security program. The board approves the security
-    program and receives regular updates from management, ensuring
-    alignment with regulatory requirements under 12 CFR 748.0(b)(2).
-  partial: >
-    The credit union has established some governance structures for
-    information security, but gaps exist in board oversight or periodic
-    reviews. Management should strengthen reporting and approval processes
-    to fully meet 12 CFR 748.0(b)(2) requirements.
-  negative: >
-    The credit union has not demonstrated effective governance and
-    oversight of its information security program as required under
-    12 CFR 748.0(b)(2). Management did not provide sufficient evidence
-    that the board reviews and approves the program on a periodic basis,
-    increasing the risk that security controls may not be aligned with
-    identified risks.
+- Most recent risk assessment report.o
+- Prior risk assessments for comparison.o
+- Documentation of mitigation strategies and tracking logs.o
+- Contracts with service providers.o
+- Reports from periodic reviews of service providers.o
+- Documentation of deficiencies and remediation actions.o
+- Reports of control testing activities.o
+- Documentation of remediation plans and progress reports.o
+- Logs of control-related incidents and resolutions.o
+- Security incident reports for the reporting period.o
+- Logs of incident classification and response activities.o
+- Documentation of lessons learned and updates to policies or procedures.o
+- Logs tracking risk mitigation efforts.o
+- Documentation of challenges or delays encountered.o
+- Records of updates provided to the Board.o
+- Risk acceptance documentation, including approvals and justifications.o
+- Logs of accepted risks and associated monitoring activities.o
+- Records of re-evaluated risks and changes made.o
+- Records of approved risk thresholds.o
+- Incident reports for threshold-exceeding events.o
+- Logs of reviews and changes to risk thresholds, including rationale.o
+- Monitoring reports for patching, vulnerability management, and other
+- areas.
+- o
+- Records of delays, issues, and resolutions.o
+- Logs of recurring trends or systemic issues.o
+questions:
+- id: Stmt_2.1
+  prompt: 'Stmt 2.1: Results from the Information Security Risk Assessment'
+  checks:
+  - 'Does the program/report include: A detailed summary of internal and external
+    risks identified during the risk assessment.o?'
+  - 'Does the program/report include: Analysis of the impact and likelihood of these
+    risks.o?'
+  - 'Does the program/report include: Documentation of mitigation strategies implemented.o?'
+  - 'Does the program/report include: Updates on previously identified risks and their
+    resolution status.o?'
+  - 'Does the program/report include: Date reported to the Boardo?'
+  - 'Verify this gap is not present: The risk assessment lacks documentation of certain
+    risks or mitigation strategies.o.'
+  - 'Verify this gap is not present: Findings from prior risk assessments remain unresolved
+    or untracked.o.'
+  evidence:
+  - Most recent risk assessment report.o
+  - Prior risk assessments for comparison.o
+  - Documentation of mitigation strategies and tracking logs.o
+- id: Stmt_2.2
+  prompt: 'Stmt 2.2: Control Arrangements with Service Providers'
+  checks:
+  - 'Does the program/report include: A list of service providers with access to sensitive
+    member information.o?'
+  - 'Does the program/report include: Results of periodic reviews of service providers’
+    security practices.o?'
+  - 'Does the program/report include: Documentation of compliance with contractual
+    security requirements.o?'
+  - 'Does the program/report include: Updates on any deficiencies identified and the
+    actions taken to resolve them.o?'
+  - 'Verify this gap is not present: Contracts with some service providers lack specific
+    information security requirements.o.'
+  - 'Verify this gap is not present: Service provider reviews are outdated or inconsistently
+    performed.o.'
+  evidence:
+  - Contracts with service providers.o
+  - Reports from periodic reviews of service providers.o
+  - Documentation of deficiencies and remediation actions.o
+- id: Stmt_2.3
+  prompt: 'Stmt 2.3: Results of Testing Key or Critical Controls'
+  checks:
+  - 'Does the program/report include: A summary of key or critical controls tested
+    during the reporting period.o?'
+  - 'Does the program/report include: Results of these tests, including identified
+    weaknesses and remediation actions.o?'
+  - 'Does the program/report include: Updates on previously identified issues and
+    their resolution.o?'
+  - 'Verify this gap is not present: Testing schedules are delayed, or results are
+    not documented.o.'
+  - 'Verify this gap is not present: Critical control failures remain unaddressed
+    or lack follow-up action plans.o.'
+  evidence:
+  - Reports of control testing activities.o
+  - Documentation of remediation plans and progress reports.o
+  - Logs of control-related incidents and resolutions.o
+- id: Stmt_2.4
+  prompt: 'Stmt 2.4: Security Incidents and Management’s Response'
+  checks:
+  - 'Does the program/report include: A summary of all security incidents during the
+    reporting period.o?'
+  - 'Does the program/report include: Classification of incidents by type, scope,
+    and impact.o?'
+  - 'Does the program/report include: Details on management’s response to each incident.o?'
+  - 'Does the program/report include: Lessons learned and updates to the security
+    program based on incident reviews.o?'
+  - 'Verify this gap is not present: Incident documentation is incomplete, or responses
+    are delayed.o.'
+  - 'Verify this gap is not present: Lessons learned are not reflected in subsequent
+    security enhancements.o.'
+  evidence:
+  - Security incident reports for the reporting period.o
+  - Logs of incident classification and response activities.o
+  - Documentation of lessons learned and updates to policies or procedures.o
+- id: Stmt_2.5
+  prompt: 'Stmt 2.5: Oversee Risk Mitigation Activities'
+  checks:
+  - 'Does the program/report include: A summary of ongoing risk mitigation activities.o?'
+  - 'Does the program/report include: Progress reports on previously identified mitigation
+    efforts.o?'
+  - 'Does the program/report include: Documentation of challenges or delays encountered
+    during mitigation.o?'
+  - 'Verify this gap is not present: Mitigation activities are poorly documented or
+    show limited progress.o.'
+  - 'Verify this gap is not present: The Board is not regularly updated on risk mitigation
+    efforts.o.'
+  evidence:
+  - Logs tracking risk mitigation efforts.o
+  - Documentation of challenges or delays encountered.o
+  - Records of updates provided to the Board.o
+- id: Stmt_2.6
+  prompt: 'Stmt 2.6: Implement a Risk Acceptance Process'
+  checks:
+  - 'Does the program/report include: Documentation of risks accepted during the reporting
+    period, including?'
+  - 'Does the program/report include: justification and approval.?'
+  - 'Does the program/report include: o?'
+  - 'Does the program/report include: Confirmation of management and stakeholder involvement
+    in risk?'
+  - 'Does the program/report include: acceptance decisions.?'
+  - 'Does the program/report include: Details on monitoring activities for accepted
+    risks and any re-evaluated?'
+  - 'Does the program/report include: risks.?'
+  evidence:
+  - Risk acceptance documentation, including approvals and justifications.o
+  - Logs of accepted risks and associated monitoring activities.o
+  - Records of re-evaluated risks and changes made.o
+- id: Stmt_2.7
+  prompt: 'Stmt 2.7: Approve Risk Thresholds Relating to Information Security Threats
+    or'
+  checks:
+  - 'Does the program/report include: Defined and approved risk thresholds with clear
+    alignment to the credit?'
+  - 'Does the program/report include: union''s risk appetite.?'
+  - 'Does the program/report include: o?'
+  - 'Does the program/report include: A summary of incidents exceeding thresholds,
+    including escalation?'
+  - 'Does the program/report include: details.?'
+  - 'Does the program/report include: Documentation of periodic reviews and any changes
+    made to thresholds.o?'
+  - 'Verify this gap is not present: Risk thresholds are outdated or unclear.o.'
+  - 'Verify this gap is not present: Threshold-exceeding incidents are not escalated
+    appropriately or lack.'
+  - 'Verify this gap is not present: supporting documentation..'
+  - 'Verify this gap is not present: o.'
+  evidence:
+  - Records of approved risk thresholds.o
+  - Incident reports for threshold-exceeding events.o
+  - Logs of reviews and changes to risk thresholds, including rationale.o
+- id: Stmt_2.8
+  prompt: 'Stmt 2.8: Monitoring Reports Related to Patching, Vulnerability Management,
+    or'
+  checks:
+  - 'Does the program/report include: Summaries of monitoring activities, including
+    patch deployment status?'
+  - 'Does the program/report include: and vulnerability management.?'
+  - 'Does the program/report include: o?'
+  - 'Does the program/report include: Documentation of recurring issues or trends
+    identified during monitoring.o?'
+  - 'Does the program/report include: Updates on delays or issues and actions taken
+    to address them.o?'
+  - 'Verify this gap is not present: Reports are incomplete, outdated, or lack detail.o.'
+  - 'Verify this gap is not present: Recurring issues are not adequately documented
+    or addressed.o.'
+  - 'Verify this gap is not present: Metrics aid management in its ability to assess
+    the overall IT environment. The specific metrics reported, and the frequency with
+    which they are reported,.'
+  - 'Verify this gap is not present: depend on the institution''s IT environment.
+    The following are common examples:.'
+  - 'Verify this gap is not present: Number of risk issues identified for IT activities
+    (updated regularly to reflect new or mitigated issues). This may include information
+    gathered.'
+  - 'Verify this gap is not present: through the threat intelligence and collaboration
+    process..'
+  - 'Verify this gap is not present: Number of risk acceptance issues approved by
+    senior management. This information may be maintained in a database or other repository
+    of the.'
+  - 'Verify this gap is not present: descriptions, mitigation options, and documentation
+    of management acceptance..'
+  - 'Verify this gap is not present: Number of current and historical events or issues
+    (external and internal events that deviate from the control standards)..'
+  - 'Verify this gap is not present: Number of current or outstanding (i.e., unresolved)
+    issues identified by the business unit, internal audit, external audit, or regulator..'
+  - 'Verify this gap is not present: From <https://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management/iiid-monitoring-and-reporting/iiid1-metrics.aspx>.'
+  - 'Verify this gap is not present: Resources.'
+  - 'Verify this gap is not present: Thursday, August 15, 2024 9:48 AM.'
+  evidence:
+  - Monitoring reports for patching, vulnerability management, and other
+  - areas.
+  - o
+  - Records of delays, issues, and resolutions.o
+  - Logs of recurring trends or systemic issues.o
+- id: Stmt_2.1
+  prompt: 'Stmt 2.1: Results from the Information Security Risk Assessment'
+  checks: []
+  evidence: []
+- id: Stmt_2.2
+  prompt: 'Stmt 2.2: Control Arrangements with Service Providers'
+  checks: []
+  evidence: []
+- id: Stmt_2.3
+  prompt: 'Stmt 2.3: Results of Testing Key or Critical Controls'
+  checks: []
+  evidence: []
+- id: Stmt_2.4
+  prompt: 'Stmt 2.4: Security Incidents and Management’s Response'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/2. Governance.pdf

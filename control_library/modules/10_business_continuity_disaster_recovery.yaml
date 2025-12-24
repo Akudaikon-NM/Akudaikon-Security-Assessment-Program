@@ -1,21 +1,11 @@
-module_id: module10
-title: Module 10
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 10_business_continuity_disaster_recovery
+title: 10 Business Continuity Disaster Recovery
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_10
+  prompt: 'Stmt 10: Disaster Recovery / Business Continuity Program'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/10. Business Continuity Disaster Recovery.pdf

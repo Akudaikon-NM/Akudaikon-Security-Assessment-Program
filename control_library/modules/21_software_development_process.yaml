@@ -1,21 +1,324 @@
-module_id: module21
-title: Module 21
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
+module_id: 21_software_development_process
+title: 21 Software Development Process
+control_objective: "Ensure that a robust, secure, and compliant SDLC process is in\
+  \ place.\nDocumentation Review:\nVerify a documented SDLC process that clearly outlines\
+  \ phases: planning, \ndesign, development, testing, deployment, and maintenance.\n\
+  o\nEnsure documentation complies with industry standards and regulatory \nrequirements,\
+  \ such as 12 CFR Part 748.\no\n•\nCompliance Check:\nConfirm that the SDLC incorporates\
+  \ secure coding practices and complies \nwith relevant regulations.\no\n•"
 evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+- "Stmt 21: Defined Systems/Software Development Life Cycle Process — Ensure that\
+  \ a robust, secure, and compliant SDLC process is in place.\nDocumentation Review:\n\
+  Verify a documented SDLC process that clearly outlines phases: planning, \ndesign,\
+  \ development, testing, deployment, and maintenance.\no\nEnsure documentation complies\
+  \ with industry standards and regulatory \nrequirements, such as 12 CFR Part 748.\n\
+  o\n•\nCompliance Check:\nConfirm that the SDLC incorporates secure coding practices\
+  \ and complies \nwith relevant regulations.\no\n•"
+- "Stmt 21.1: Documented Secure Application Development Process — Ensure a secure\
+  \ application development process is documented, approved, and \nintegrated into\
+  \ the SDLC.\nProcess Documentation:\nReview the secure application development documentation\
+  \ to ensure it covers \nsecurity requirements, coding standards, and secure design\
+  \ principles.\no\n•\nApproval and Updates:\nVerify approval from appropriate stakeholders\
+  \ and check for a regular review \nprocess to update the development process.\n\
+  o\n•\nIntegration with SDLC:\nConfirm integration of secure application development\
+  \ into the SDLC.o\n•"
+- "Stmt 21.2: Secure Code Repository and Controls — Ensure a secure code repository\
+  \ with appropriate access controls and logging \ncapabilities.\nRepository Review:\n\
+  Confirm the presence of a secure code repository that supports version \ncontrol,\
+  \ access control, and audit logging.\no\n•\nAccess Controls:\nReview access control\
+  \ measures to ensure only authorized personnel can \ncheck code in and out, with\
+  \ logged and reviewed changes.\no\n•\nSecurity Measures:•\nComprehensive Review\
+  \ Process for Credit Union’s Software \nDevelopment –Compliance with 12 CFR Part\
+  \ 748\nMonday, October 28, 2024 9:06 AM\n 21. Software Development Process Page\
+  \ 8 \nSecurity Measures:\nCheck for encryption and security protocols safeguarding\
+  \ the code repository.o\n•"
+- "Stmt 21.3: Appropriate Segregation of Duties — Ensure segregation of duties to\
+  \ prevent conflicts of interest and reduce risks.\nRole Definitions:\nConfirm clearly\
+  \ defined roles and responsibilities within the development \nprocess.\no\n•\nAccess\
+  \ Control:\nReview access mechanisms enforcing segregation of duties.o\n•\nDocumentation:\n\
+  Ensure documentation reflects duty segregation and undergoes regular review.o\n•"
+- "Stmt 21.4: Root Cause Analysis Process — Establish a root cause analysis process\
+  \ to identify and address code vulnerabilities.\nProcess Documentation:\nReview\
+  \ the root cause analysis process, ensuring it includes steps to identify, \nanalyze,\
+  \ and address code vulnerabilities.\no\n•\nImplementation:\nVerify the root cause\
+  \ analysis process is practiced and implemented \neffectively.\no\n•\nReporting\
+  \ and Review:\nConfirm findings from root cause analyses are documented and reviewed\
+  \ for \ncontinuous improvement.\no\n•"
+- "Stmt 21.5: Inventory of Third-Party Components — Maintain an updated inventory\
+  \ of third-party components used in development, \nwith security and version details.\n\
+  Inventory Review:\nVerify an up-to-date inventory of third-party components, including\
+  \ versions \nand security information.\no\n•\nMonitoring and Updates:\nConfirm regular\
+  \ updates and monitoring of third-party components for \nvulnerabilities.\no\n•\n\
+  Documentation:\nEnsure documentation accurately reflects third-party components.\n\
+  •\n 21. Software Development Process Page 9 \nEnsure documentation accurately reflects\
+  \ third-party components.o"
+- "Stmt 21.6: Separate Environments for Production and Non-Production Systems — Ensure\
+  \ production and non-production systems are kept separate.\nEnvironment Configuration:\n\
+  Verify separate environments for production and non-production, ensuring \nnon-production\
+  \ systems are isolated from production.\no\n•\nAccess Controls:\nReview access control\
+  \ settings specific to each environment to ensure proper \nrestrictions.\no\n•\n\
+  Documentation:\nConfirm that documentation reflects environment separation and is\
+  \ regularly \nupdated.\no\n•"
+- "Stmt 21.7: Secure Code Training for Personnel — Ensure that all development personnel\
+  \ are trained in secure coding specific to their \nenvironment.\nTraining Programs:\n\
+  Verify that secure coding training is provided to all software development \npersonnel,\
+  \ tailored to their roles.\no\n•\nTraining Records:\nReview training records, including\
+  \ completed sessions and participant lists.o\n•\nOngoing Education:\nEnsure training\
+  \ is updated regularly to reflect the latest secure coding \npractices.\no\n•"
+- "Stmt 21.8: Static and Dynamic Analysis Tools — Integrate static and dynamic analysis\
+  \ tools into the SDLC to validate secure coding \npractices.\nTool Deployment:\n\
+  Verify the use of static and dynamic analysis tools within the application life\
+  \ \ncycle.\no\n•\nUsage and Coverage:\nConfirm consistent tool usage across development\
+  \ and testing stages, covering \nsecure coding practices.\no\n•\nResults and Actions:\n\
+  Review how results from analysis tools are addressed and ensure mitigation of \n\
+  •\n 21. Software Development Process Page 10 \nReview how results from analysis\
+  \ tools are addressed and ensure mitigation of \nidentified vulnerabilities.\no"
+- "Stmt 21.9: Process for Addressing Software Vulnerabilities — Establish a process\
+  \ for accepting and addressing software vulnerabilities, with a \nchannel for external\
+  \ reporting.\nVulnerability Reporting:\nVerify the presence of a process for receiving\
+  \ and addressing vulnerability \nreports, including from external entities.\no\n\
+  •\nResponse and Resolution:\nReview procedures for tracking, evaluating, and resolving\
+  \ reported \nvulnerabilities.\no\n•\nCommunication:\nConfirm a mechanism to notify\
+  \ stakeholders of resolved vulnerabilities.o\n•\nDocumentation:\nEnsure that all\
+  \ vulnerabilities and actions taken are well-documented and \nmaintained for audit\
+  \ purposes.\no\n•\n 21. Software Development Process Page 11 \nComprehensive Review\
+  \ Process for Credit Union’s Software Development –\nCompliance with 12 CFR Part\
+  \ 748"
+required_evidence: []
+questions:
+- id: Stmt_21
+  prompt: 'Stmt 21: Defined Systems/Software Development Life Cycle Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.1
+  prompt: 'Stmt 21.1: Documented Secure Application Development Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.2
+  prompt: 'Stmt 21.2: Secure Code Repository and Controls'
+  checks: []
+  evidence: []
+- id: Stmt_21.3
+  prompt: 'Stmt 21.3: Appropriate Segregation of Duties'
+  checks: []
+  evidence: []
+- id: Stmt_21.4
+  prompt: 'Stmt 21.4: Root Cause Analysis Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.5
+  prompt: 'Stmt 21.5: Inventory of Third-Party Components'
+  checks: []
+  evidence: []
+- id: Stmt_21.6
+  prompt: 'Stmt 21.6: Separate Environments for Production and Non-Production Systems'
+  checks: []
+  evidence: []
+- id: Stmt_21.7
+  prompt: 'Stmt 21.7: Secure Code Training for Personnel'
+  checks: []
+  evidence: []
+- id: Stmt_21.8
+  prompt: 'Stmt 21.8: Static and Dynamic Analysis Tools'
+  checks: []
+  evidence: []
+- id: Stmt_21.9
+  prompt: 'Stmt 21.9: Process for Addressing Software Vulnerabilities'
+  checks: []
+  evidence: []
+- id: Stmt_21
+  prompt: 'Stmt 21: Defined Systems/Software Development Life Cycle Process'
+  checks:
+  - "Validate: Ensure that a robust, secure, and compliant SDLC process is in place.\n\
+    Documentation Review:\nVerify a documented SDLC process that clearly outlines\
+    \ phases: planning, \ndesign, development, testing, deployment, and maintenance.\n\
+    o\nEnsure documentation complies with industry standards and regulatory \nrequirements,\
+    \ such as 12 CFR Part 748.\no\n•\nCompliance Check:\nConfirm that the SDLC incorporates\
+    \ secure coding practices and complies \nwith relevant regulations.\no\n•"
+  evidence: []
+- id: Stmt_21.1
+  prompt: 'Stmt 21.1: Documented Secure Application Development Process'
+  checks:
+  - "Validate: Ensure a secure application development process is documented, approved,\
+    \ and \nintegrated into the SDLC.\nProcess Documentation:\nReview the secure application\
+    \ development documentation to ensure it covers \nsecurity requirements, coding\
+    \ standards, and secure design principles.\no\n•\nApproval and Updates:\nVerify\
+    \ approval from appropriate stakeholders and check for a regular review \nprocess\
+    \ to update the development process.\no\n•\nIntegration with SDLC:\nConfirm integration\
+    \ of secure application development into the SDLC.o\n•"
+  evidence: []
+- id: Stmt_21.2
+  prompt: 'Stmt 21.2: Secure Code Repository and Controls'
+  checks:
+  - "Validate: Ensure a secure code repository with appropriate access controls and\
+    \ logging \ncapabilities.\nRepository Review:\nConfirm the presence of a secure\
+    \ code repository that supports version \ncontrol, access control, and audit logging.\n\
+    o\n•\nAccess Controls:\nReview access control measures to ensure only authorized\
+    \ personnel can \ncheck code in and out, with logged and reviewed changes.\no\n\
+    •\nSecurity Measures:•\nComprehensive Review Process for Credit Union’s Software\
+    \ \nDevelopment –Compliance with 12 CFR Part 748\nMonday, October 28, 2024 9:06\
+    \ AM\n 21. Software Development Process Page 8 \nSecurity Measures:\nCheck for\
+    \ encryption and security protocols safeguarding the code repository.o\n•"
+  evidence: []
+- id: Stmt_21.3
+  prompt: 'Stmt 21.3: Appropriate Segregation of Duties'
+  checks:
+  - "Validate: Ensure segregation of duties to prevent conflicts of interest and reduce\
+    \ risks.\nRole Definitions:\nConfirm clearly defined roles and responsibilities\
+    \ within the development \nprocess.\no\n•\nAccess Control:\nReview access mechanisms\
+    \ enforcing segregation of duties.o\n•\nDocumentation:\nEnsure documentation reflects\
+    \ duty segregation and undergoes regular review.o\n•"
+  evidence: []
+- id: Stmt_21.4
+  prompt: 'Stmt 21.4: Root Cause Analysis Process'
+  checks:
+  - "Validate: Establish a root cause analysis process to identify and address code\
+    \ vulnerabilities.\nProcess Documentation:\nReview the root cause analysis process,\
+    \ ensuring it includes steps to identify, \nanalyze, and address code vulnerabilities.\n\
+    o\n•\nImplementation:\nVerify the root cause analysis process is practiced and\
+    \ implemented \neffectively.\no\n•\nReporting and Review:\nConfirm findings from\
+    \ root cause analyses are documented and reviewed for \ncontinuous improvement.\n\
+    o\n•"
+  evidence: []
+- id: Stmt_21.5
+  prompt: 'Stmt 21.5: Inventory of Third-Party Components'
+  checks:
+  - "Validate: Maintain an updated inventory of third-party components used in development,\
+    \ \nwith security and version details.\nInventory Review:\nVerify an up-to-date\
+    \ inventory of third-party components, including versions \nand security information.\n\
+    o\n•\nMonitoring and Updates:\nConfirm regular updates and monitoring of third-party\
+    \ components for \nvulnerabilities.\no\n•\nDocumentation:\nEnsure documentation\
+    \ accurately reflects third-party components.\n•\n 21. Software Development Process\
+    \ Page 9 \nEnsure documentation accurately reflects third-party components.o"
+  evidence: []
+- id: Stmt_21.6
+  prompt: 'Stmt 21.6: Separate Environments for Production and Non-Production Systems'
+  checks:
+  - "Validate: Ensure production and non-production systems are kept separate.\nEnvironment\
+    \ Configuration:\nVerify separate environments for production and non-production,\
+    \ ensuring \nnon-production systems are isolated from production.\no\n•\nAccess\
+    \ Controls:\nReview access control settings specific to each environment to ensure\
+    \ proper \nrestrictions.\no\n•\nDocumentation:\nConfirm that documentation reflects\
+    \ environment separation and is regularly \nupdated.\no\n•"
+  evidence: []
+- id: Stmt_21.7
+  prompt: 'Stmt 21.7: Secure Code Training for Personnel'
+  checks:
+  - "Validate: Ensure that all development personnel are trained in secure coding\
+    \ specific to their \nenvironment.\nTraining Programs:\nVerify that secure coding\
+    \ training is provided to all software development \npersonnel, tailored to their\
+    \ roles.\no\n•\nTraining Records:\nReview training records, including completed\
+    \ sessions and participant lists.o\n•\nOngoing Education:\nEnsure training is\
+    \ updated regularly to reflect the latest secure coding \npractices.\no\n•"
+  evidence: []
+- id: Stmt_21.8
+  prompt: 'Stmt 21.8: Static and Dynamic Analysis Tools'
+  checks:
+  - "Validate: Integrate static and dynamic analysis tools into the SDLC to validate\
+    \ secure coding \npractices.\nTool Deployment:\nVerify the use of static and dynamic\
+    \ analysis tools within the application life \ncycle.\no\n•\nUsage and Coverage:\n\
+    Confirm consistent tool usage across development and testing stages, covering\
+    \ \nsecure coding practices.\no\n•\nResults and Actions:\nReview how results from\
+    \ analysis tools are addressed and ensure mitigation of \n•\n 21. Software Development\
+    \ Process Page 10 \nReview how results from analysis tools are addressed and ensure\
+    \ mitigation of \nidentified vulnerabilities.\no"
+  evidence: []
+- id: Stmt_21.9
+  prompt: 'Stmt 21.9: Process for Addressing Software Vulnerabilities'
+  checks:
+  - "Validate: Establish a process for accepting and addressing software vulnerabilities,\
+    \ with a \nchannel for external reporting.\nVulnerability Reporting:\nVerify the\
+    \ presence of a process for receiving and addressing vulnerability \nreports,\
+    \ including from external entities.\no\n•\nResponse and Resolution:\nReview procedures\
+    \ for tracking, evaluating, and resolving reported \nvulnerabilities.\no\n•\n\
+    Communication:\nConfirm a mechanism to notify stakeholders of resolved vulnerabilities.o\n\
+    •\nDocumentation:\nEnsure that all vulnerabilities and actions taken are well-documented\
+    \ and \nmaintained for audit purposes.\no\n•\n 21. Software Development Process\
+    \ Page 11 \nComprehensive Review Process for Credit Union’s Software Development\
+    \ –\nCompliance with 12 CFR Part 748"
+  evidence: []
+- id: Stmt_21
+  prompt: 'Stmt 21: Defined Systems/Software Development Life Cycle Process (SDLC)'
+  checks: []
+  evidence: []
+- id: Stmt_21.1
+  prompt: 'Stmt 21.1: Documented Secure Application Development Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.2
+  prompt: 'Stmt 21.2: Secure Code Repository and Controls'
+  checks: []
+  evidence: []
+- id: Stmt_21.3
+  prompt: 'Stmt 21.3: Appropriate Segregation of Duties'
+  checks: []
+  evidence: []
+- id: Stmt_21.4
+  prompt: 'Stmt 21.4: Root Cause Analysis Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.5
+  prompt: 'Stmt 21.5: Inventory of Third-Party Components'
+  checks: []
+  evidence: []
+- id: Stmt_21.6
+  prompt: 'Stmt 21.6: Separate Environments for Production and Non-Production Systems'
+  checks: []
+  evidence: []
+- id: Stmt_21.7
+  prompt: 'Stmt 21.7: Secure Code Training for Personnel'
+  checks: []
+  evidence: []
+- id: Stmt_21.8
+  prompt: 'Stmt 21.8: Static and Dynamic Analysis Tools'
+  checks: []
+  evidence: []
+- id: Stmt_21.9
+  prompt: 'Stmt 21.9: Process for Addressing Software Vulnerabilities'
+  checks: []
+  evidence: []
+- id: Stmt_21
+  prompt: 'Stmt 21: Defined Systems/Software Development Life Cycle Process (SDLC)'
+  checks: []
+  evidence: []
+- id: Stmt_21.1
+  prompt: 'Stmt 21.1: Documented Secure Application Development Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.2
+  prompt: 'Stmt 21.2: Secure Code Repository and Controls'
+  checks: []
+  evidence: []
+- id: Stmt_21.3
+  prompt: 'Stmt 21.3: Appropriate Segregation of Duties'
+  checks: []
+  evidence: []
+- id: Stmt_21.3
+  prompt: 'Stmt 21.3: Appropriate Segregation of Duties'
+  checks: []
+  evidence: []
+- id: Stmt_21.4
+  prompt: 'Stmt 21.4: Root Cause Analysis Process'
+  checks: []
+  evidence: []
+- id: Stmt_21.5
+  prompt: 'Stmt 21.5: Inventory of Third-Party Components'
+  checks: []
+  evidence: []
+- id: Stmt_21.6
+  prompt: 'Stmt 21.6: Separate Environments for Production and Non-Production Systems'
+  checks: []
+  evidence: []
+- id: Stmt_21.7
+  prompt: 'Stmt 21.7: Secure Code Training for Personnel'
+  checks: []
+  evidence: []
+- id: Stmt_21.8
+  prompt: 'Stmt 21.8: Static and Dynamic Analysis Tools'
+  checks: []
+  evidence: []
+- id: Stmt_21.9
+  prompt: 'Stmt 21.9: Process for Addressing Software Vulnerabilities'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/21. Software Development Process.pdf

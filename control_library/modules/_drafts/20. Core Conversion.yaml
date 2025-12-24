@@ -1,0 +1,183 @@
+title: 20. Core Conversion
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: Has a formal project plan been created that outlines the full scope, goals,
+    and objectives of?
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: Does the project plan specify roles, responsibilities, and timelines for
+    each phase, including?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: Are all stakeholders aware of and in agreement with the project plan?•?
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: Does the vendor or third party maintain formal project minutes and notes
+    for all planning?
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: Are these minutes shared with relevant stakeholders, and do they include
+    key decisions,?
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: How often are the meeting notes reviewed for accuracy, and who is responsible
+    for?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Are post-conversion minutes/notes created to summarize the project’s outcomes,
+    any?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Do these notes reflect the performance of the system post-conversion and
+    any adjustments?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Are the post-conversion minutes reviewed by relevant stakeholders, and are
+    action items?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Is there a tracking mechanism in place to log and monitor any unresolved
+    items or issues?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: How are material issues prioritized, assigned, and resolved, and what is
+    the timeline for?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Is there regular reporting on outstanding items to ensure they are addressed
+    promptly?•?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Was a formal training plan developed for employees on the new core system
+    and its?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Does the training cover all necessary functionalities for each user role?•?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: Are training materials available to staff for future reference, and is feedback
+    collected post-?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Does the project plan outline specific timeframes for each testing phase,
+    including unit?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Are testing objectives clearly defined, with success criteria for each phase?•?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: How are testing results documented, and are these results reviewed by stakeholders
+    before?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Were team members selected based on their relevant expertise and experience
+    to support?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: Is there a designated resource with technical knowledge of the core system
+    conversion?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Has management confirmed that project roles and responsibilities align with
+    the needs of?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Does the conversion plan include all key milestones, such as data cleanup,
+    data mapping,?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Are timelines established for each milestone, with assigned responsibilities
+    for completing?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: How are mock conversions and mirrored transaction testing conducted to ensure
+    accuracy?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Was a dedicated project manager appointed to oversee the core conversion,
+    and do they?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Are subject matter experts (SMEs) included in the project team, covering
+    areas such as IT,?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Are project team members’ roles clearly defined to ensure they can dedicate
+    the necessary?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: Was a third-party expert engaged for support with deconversion and conversion,
+    and, if so,?
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Does the contract with the third-party expert define roles, responsibilities,
+    deliverables,?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Are third-party experts adhering to contractual requirements, including
+    regular reporting?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Is there a final compliance review and report that consolidates all project
+    documentation,?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Were there any deviations from the original project plan, and if so, what
+    corrective actions?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Is a compliance report presented to senior management and/or the board,
+    detailing?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: Is there a post-implementation review process to assess the conversion’s
+    effectiveness and?
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Are lessons learned documented and shared with relevant stakeholders to
+    guide future?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: What steps are in place for continuous monitoring and performance review
+    of the new?
+  reference: ''
+  evidence_requests: []

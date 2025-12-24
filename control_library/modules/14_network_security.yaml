@@ -1,21 +1,14 @@
-module_id: module14
-title: Module 14
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 14_network_security
+title: 14 Network Security
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 14 Network Security?
+- Who owns and approves 14 Network Security (role/title), and when was it last approved?
+- How is 14 Network Security implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 14 Network Security is operating effectively?
+- How often is 14 Network Security reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/14. Network Security.pdf
+__meta__:
+  questions_source: synthesized

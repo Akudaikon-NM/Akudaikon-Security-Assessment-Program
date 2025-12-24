@@ -1,0 +1,84 @@
+# PDF Question Extraction Profiles
+# Configure how to extract questions from different security module PDFs
+
+default:
+  question_headers:
+    - "Questions"
+    - "Interview Questions"
+    - "Validation Questions"
+    - "Management Questions"
+    - "Assessment Questions"
+    - "Review Questions"
+  
+  accept_line_if:
+    - "ends_with_question_mark"
+    - "starts_with_q_prefix"
+    - "numbered_question"
+  
+  # Skip lines containing these patterns
+  skip_patterns:
+    - "^Page \\d+"
+    - "^\\s*$"
+    - "^Table of Contents"
+    - "^©"
+  
+  # Minimum question length (in characters)
+  min_question_length: 10
+  
+  # Maximum question length (in characters, for sanity check)
+  max_question_length: 500
+
+# Module-specific overrides
+incident_response:
+  question_headers:
+    - "Incident Response Questions"
+    - "Testing Questions"
+    - "Tabletop Exercise Questions"
+    - "Response Validation"
+
+training:
+  question_headers:
+    - "Training Questions"
+    - "Awareness Questions"
+    - "Compliance Questions"
+
+governance:
+  question_headers:
+    - "Governance Questions"
+    - "Board Questions"
+    - "Executive Questions"
+
+risk_assessment:
+  question_headers:
+    - "Risk Questions"
+    - "Risk Assessment Questions"
+    - "Risk Analysis Questions"
+
+third_party:
+  question_headers:
+    - "Vendor Questions"
+    - "Third Party Questions"
+    - "Supplier Questions"
+    - "Due Diligence Questions"
+
+business_continuity:
+  question_headers:
+    - "BCP Questions"
+    - "DR Questions"
+    - "Business Continuity Questions"
+    - "Disaster Recovery Questions"
+    - "Resilience Questions"
+
+access_controls:
+  question_headers:
+    - "Access Control Questions"
+    - "IAM Questions"
+    - "Authentication Questions"
+    - "Authorization Questions"
+
+data_governance:
+  question_headers:
+    - "Data Questions"
+    - "Data Management Questions"
+    - "Data Classification Questions"
+    - "Privacy Questions"

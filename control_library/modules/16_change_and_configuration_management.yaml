@@ -1,21 +1,63 @@
-module_id: module16
-title: Module 16
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 16_change_and_configuration_management
+title: 16 Change And Configuration Management
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_16.1
+  prompt: 'Stmt 16.1: Process for Review and Approval of Changes:'
+  checks: []
+  evidence: []
+- id: Stmt_16.2
+  prompt: 'Stmt 16.2: Documentation of Requests and Approvals:'
+  checks: []
+  evidence: []
+- id: Stmt_16.5
+  prompt: 'Stmt 16.5: Inventory of Authentication and Authorization Systems:'
+  checks: []
+  evidence: []
+- id: Stmt_16.6
+  prompt: 'Stmt 16.6: Centralized Access Control:'
+  checks: []
+  evidence: []
+- id: Stmt_16.7
+  prompt: 'Stmt 16.7: Role-Based Access Control (RBAC):'
+  checks: []
+  evidence: []
+- id: Stmt_16.8
+  prompt: 'Stmt 16.8: Change Categorization by Severity:'
+  checks: []
+  evidence: []
+- id: Stmt_16.9
+  prompt: 'Stmt 16.9: Configuration Management Process:'
+  checks: []
+  evidence: []
+- id: Stmt_16.10
+  prompt: 'Stmt 16.10: Removal of Nonessential Software:'
+  checks: []
+  evidence: []
+- id: Stmt_16.11
+  prompt: 'Stmt 16.11: Standard Builds and Documented Configurations:'
+  checks: []
+  evidence: []
+- id: Stmt_16.12
+  prompt: 'Stmt 16.12: Rollback Procedures:'
+  checks: []
+  evidence: []
+- id: Stmt_16.13
+  prompt: 'Stmt 16.13: Metrics for Change Management:10.'
+  checks: []
+  evidence: []
+- id: Stmt_16.14
+  prompt: 'Stmt 16.14: Change Performance Documentation:1.'
+  checks: []
+  evidence: []
+- id: Stmt_16.14
+  prompt: 'Stmt 16.14: Change Performance Documentation:1.'
+  checks: []
+  evidence: []
+- id: Stmt_16.15
+  prompt: 'Stmt 16.15: Post-Implementation Review:1.'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/16. Change and Configuration Management.pdf

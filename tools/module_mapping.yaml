@@ -1,0 +1,100 @@
+modules:
+  - module_stem: "01_policies_and_procedures"
+    pdf: "docs/source_pdfs/01_policies_and_procedures.pdf"
+    title: "Policies and Procedures"
+
+  - module_stem: "02_governance"
+    pdf: "docs/source_pdfs/02_governance.pdf"
+    title: "Governance and Board Oversight"
+
+  - module_stem: "03_asset_inventory"
+    pdf: "docs/source_pdfs/03_asset_inventory.pdf"
+    title: "Asset Inventory"
+
+  - module_stem: "04_risk_assessment"
+    pdf: "docs/source_pdfs/04_risk_assessment.pdf"
+    title: "Risk Assessment"
+
+  - module_stem: "05_controls_testing"
+    pdf: "docs/source_pdfs/05_controls_testing.pdf"
+    title: "Controls Testing"
+
+  - module_stem: "06_corrective_actions"
+    pdf: "docs/source_pdfs/06_corrective_actions.pdf"
+    title: "Corrective Actions"
+
+  - module_stem: "07_training"
+    pdf: "docs/source_pdfs/07_training.pdf"
+    title: "Training"
+
+  - module_stem: "08_incident_response"
+    pdf: "docs/source_pdfs/08_incident_response.pdf"
+    title: "Incident Response"
+
+  - module_stem: "09_third_party_risk_management"
+    pdf: "docs/source_pdfs/09_third_party_risk_management.pdf"
+    title: "Third-Party Risk Management"
+
+  - module_stem: "10_business_continuity_disaster_recovery"
+    pdf: "docs/source_pdfs/10_business_continuity_disaster_recovery.pdf"
+    title: "Business Continuity and Disaster Recovery"
+
+  - module_stem: "11_vulnerability_and_patch_management"
+    pdf: "docs/source_pdfs/11_vulnerability_and_patch_management.pdf"
+    title: "Vulnerability and Patch Management"
+
+  - module_stem: "12_antivirus_and_antimalware_controls"
+    pdf: "docs/source_pdfs/12_antivirus_and_antimalware_controls.pdf"
+    title: "Antivirus and Antimalware Controls"
+
+  - module_stem: "13_access_controls"
+    pdf: "docs/source_pdfs/13_access_controls.pdf"
+    title: "Access Controls"
+
+  - module_stem: "14_network_security"
+    pdf: "docs/source_pdfs/14_network_security.pdf"
+    title: "Network Security"
+
+  - module_stem: "15_data_leak_protection"
+    pdf: "docs/source_pdfs/15_data_leak_protection.pdf"
+    title: "Data Leak Protection"
+
+  - module_stem: "16_change_and_configuration_management"
+    pdf: "docs/source_pdfs/16_change_and_configuration_management.pdf"
+    title: "Change and Configuration Management"
+
+  - module_stem: "17_monitoring"
+    pdf: "docs/source_pdfs/17_monitoring.pdf"
+    title: "Monitoring"
+
+  - module_stem: "18_logging_and_monitoring_activities"
+    pdf: "docs/source_pdfs/18_logging.pdf"
+    title: "Logging and Monitoring Activities"
+
+  - module_stem: "19_data_governance"
+    pdf: "docs/source_pdfs/19_data_governance.pdf"
+    title: "Data Governance"
+
+  - module_stem: "20_core_conversion_management"
+    pdf: "docs/source_pdfs/20_core_conversion.pdf"
+    title: "Core Conversion Management"
+
+  - module_stem: "21_software_development_process"
+    pdf: "docs/source_pdfs/21_software_development_process.pdf"
+    title: "Software Development Process"
+
+  - module_stem: "22_internal_audit_program"
+    pdf: "docs/source_pdfs/22_internal_audit.pdf"
+    title: "Internal Audit Program"
+
+  - module_stem: "23_ai_review"
+    pdf: "docs/source_pdfs/23_ai_review.pdf"
+    title: "AI Review"
+
+  - module_stem: "24_security_controls_questionnaire"
+    pdf: "docs/source_pdfs/24_questionnaire_security_controls.pdf"
+    title: "Security Controls Questionnaire"
+
+  - module_stem: "25_cis_controls_roi_library"
+    pdf: "docs/source_pdfs/25_cis_controls_roi_library.pdf"
+    title: "CIS Controls ROI Library"

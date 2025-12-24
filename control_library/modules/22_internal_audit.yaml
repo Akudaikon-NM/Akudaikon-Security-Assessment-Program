@@ -1,0 +1,14 @@
+module_id: 22_internal_audit
+title: 22 Internal Audit
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 22 Internal Audit?
+- Who owns and approves 22 Internal Audit (role/title), and when was it last approved?
+- How is 22 Internal Audit implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 22 Internal Audit is operating effectively?
+- How often is 22 Internal Audit reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/22. Internal Audit.pdf
+__meta__:
+  questions_source: synthesized

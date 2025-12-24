@@ -1,30 +1,16 @@
-title: "Policies and Procedures"
-description: "Written policies and procedures for information security."
-control_objective: >
-  Comprehensive written policies and procedures must exist to establish a foundation for information security governance and ensure consistent implementation of security controls across the credit union.
-
-evaluation_criteria:
-  - Policies cover all required security areas
-  - Procedures are documented and accessible
-  - Policies are reviewed and approved by management
-  - Procedures are updated as needed
-
-required_evidence:
-  - Information Security Policy document
-  - Security procedures manual
-  - Policy approval records
-  - Procedure update logs
-
+module_id: 01_policies_and_procedures
+title: 01 Policies And Procedures
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
 questions:
-  - id: "pp1"
-    prompt: "Are there written policies and procedures for information security?"
-    evidence_requests:
-      - "Policy documents."
-    primary_citations:
-      - "12 CFR § 748.1(c)"
-    guidance_alignment:
-      - "NCUA Guidance: Policies"
-    finding_patterns:
-      - "Policies are comprehensive."
-      - "Partial policies."
-      - "No policies."
+- Does the organization have documented 01 Policies And Procedures?
+- Who owns and approves 01 Policies And Procedures (role/title), and when was it last
+  approved?
+- How is 01 Policies And Procedures implemented in day-to-day operations (process
+  + tooling)?
+- What evidence demonstrates 01 Policies And Procedures is operating effectively?
+- How often is 01 Policies And Procedures reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/1. Policies and Procedures.pdf
+__meta__:
+  questions_source: synthesized

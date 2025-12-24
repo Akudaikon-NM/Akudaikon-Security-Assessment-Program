@@ -1,0 +1,186 @@
+title: 18. Logging
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: 'Third-Party Vendor Log Monitoring: Validated?'
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: 'Audit Log Management: Verified?'
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: 'Detailed Logging: Enabled?'
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: 'URL/DNS/Command-Line Logs: Collected?'
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: 'Service Provider Logs: Present?'
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: Have all relevant documents, including logging and monitoring?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: Do these documents clearly define the logging requirements,?
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Does the documentation align with CORE+ requirements for?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Do the policies and procedures reflect current industry standards?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Are contracts or SLAs with third-party vendors responsible for log?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: Do these agreements include specific provisions for monitoring log?
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Are reports or logs from the third-party vendor reviewed regularly?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Are documented procedures in place for how the vendor handles?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Are interviews conducted with vendor representatives and internal?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: Does the enterprise have a defined audit log management process?
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: Does the process specify log retention periods, access controls,?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: Are logs from critical systems reviewed to verify they are managed?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Is the audit log management process regularly reviewed and?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: Does the audit log management process align with regulatory?
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: Is detailed audit logging configured for all assets containing?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Do logs capture key elements such as event source, date,?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Are log samples from sensitive assets reviewed to verify that the?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Do the logs contain sufficient detail to support forensic?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: Are logging tools configured correctly to collect the required?
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Are logs stored securely, and is access restricted to authorized?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Are URL request, DNS query, and command-line audit logs?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Are system configurations reviewed to ensure logging is enabled?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: Are samples of these logs analyzed to ensure relevant data is?
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Do the logs provide sufficient information to identify potential?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Are these logs integrated with the enterprise’s centralized logging?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Are all third-party service providers that generate relevant logs?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Are logs from these providers being collected, where supported?o?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Are samples of service provider logs reviewed to ensure they?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: Are these logs stored and managed according to the enterprise’s?
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Are service providers engaged to confirm secure transmission of?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: Are findings from each validation step documented, including any?
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: Are recommendations for enhancing logging and monitoring?
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: If gaps are identified, is an action plan developed to address them,?
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: Are responsibilities assigned, and deadlines set for implementing?
+  reference: ''
+  evidence_requests: []
+- id: Q-40
+  prompt: Is a comprehensive report prepared detailing the validation?
+  reference: ''
+  evidence_requests: []
+- id: Q-41
+  prompt: Is the report presented to relevant stakeholders for review and?
+  reference: ''
+  evidence_requests: []
+- id: Q-42
+  prompt: Is there a process for continuous monitoring of security logging?
+  reference: ''
+  evidence_requests: []
+- id: Q-43
+  prompt: Are audit log management processes and vendor agreements?
+  reference: ''
+  evidence_requests: []
+- id: Q-44
+  prompt: Are periodic validations scheduled to ensure logging and?
+  reference: ''
+  evidence_requests: []
+- id: Q-45
+  prompt: Are processes updated based on the results of periodic validation?
+  reference: ''
+  evidence_requests: []

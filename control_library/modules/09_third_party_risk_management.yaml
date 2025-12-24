@@ -1,21 +1,17 @@
-module_id: module09
-title: Module 09
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 09_third_party_risk_management
+title: 09 Third Party Risk Management
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 09 Third Party Risk Management?
+- Who owns and approves 09 Third Party Risk Management (role/title), and when was
+  it last approved?
+- How is 09 Third Party Risk Management implemented in day-to-day operations (process
+  + tooling)?
+- What evidence demonstrates 09 Third Party Risk Management is operating effectively?
+- How often is 09 Third Party Risk Management reviewed/updated, and what triggers
+  an update?
+__source_pdf__: docs/source_pdfs/9. Third-Party Risk Management.pdf
+__meta__:
+  questions_source: synthesized

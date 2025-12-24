@@ -1,0 +1,264 @@
+title: 17. Monitoring
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: 'Purpose: Track user logons and authentication attempts to detect potential
+    unauthorized access or insider threats?'
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: What to check:?
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: Successful and failed login attempts?
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: Logins from unusual or unauthorized IP addresses?
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: Failed login attempts followed by a successful login (indicating a potential
+    brute-force attack)?
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: Privileged account logon events?
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: 'Purpose: Track the activity of privileged users (e.g., administrators)
+    to detect potential misuse or unauthorized access?'
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: Privileged user login attempts and activity?
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: Changes to administrative groups (e.g., Domain Admins)?
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: Sensitive command execution or configuration changes?
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: 'Purpose: Detect and track attempts to gain unauthorized access to sensitive
+    systems or data?'
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: Access attempts to restricted systems or files?
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: Multiple failed login attempts followed by a success (possible brute-force)?
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: Unauthorized privilege escalation attempts?
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: 'Purpose: Detect any unauthorized changes to critical files, configurations,
+    or directories?'
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: File changes in sensitive directories (e.g., configuration files, system
+    files)?
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: New file creation in restricted areas?
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: Unauthorized changes to key system configurations?
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: 'Purpose: Identify and monitor any malware-related activity within your
+    environment?'
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: Malware detection alerts (from endpoint detection tools or antivirus solutions)?
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: Execution of suspicious or unauthorized processes?
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: Indicators of compromise (IoCs), such as communication with known malicious
+    IPs or domains?
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: Files dropped by malware or suspicious binaries?
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: 'Purpose: Track successful and failed login attempts, including details
+    about the user, the device, and time of access. Helps identify unauthorized access
+    attempts or suspicious?'
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: Examples:?
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: Failed Login Attempts Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: Successful Logins by User?
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: 'Purpose: Monitor actions performed by privileged users to ensure that only
+    authorized personnel are making changes. Critical for detecting misuse of admin
+    accounts?'
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Privileged Account Usage?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Administrative Changes Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: 'Purpose: Track file changes across critical systems to detect unauthorized
+    modifications, deletions, or creations of sensitive files?'
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: File Access and Changes Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: Configuration File Integrity Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: 'Purpose: Identify suspicious activities, including malware detection, potential
+    exploits, or other cybersecurity threats. These reports help in proactive security
+    management?'
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Malware Detection Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: Intrusion Detection Activity Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: 'Purpose: Meet regulatory requirements by running pre-built compliance reports
+    that align with standards like PCI DSS, HIPAA, SOX, or GDPR?'
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: PCI DSS Compliance Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: HIPAA Compliance Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-40
+  prompt: GDPR Activity Monitoring Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-41
+  prompt: 'Purpose: Track changes to SEM configurations or rule sets. These reports
+    are crucial for maintaining the integrity of SEM andensuring proper change management?'
+  reference: ''
+  evidence_requests: []
+- id: Q-42
+  prompt: SEM Configuration Change Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-43
+  prompt: Audit Log Activity Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-44
+  prompt: 'Purpose: Analyze events that have triggered specific correlation rules.
+    This is useful for identifying patterns and automating incident detection?'
+  reference: ''
+  evidence_requests: []
+- id: Q-45
+  prompt: Event Correlation Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-46
+  prompt: Triggered Alerts Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-47
+  prompt: 'Purpose: Keep track of security-related events on network devices such
+    as routers, switches, and firewalls?'
+  reference: ''
+  evidence_requests: []
+- id: Q-48
+  prompt: Firewall Access and Denied Traffic Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-49
+  prompt: Network Device Security Events Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-50
+  prompt: 'Purpose: Monitor suspicious activity at the endpoint level, such as USB
+    device usage, application activity, or remote desktopactivity?'
+  reference: ''
+  evidence_requests: []
+- id: Q-51
+  prompt: USB Device Usage Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-52
+  prompt: Application Execution Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-53
+  prompt: Remote Desktop Logins Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-54
+  prompt: 'Purpose: Ensure SEM is running optimally by monitoring performance metrics,
+    such as event collection, log storage, and systemhealth?'
+  reference: ''
+  evidence_requests: []
+- id: Q-55
+  prompt: Event Collection Summary?
+  reference: ''
+  evidence_requests: []
+- id: Q-56
+  prompt: SEM Health Monitoring Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-57
+  prompt: 'Purpose: Monitor firewall traffic, VPN access, and policy changes to detect
+    unauthorized access or unusual activity?'
+  reference: ''
+  evidence_requests: []
+- id: Q-58
+  prompt: Firewall Activity Report?
+  reference: ''
+  evidence_requests: []
+- id: Q-59
+  prompt: VPN Access Report?
+  reference: ''
+  evidence_requests: []

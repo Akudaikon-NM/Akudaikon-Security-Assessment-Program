@@ -1,21 +1,221 @@
-module_id: module06
-title: Module 06
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
+module_id: 06_corrective_actions
+title: 06 Corrective Actions
+control_objective: "The scheduled test aims to assess the resilience of critical DNA\
+  \ hosts and improve preparedness for potential disruptions.•\nStrengths of the Proposed\
+  \ Solution\nFocus on Critical Systems:\nTesting DNA hosts ensures that the organization's\
+  \ business continuity plan (BCP) addresses the most critical infrastructure components.o\n\
+  1.\nProactive Approach:\nScheduling an in-depth test demonstrates a commitment to\
+  \ evaluating and improving the organization's BCP.o\n2.\nOpportunity for Improvement:\n\
+  The test provides an opportunity to identify weaknesses in the current BCP and take\
+  \ corrective actions based on findings.o\n3.\nWeaknesses of the Proposed Solution\n\
+  Limited Scope:\nFocusing solely on DNA hosts may not address broader business continuity\
+  \ risks, such as recovery times for non -DNA systems, communication protocols, or\
+  \ employee preparedness.o\n1.\nDelayed Implementation:\nIf the test is not conducted\
+  \ until October, the organization remains exposed to untested scenarios for several\
+  \ months.o\n2.\nLack of Regular Testing:\nConducting a single in-depth test does\
+  \ not meet the FFIEC guideline for regular testing of the BCP, which is typically\
+  \ recommended at least annually or semi-annually.o\n3.\nAbsence of Comprehensive\
+  \ Plan Validation:\nThe proposed test does not explicitly include broader components\
+  \ such as tabletop exercises, communication protocols, or supp ly chain continuity.o\n\
+  4.\nRisk Assessment\nLikelihood of Exploit: Medium\nBusiness disruptions (e.g.,\
+  \ cyberattacks, natural disasters) can occur at any time, leaving the organization\
+  \ unprepared if testing is delayed.o\n•\nImpact: High\nWithout regular and comprehensive\
+  \ testing, gaps in the BCP may go unnoticed, leading to prolonged downtime and operational\
+  \ disruptions.o\n•\nRecommendations\nShort-Term (Before October):\nInterim Testing:\n\
+  Conduct a tabletop exercise or limited-scope simulation for non-DNA components to\
+  \ evaluate broader BCP readiness.o\nFocus on critical areas such as communication\
+  \ protocols, staff roles, and data recovery processes.o\n1.\nDocument and Address\
+  \ Current Gaps:\nReview existing BCP documentation to identify potential weaknesses\
+  \ that do not require in-depth testing to address.o\n2.\nDuring October Testing:\n\
+  Expand Scope:\nInclude additional critical systems beyond DNA hosts to ensure the\
+  \ BCP is tested comprehensively.o\nSimulate real-world scenarios, such as ransomware\
+  \ attacks or power outages, to evaluate preparedness.o\n1.\nEngage Key Stakeholders:\n\
+  Involve representatives from all relevant departments to validate cross-functional\
+  \ readiness.o\n2.\nLong-Term (Post-October):\nSchedule Regular Tests:\nEstablish\
+  \ a schedule for annual or semi-annual business continuity testing that includes\
+  \ full-scale simulations, tabletop exercises, and functional recovery tests.o\n\
+  1.\nReview and Update the BCP:\nIncorporate findings from the October test into\
+  \ the BCP and address identified gaps promptly.o\nEnsure the BCP remains aligned\
+  \ with FFIEC guidelines and evolving organizational needs.o\n2.\nRevised Tracking\
+  \ for Issue 003\n 6. Corrective Actions Page 15 \nRevised Tracking for Issue 0033.\n\
+  Issue \nID\nDescription Severi\nty\nLikelihood \nof Exploit\nImpac\nt\nDate \nIdentified\n\
+  Owner Action Plan Target \nResolution \nDate\nStatus Resolutio\nn Date\nMITRE ATT&CK\
+  \ \nTactics/Techniques\n003 Business continuity testing \nnot conducted regularly\n\
+  High Medium High 2024-12-1\n2\nIT \nOperatio\nns\nConduct October test on DNA hosts;\
+  \ add interim \ntabletop exercises; schedule regular annual \ntests.\n2024-10-31\
+  \ In \nProgres\ns\nT1489 - Service Stop, \nT1490 - Inhibit System \nRecovery\nWhile\
+  \ the scheduled October test is a positive step, relying solely on this event leaves\
+  \ gaps in broader business continuity preparedness. Expanding the test scope to\
+  \ include additional systems and conducting interim exercises before October will\
+  \ help \naddress these gaps. Long-term, establishing a regular testing schedule\
+  \ ensures compliance with FFIEC guidelines and continuous improvement of the BCP.\n\
+  \ 6. Corrective Actions Page 16"
 evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+- "Stmt 6.5: Documentation of Unresolved or Accepted Issues in Risk Assessment — The\
+  \ scheduled test aims to assess the resilience of critical DNA hosts and improve\
+  \ preparedness for potential disruptions.•\nStrengths of the Proposed Solution\n\
+  Focus on Critical Systems:\nTesting DNA hosts ensures that the organization's business\
+  \ continuity plan (BCP) addresses the most critical infrastructure components.o\n\
+  1.\nProactive Approach:\nScheduling an in-depth test demonstrates a commitment to\
+  \ evaluating and improving the organization's BCP.o\n2.\nOpportunity for Improvement:\n\
+  The test provides an opportunity to identify weaknesses in the current BCP and take\
+  \ corrective actions based on findings.o\n3.\nWeaknesses of the Proposed Solution\n\
+  Limited Scope:\nFocusing solely on DNA hosts may not address broader business continuity\
+  \ risks, such as recovery times for non -DNA systems, communication protocols, or\
+  \ employee preparedness.o\n1.\nDelayed Implementation:\nIf the test is not conducted\
+  \ until October, the organization remains exposed to untested scenarios for several\
+  \ months.o\n2.\nLack of Regular Testing:\nConducting a single in-depth test does\
+  \ not meet the FFIEC guideline for regular testing of the BCP, which is typically\
+  \ recommended at least annually or semi-annually.o\n3.\nAbsence of Comprehensive\
+  \ Plan Validation:\nThe proposed test does not explicitly include broader components\
+  \ such as tabletop exercises, communication protocols, or supp ly chain continuity.o\n\
+  4.\nRisk Assessment\nLikelihood of Exploit: Medium\nBusiness disruptions (e.g.,\
+  \ cyberattacks, natural disasters) can occur at any time, leaving the organization\
+  \ unprepared if testing is delayed.o\n•\nImpact: High\nWithout regular and comprehensive\
+  \ testing, gaps in the BCP may go unnoticed, leading to prolonged downtime and operational\
+  \ disruptions.o\n•\nRecommendations\nShort-Term (Before October):\nInterim Testing:\n\
+  Conduct a tabletop exercise or limited-scope simulation for non-DNA components to\
+  \ evaluate broader BCP readiness.o\nFocus on critical areas such as communication\
+  \ protocols, staff roles, and data recovery processes.o\n1.\nDocument and Address\
+  \ Current Gaps:\nReview existing BCP documentation to identify potential weaknesses\
+  \ that do not require in-depth testing to address.o\n2.\nDuring October Testing:\n\
+  Expand Scope:\nInclude additional critical systems beyond DNA hosts to ensure the\
+  \ BCP is tested comprehensively.o\nSimulate real-world scenarios, such as ransomware\
+  \ attacks or power outages, to evaluate preparedness.o\n1.\nEngage Key Stakeholders:\n\
+  Involve representatives from all relevant departments to validate cross-functional\
+  \ readiness.o\n2.\nLong-Term (Post-October):\nSchedule Regular Tests:\nEstablish\
+  \ a schedule for annual or semi-annual business continuity testing that includes\
+  \ full-scale simulations, tabletop exercises, and functional recovery tests.o\n\
+  1.\nReview and Update the BCP:\nIncorporate findings from the October test into\
+  \ the BCP and address identified gaps promptly.o\nEnsure the BCP remains aligned\
+  \ with FFIEC guidelines and evolving organizational needs.o\n2.\nRevised Tracking\
+  \ for Issue 003\n 6. Corrective Actions Page 15 \nRevised Tracking for Issue 0033.\n\
+  Issue \nID\nDescription Severi\nty\nLikelihood \nof Exploit\nImpac\nt\nDate \nIdentified\n\
+  Owner Action Plan Target \nResolution \nDate\nStatus Resolutio\nn Date\nMITRE ATT&CK\
+  \ \nTactics/Techniques\n003 Business continuity testing \nnot conducted regularly\n\
+  High Medium High 2024-12-1\n2\nIT \nOperatio\nns\nConduct October test on DNA hosts;\
+  \ add interim \ntabletop exercises; schedule regular annual \ntests.\n2024-10-31\
+  \ In \nProgres\ns\nT1489 - Service Stop, \nT1490 - Inhibit System \nRecovery\nWhile\
+  \ the scheduled October test is a positive step, relying solely on this event leaves\
+  \ gaps in broader business continuity preparedness. Expanding the test scope to\
+  \ include additional systems and conducting interim exercises before October will\
+  \ help \naddress these gaps. Long-term, establishing a regular testing schedule\
+  \ ensures compliance with FFIEC guidelines and continuous improvement of the BCP.\n\
+  \ 6. Corrective Actions Page 16"
+required_evidence: []
+questions:
+- id: Stmt_6.1
+  prompt: 'Stmt 6.1: A Process for Resolving Identified Issues, Exceptions, and/or
+    Corrective Actions'
+  checks: []
+  evidence: []
+- id: Stmt_6.2
+  prompt: 'Stmt 6.2: Methods for Tracking and Reporting Issues to Resolution'
+  checks: []
+  evidence: []
+- id: Stmt_6.3
+  prompt: 'Stmt 6.3: Number of Current and Historical Events or Issues'
+  checks: []
+  evidence: []
+- id: Stmt_6.4
+  prompt: 'Stmt 6.4: Penetration Testing Program Characteristics'
+  checks: []
+  evidence: []
+- id: Stmt_6.5
+  prompt: 'Stmt 6.5: Documentation of Unresolved or Accepted Issues in Risk Assessment'
+  checks: []
+  evidence: []
+- id: Stmt_6.1
+  prompt: 'Stmt 6.1: A Process for Resolving Identified Issues, Exceptions, and/or
+    Corrective Actions'
+  checks: []
+  evidence: []
+- id: Stmt_6.2
+  prompt: 'Stmt 6.2: Methods for Tracking and Reporting Issues to Resolution'
+  checks: []
+  evidence: []
+- id: Stmt_6.3
+  prompt: 'Stmt 6.3: Number of Current and Historical Events or Issues'
+  checks: []
+  evidence: []
+- id: Stmt_6.4
+  prompt: 'Stmt 6.4: Penetration Testing Program Characteristics'
+  checks: []
+  evidence: []
+- id: Stmt_6.5
+  prompt: 'Stmt 6.5: Documentation of Unresolved or Accepted Issues in Risk Assessment'
+  checks: []
+  evidence: []
+- id: Stmt_6.1
+  prompt: 'Stmt 6.1: A Process for Resolving Identified Issues, Exceptions, and/or
+    Corrective Actions'
+  checks: []
+  evidence: []
+- id: Stmt_6.2
+  prompt: 'Stmt 6.2: Methods for Tracking and Reporting Issues to Resolution'
+  checks: []
+  evidence: []
+- id: Stmt_6.3
+  prompt: 'Stmt 6.3: Number of Current and Historical Events or Issues'
+  checks: []
+  evidence: []
+- id: Stmt_6.4
+  prompt: 'Stmt 6.4: Penetration Testing Program Characteristics'
+  checks: []
+  evidence: []
+- id: Stmt_6.5
+  prompt: 'Stmt 6.5: Documentation of Unresolved or Accepted Issues in Risk Assessment'
+  checks:
+  - "Validate: The scheduled test aims to assess the resilience of critical DNA hosts\
+    \ and improve preparedness for potential disruptions.•\nStrengths of the Proposed\
+    \ Solution\nFocus on Critical Systems:\nTesting DNA hosts ensures that the organization's\
+    \ business continuity plan (BCP) addresses the most critical infrastructure components.o\n\
+    1.\nProactive Approach:\nScheduling an in-depth test demonstrates a commitment\
+    \ to evaluating and improving the organization's BCP.o\n2.\nOpportunity for Improvement:\n\
+    The test provides an opportunity to identify weaknesses in the current BCP and\
+    \ take corrective actions based on findings.o\n3.\nWeaknesses of the Proposed\
+    \ Solution\nLimited Scope:\nFocusing solely on DNA hosts may not address broader\
+    \ business continuity risks, such as recovery times for non -DNA systems, communication\
+    \ protocols, or employee preparedness.o\n1.\nDelayed Implementation:\nIf the test\
+    \ is not conducted until October, the organization remains exposed to untested\
+    \ scenarios for several months.o\n2.\nLack of Regular Testing:\nConducting a single\
+    \ in-depth test does not meet the FFIEC guideline for regular testing of the BCP,\
+    \ which is typically recommended at least annually or semi-annually.o\n3.\nAbsence\
+    \ of Comprehensive Plan Validation:\nThe proposed test does not explicitly include\
+    \ broader components such as tabletop exercises, communication protocols, or supp\
+    \ ly chain continuity.o\n4.\nRisk Assessment\nLikelihood of Exploit: Medium\n\
+    Business disruptions (e.g., cyberattacks, natural disasters) can occur at any\
+    \ time, leaving the organization unprepared if testing is delayed.o\n•\nImpact:\
+    \ High\nWithout regular and comprehensive testing, gaps in the BCP may go unnoticed,\
+    \ leading to prolonged downtime and operational disruptions.o\n•\nRecommendations\n\
+    Short-Term (Before October):\nInterim Testing:\nConduct a tabletop exercise or\
+    \ limited-scope simulation for non-DNA components to evaluate broader BCP readiness.o\n\
+    Focus on critical areas such as communication protocols, staff roles, and data\
+    \ recovery processes.o\n1.\nDocument and Address Current Gaps:\nReview existing\
+    \ BCP documentation to identify potential weaknesses that do not require in-depth\
+    \ testing to address.o\n2.\nDuring October Testing:\nExpand Scope:\nInclude additional\
+    \ critical systems beyond DNA hosts to ensure the BCP is tested comprehensively.o\n\
+    Simulate real-world scenarios, such as ransomware attacks or power outages, to\
+    \ evaluate preparedness.o\n1.\nEngage Key Stakeholders:\nInvolve representatives\
+    \ from all relevant departments to validate cross-functional readiness.o\n2.\n\
+    Long-Term (Post-October):\nSchedule Regular Tests:\nEstablish a schedule for annual\
+    \ or semi-annual business continuity testing that includes full-scale simulations,\
+    \ tabletop exercises, and functional recovery tests.o\n1.\nReview and Update the\
+    \ BCP:\nIncorporate findings from the October test into the BCP and address identified\
+    \ gaps promptly.o\nEnsure the BCP remains aligned with FFIEC guidelines and evolving\
+    \ organizational needs.o\n2.\nRevised Tracking for Issue 003\n 6. Corrective Actions\
+    \ Page 15 \nRevised Tracking for Issue 0033.\nIssue \nID\nDescription Severi\n\
+    ty\nLikelihood \nof Exploit\nImpac\nt\nDate \nIdentified\nOwner Action Plan Target\
+    \ \nResolution \nDate\nStatus Resolutio\nn Date\nMITRE ATT&CK \nTactics/Techniques\n\
+    003 Business continuity testing \nnot conducted regularly\nHigh Medium High 2024-12-1\n\
+    2\nIT \nOperatio\nns\nConduct October test on DNA hosts; add interim \ntabletop\
+    \ exercises; schedule regular annual \ntests.\n2024-10-31 In \nProgres\ns\nT1489\
+    \ - Service Stop, \nT1490 - Inhibit System \nRecovery\nWhile the scheduled October\
+    \ test is a positive step, relying solely on this event leaves gaps in broader\
+    \ business continuity preparedness. Expanding the test scope to include additional\
+    \ systems and conducting interim exercises before October will help \naddress\
+    \ these gaps. Long-term, establishing a regular testing schedule ensures compliance\
+    \ with FFIEC guidelines and continuous improvement of the BCP.\n 6. Corrective\
+    \ Actions Page 16"
+  evidence: []
+__source_pdf__: docs/source_pdfs/6. Corrective Actions.pdf

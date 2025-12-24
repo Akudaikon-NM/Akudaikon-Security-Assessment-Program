@@ -1,21 +1,79 @@
-module_id: module08
-title: Module 08
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 08_incident_response
+title: 08 Incident Response
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_8.1
+  prompt: 'Stmt 8.1: Assessment of the Nature and Scope of an Incident'
+  checks: []
+  evidence: []
+- id: Stmt_8.2
+  prompt: 'Stmt 8.2: Measures to Contain and Control an Incident'
+  checks: []
+  evidence: []
+- id: Stmt_8.3
+  prompt: 'Stmt 8.3: Plans for Identifying Member Information Access or Misuse'
+  checks: []
+  evidence: []
+- id: Stmt_8.4
+  prompt: 'Stmt 8.4: Filing a Timely Suspicious Activity Report (SAR)'
+  checks: []
+  evidence: []
+- id: Stmt_8.5
+  prompt: 'Stmt 8.5: Notification to Regulatory Authorities'
+  checks: []
+  evidence: []
+- id: Stmt_8.6
+  prompt: 'Stmt 8.6: Notification to Law Enforcement'
+  checks: []
+  evidence: []
+- id: Stmt_8.7
+  prompt: 'Stmt 8.7: Member Notification Procedures'
+  checks: []
+  evidence: []
+- id: Stmt_8.8
+  prompt: 'Stmt 8.8: Incident Response Plans Updated for Regulatory Reporting'
+  checks: []
+  evidence: []
+- id: Stmt_8.9
+  prompt: 'Stmt 8.9: Periodic Testing of the Incident Response Plan'
+  checks: []
+  evidence: []
+- id: Stmt_8.10
+  prompt: 'Stmt 8.10: A Response Team with Assigned Roles and Responsibilities'
+  checks: []
+  evidence: []
+- id: Stmt_8.11
+  prompt: 'Stmt 8.11: Incident Response Plans and Capabilities'
+  checks: []
+  evidence: []
+- id: Stmt_8.12
+  prompt: 'Stmt 8.12: Mechanisms for Communicating During Incident Response'
+  checks: []
+  evidence: []
+- id: Stmt_8.13
+  prompt: 'Stmt 8.13: Procedures for Vendor Incidents'
+  checks: []
+  evidence: []
+- id: Stmt_8.14
+  prompt: 'Stmt 8.14: Incident Thresholds'
+  checks: []
+  evidence: []
+- id: Stmt_8.15
+  prompt: 'Stmt 8.15: Data Recovery Practices'
+  checks: []
+  evidence: []
+- id: Stmt_8.16
+  prompt: 'Stmt 8.16: Conducting Routine Incident Response Exercises'
+  checks: []
+  evidence: []
+- id: Stmt_8.17
+  prompt: 'Stmt 8.17: Conducting Post-Incident Reviews'
+  checks: []
+  evidence: []
+- id: Stmt_8.18
+  prompt: 'Stmt 8.18: Tracking Action Items'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/8. Incident Response.pdf

@@ -1,21 +1,14 @@
-module_id: module05
-title: Module 05
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 05_controls_testing
+title: 05 Controls Testing
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented 05 Controls Testing?
+- Who owns and approves 05 Controls Testing (role/title), and when was it last approved?
+- How is 05 Controls Testing implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates 05 Controls Testing is operating effectively?
+- How often is 05 Controls Testing reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/5. Controls Testing.pdf
+__meta__:
+  questions_source: synthesized

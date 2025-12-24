@@ -1,0 +1,384 @@
+title: 14. Network Security
+description: ''
+control_objective: ''
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Q-01
+  prompt: 'Multi-factor authentication (MFA): Enable MFA for all administrative accounts
+    to protect against unauthorized access?'
+  reference: ''
+  evidence_requests: []
+- id: Q-02
+  prompt: 'Role-based access control (RBAC): Assign user roles based on least privilege
+    principles, ensuring that users have only the permissions they need?'
+  reference: ''
+  evidence_requests: []
+- id: Q-03
+  prompt: 'Management Interface Security: Restrict management access to trusted IP
+    addresses and subnets using the Management Interface Settings?'
+  reference: ''
+  evidence_requests: []
+- id: Q-04
+  prompt: 'SSH and HTTPS: Ensure secure management access by enforcing strong encryption
+    standards for SSH and HTTPS?'
+  reference: ''
+  evidence_requests: []
+- id: Q-05
+  prompt: 'Log Storage: Regularly check log storage settings to ensure logs are retained
+    according to compliance requirements?'
+  reference: ''
+  evidence_requests: []
+- id: Q-06
+  prompt: 'Log Redundancy: Configure redundancy for log forwarding to an external
+    log collector or SIEM (Security Information and Event Management) for backup and
+    analysis?'
+  reference: ''
+  evidence_requests: []
+- id: Q-07
+  prompt: 'Log Filtering: Ensure important logs such as threat, traffic, and configuration
+    logs are collected and filtered appropriately?'
+  reference: ''
+  evidence_requests: []
+- id: Q-08
+  prompt: 'Antivirus/Anti-spyware Protection: Enable antivirus, anti-spyware, and
+    vulnerability protection profiles for inbound and outbound traffic?'
+  reference: ''
+  evidence_requests: []
+- id: Q-09
+  prompt: 'URL Filtering: Use URL filtering profiles to block access to malicious
+    or unwanted sites?'
+  reference: ''
+  evidence_requests: []
+- id: Q-10
+  prompt: 'Data Filtering: Enable data filtering to prevent sensitive data leakage?'
+  reference: ''
+  evidence_requests: []
+- id: Q-11
+  prompt: 'Decryption Policies: Configure SSL decryption to inspect encrypted traffic
+    and protect against encrypted threats?'
+  reference: ''
+  evidence_requests: []
+- id: Q-12
+  prompt: 'Application-ID: Enable Application-ID to identify and control traffic at
+    the application level?'
+  reference: ''
+  evidence_requests: []
+- id: Q-13
+  prompt: 'Security Updates: Regularly update threat prevention databases (antivirus,
+    anti-spyware, vulnerability protection) and apply security patches?'
+  reference: ''
+  evidence_requests: []
+- id: Q-14
+  prompt: 'WildFire Analysis: Ensure integration with WildFire for zero-day threat
+    detection and sandboxing?'
+  reference: ''
+  evidence_requests: []
+- id: Q-15
+  prompt: 'DNS Security: Enable DNS Security to prevent domain name system-based attacks
+    like DNS tunneling or command-and-control callbacks?'
+  reference: ''
+  evidence_requests: []
+- id: Q-16
+  prompt: 'Panorama HA (High Availability): Configure Panorama in an HA pair to ensure
+    availability in case of a failure?'
+  reference: ''
+  evidence_requests: []
+- id: Q-17
+  prompt: 'Device Monitoring and Failover: Regularly check device communication to
+    ensure that connected firewalls are being properly managed?'
+  reference: ''
+  evidence_requests: []
+- id: Q-18
+  prompt: 'Backup and Restore: Ensure Panorama configurations are regularly backed
+    up for disaster recovery?'
+  reference: ''
+  evidence_requests: []
+- id: Q-19
+  prompt: 'Interface Management: Ensure management interfaces are only accessible
+    from trusted sources?'
+  reference: ''
+  evidence_requests: []
+- id: Q-20
+  prompt: 'Segmented Network Zones: Use security zones to separate network traffic
+    and apply granular security policies between different network segments?'
+  reference: ''
+  evidence_requests: []
+- id: Q-21
+  prompt: 'Intrazone and Interzone Policies: Apply security policies to control traffic
+    both within and between zones?'
+  reference: ''
+  evidence_requests: []
+- id: Q-22
+  prompt: 'Configuration Audits: Perform regular configuration audits to ensure security
+    settings are compliant with your organization’s security policies?'
+  reference: ''
+  evidence_requests: []
+- id: Q-23
+  prompt: 'Alerts and Notifications: Set up alerts for configuration changes, high-risk
+    vulnerabilities, or abnormal traffic patterns?'
+  reference: ''
+  evidence_requests: []
+- id: Q-24
+  prompt: 'Log Integrity: Ensure logs are protected against tampering by enabling
+    log integrity verification?'
+  reference: ''
+  evidence_requests: []
+- id: Q-25
+  prompt: 'Panorama Software Updates: Regularly check for and apply software updates
+    to Panorama to protect against vulnerabilities and to receive the latest features?'
+  reference: ''
+  evidence_requests: []
+- id: Q-26
+  prompt: 'Content and Threat Updates: Ensure that Panorama and connected firewalls
+    are receiving the latest content updates, including threat signatures, to defend
+    against emerging threats?'
+  reference: ''
+  evidence_requests: []
+- id: Q-27
+  prompt: 'Why: Ensures only authorized users and devices can access the network?'
+  reference: ''
+  evidence_requests: []
+- id: Q-28
+  prompt: 'How: Configure ClearPass to work with RADIUS for 802.1X-based authentication.
+    Integrate with?'
+  reference: ''
+  evidence_requests: []
+- id: Q-29
+  prompt: Steps:?
+  reference: ''
+  evidence_requests: []
+- id: Q-30
+  prompt: Set up RADIUS server settings in ClearPass?
+  reference: ''
+  evidence_requests: []
+- id: Q-31
+  prompt: Configure the Network Access Device (NAD) (e.g., switches, access points)
+    to use ClearPass as a?
+  reference: ''
+  evidence_requests: []
+- id: Q-32
+  prompt: Enable PEAP/MS-CHAPv2 for user authentication and EAP-TLS for certificate-based
+    authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-33
+  prompt: 'Why: Identifies and categorizes devices connecting to the network (e.g.,
+    laptops, smartphones, IoT)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-34
+  prompt: 'How: Use ClearPass Device Insight or ClearPass OnGuard for device profiling
+    and posture checks to?'
+  reference: ''
+  evidence_requests: []
+- id: Q-35
+  prompt: Enable Device Profiling to automatically detect and classify devices based
+    on their attributes?
+  reference: ''
+  evidence_requests: []
+- id: Q-36
+  prompt: Enforce Posture Assessment policies to check the device’s health, such as
+    anti-virus status,?
+  reference: ''
+  evidence_requests: []
+- id: Q-37
+  prompt: 'Why: Restricts user/device access based on roles (e.g., employee, guest,
+    contractor, IoT)?'
+  reference: ''
+  evidence_requests: []
+- id: Q-38
+  prompt: 'How: Create role-based policies in ClearPass to assign different access
+    levels based on user?'
+  reference: ''
+  evidence_requests: []
+- id: Q-39
+  prompt: Define roles for different users/devices (e.g., Guest, Staff, Contractor,
+    IoT)?
+  reference: ''
+  evidence_requests: []
+- id: Q-40
+  prompt: Assign VLANs, ACLs, or Firewall policies based on the role?
+  reference: ''
+  evidence_requests: []
+- id: Q-41
+  prompt: Configure Enforcement Policies to dynamically assign roles based on attributes
+    such as AD group?
+  reference: ''
+  evidence_requests: []
+- id: Q-42
+  prompt: 'Why: Provides secure, limited access for guests?'
+  reference: ''
+  evidence_requests: []
+- id: Q-43
+  prompt: 'How: Use ClearPass Guest to create captive portals for guest users, and
+    control guest access via?'
+  reference: ''
+  evidence_requests: []
+- id: Q-44
+  prompt: Configure a Captive Portal for guest authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-45
+  prompt: Use self-registration, sponsor approval, or social login for guest access?
+  reference: ''
+  evidence_requests: []
+- id: Q-46
+  prompt: Apply rate limits, time limits, and VLAN isolation for guests?
+  reference: ''
+  evidence_requests: []
+- id: Q-47
+  prompt: 'Why: Increases security by using certificates instead of passwords?'
+  reference: ''
+  evidence_requests: []
+- id: Q-48
+  prompt: 'How: Use ClearPass Policy Manager to manage and enforce EAP-TLS authentication
+    for corporate?'
+  reference: ''
+  evidence_requests: []
+- id: Q-49
+  prompt: Deploy a PKI infrastructure and distribute certificates to trusted devices?
+  reference: ''
+  evidence_requests: []
+- id: Q-50
+  prompt: Set up ClearPass to authenticate devices using EAP-TLS for certificate-based
+    authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-51
+  prompt: Enforce certificate checks on devices before granting network access?
+  reference: ''
+  evidence_requests: []
+- id: Q-52
+  prompt: 'Why: Limits lateral movement of threats by isolating different segments
+    of the network?'
+  reference: ''
+  evidence_requests: []
+- id: Q-53
+  prompt: 'How: Leverage ClearPass to dynamically assign users and devices to specific
+    VLANs or apply?'
+  reference: ''
+  evidence_requests: []
+- id: Q-54
+  prompt: Implement VLAN assignment policies based on role or device type?
+  reference: ''
+  evidence_requests: []
+- id: Q-55
+  prompt: Use Aruba Dynamic Segmentation to apply different security profiles based
+    on ClearPass?
+  reference: ''
+  evidence_requests: []
+- id: Q-56
+  prompt: 'Why: Ensures continuous visibility and monitoring for abnormal behavior
+    or policy violations?'
+  reference: ''
+  evidence_requests: []
+- id: Q-57
+  prompt: 'How: Integrate ClearPass with Aruba Central, SIEM systems, and Syslog servers
+    for centralized?'
+  reference: ''
+  evidence_requests: []
+- id: Q-58
+  prompt: Configure ClearPass Insight for visibility into authentication and device
+    activity?
+  reference: ''
+  evidence_requests: []
+- id: Q-59
+  prompt: Set up logging to a centralized system for analysis and correlation?
+  reference: ''
+  evidence_requests: []
+- id: Q-60
+  prompt: Enable alerts for anomalous behavior such as repeated failed login attempts?
+  reference: ''
+  evidence_requests: []
+- id: Q-61
+  prompt: 'Why: Expands ClearPass functionality through integration with third-party
+    security solutions (e.g.,?'
+  reference: ''
+  evidence_requests: []
+- id: Q-62
+  prompt: 'How: Use ClearPass Exchange to integrate with security tools like firewalls,
+    SIEM, or EDR solutions,?'
+  reference: ''
+  evidence_requests: []
+- id: Q-63
+  prompt: Use ClearPass REST APIs or Syslog to integrate with other network and security
+    devices?
+  reference: ''
+  evidence_requests: []
+- id: Q-64
+  prompt: Implement real-time threat response workflows that revoke or limit network
+    access when threats?
+  reference: ''
+  evidence_requests: []
+- id: Q-65
+  prompt: 'Why: Ensure ClearPass is always up-to-date with the latest security patches?'
+  reference: ''
+  evidence_requests: []
+- id: Q-66
+  prompt: 'How: Regularly update ClearPass software to patch known vulnerabilities
+    and improve security?'
+  reference: ''
+  evidence_requests: []
+- id: Q-67
+  prompt: Subscribe to Aruba’s security advisories?
+  reference: ''
+  evidence_requests: []
+- id: Q-68
+  prompt: Implement a patch management process to regularly update ClearPass and the
+    underlying?
+  reference: ''
+  evidence_requests: []
+- id: Q-69
+  prompt: 'Why: Provides an extra layer of protection against unauthorized access?'
+  reference: ''
+  evidence_requests: []
+- id: Q-70
+  prompt: 'How: Integrate ClearPass with an MFA provider for two-factor authentication
+    during network login?'
+  reference: ''
+  evidence_requests: []
+- id: Q-71
+  prompt: Use ClearPass Policy Manager to enforce MFA for sensitive areas or privileged
+    users?
+  reference: ''
+  evidence_requests: []
+- id: Q-72
+  prompt: Implement SMS, email, or TOTP-based second-factor authentication for high-risk
+    accounts?
+  reference: ''
+  evidence_requests: []
+- id: Q-73
+  prompt: Use 802.1X for secure, identity-based authentication?
+  reference: ''
+  evidence_requests: []
+- id: Q-74
+  prompt: Deploy device profiling and posture assessments to evaluate connected devices?
+  reference: ''
+  evidence_requests: []
+- id: Q-75
+  prompt: Implement role-based access control (RBAC) for granular policy enforcement?
+  reference: ''
+  evidence_requests: []
+- id: Q-76
+  prompt: Leverage ClearPass Guest for secure guest access?
+  reference: ''
+  evidence_requests: []
+- id: Q-77
+  prompt: Enable certificate-based authentication (EAP-TLS) for higher security?
+  reference: ''
+  evidence_requests: []
+- id: Q-78
+  prompt: Use network segmentation to limit lateral?
+  reference: ''
+  evidence_requests: []
+- id: Q-79
+  prompt: 'Why: Ensures that all users and devices must authenticate before accessing
+    the network?'
+  reference: ''
+  evidence_requests: []
+- id: Q-80
+  prompt: 'How: Use ClearPass Policy Manager and RADIUS to enforce 802.1X for authentication
+    across wired,?'
+  reference: ''
+  evidence_requests: []

@@ -1,0 +1,14 @@
+module_id: questionnaire
+title: Questionnaire
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- Does the organization have documented Questionnaire?
+- Who owns and approves Questionnaire (role/title), and when was it last approved?
+- How is Questionnaire implemented in day-to-day operations (process + tooling)?
+- What evidence demonstrates Questionnaire is operating effectively?
+- How often is Questionnaire reviewed/updated, and what triggers an update?
+__source_pdf__: docs/source_pdfs/Questionnaire.pdf
+__meta__:
+  questions_source: synthesized

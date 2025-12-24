@@ -1,21 +1,55 @@
-module_id: module15
-title: Module 15
-
-primary_requirements:
-  - Placeholder requirement
-
-guidance_alignment:
-  - Placeholder guidance
-
-control_objective: Placeholder objective
-
-evaluation_criteria:
-  - Placeholder criteria
-
-required_evidence:
-  - Placeholder evidence
-
-finding_templates:
-  positive: Positive finding
-  partial: Partial finding
-  negative: Negative finding
+module_id: 15_data_leak_protection
+title: 15 Data Leak Protection
+control_objective: Objective extracted from PDF statements.
+evaluation_criteria: []
+required_evidence: []
+questions:
+- id: Stmt_15.1
+  prompt: 'Stmt 15.1: Fully Supported Browsers and Email Clients'
+  checks: []
+  evidence: []
+- id: Stmt_15.2
+  prompt: 'Stmt 15.2: Web Content Filtering'
+  checks: []
+  evidence: []
+- id: Stmt_15.3
+  prompt: 'Stmt 15.3: Email Server Anti-Malware Protections'
+  checks: []
+  evidence: []
+- id: Stmt_15.4
+  prompt: 'Stmt 15.4: Blocking Unnecessary File Types'
+  checks: []
+  evidence: []
+- id: Stmt_15.5
+  prompt: 'Stmt 15.5: Secure File Exchange Methods'
+  checks: []
+  evidence: []
+- id: Stmt_15.6
+  prompt: 'Stmt 15.6: Restrictions on Removable Media'
+  checks: []
+  evidence: []
+- id: Stmt_15.7
+  prompt: 'Stmt 15.7: Trusted File Storage on Third-Party Servers'
+  checks: []
+  evidence: []
+- id: Stmt_15.8
+  prompt: 'Stmt 15.8: Trusted Network for File Transfers'
+  checks: []
+  evidence: []
+- id: Stmt_15.9
+  prompt: 'Stmt 15.9: Approved and Secure File Exchange Methods'
+  checks: []
+  evidence: []
+- id: Stmt_15.10
+  prompt: 'Stmt 15.10: Cloud Access Security Brokers (CASBs)'
+  checks: []
+  evidence: []
+- id: Stmt_15.11
+  prompt: 'Stmt 15.11: Screening Outbound Email for PII'
+  checks: []
+  evidence: []
+- id: Stmt_15.12
+  prompt: 'Stmt 15.12: Web Filter for File Sharing Sites and Web-Based Email'
+  checks: []
+  evidence: []
+__source_pdf__: docs/source_pdfs/15. Data Leak Protection.pdf
