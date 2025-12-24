@@ -5,7 +5,7 @@ Module loader for runner.
 import yaml
 from pathlib import Path
 
-REQUIRED_KEYS = ["module_id", "title", "control_objective", "evaluation_criteria", "required_evidence"]
+REQUIRED_KEYS = ["title", "control_objective", "evaluation_criteria", "required_evidence"]
 
 BASE_PATH = Path(__file__).resolve().parents[2] / "control_library" / "modules"
 
@@ -32,6 +32,9 @@ def load_module(module_filename_stem: str, strict: bool = False):
     # helpful metadata
     module_data["__file__"] = str(path)
     module_data["__stem__"] = module_filename_stem
+    # Optional module_id: default to filename stem for stability
+    if "module_id" not in module_data:
+        module_data["module_id"] = module_filename_stem
 
     return module_data
 
