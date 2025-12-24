@@ -1,0 +1,30 @@
+title: "Risk Assessment"
+description: "Regular risk assessments."
+control_objective: >
+  Regular risk assessments must be conducted to identify, evaluate, and prioritize information security risks, enabling the credit union to implement appropriate safeguards and mitigate potential threats effectively.
+
+evaluation_criteria:
+  - Risk assessments are conducted at least annually
+  - All critical systems and data are included
+  - Threats and vulnerabilities are identified
+  - Risk mitigation strategies are documented
+
+required_evidence:
+  - Risk assessment reports
+  - Threat analysis documentation
+  - Vulnerability scan results
+  - Risk mitigation plans
+
+questions:
+  - id: "ra1"
+    prompt: "Are risk assessments conducted regularly?"
+    evidence_requests:
+      - "Risk assessment reports."
+    primary_citations:
+      - "GLBA Safeguards Rule"
+    guidance_alignment:
+      - "NCUA Guidance: Risk Management"
+    finding_patterns:
+      - "Regular assessments."
+      - "Irregular."
+      - "None."

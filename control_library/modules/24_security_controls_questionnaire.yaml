@@ -1,0 +1,22 @@
+module_id: module23
+title: Module 23
+source_pdf: 24_questionnaire_security_controls.pdf
+
+primary_requirements:
+  - Placeholder requirement
+
+guidance_alignment:
+  - Placeholder guidance
+
+control_objective: Placeholder objective
+
+evaluation_criteria:
+  - Placeholder criteria
+
+required_evidence:
+  - Placeholder evidence
+
+finding_templates:
+  positive: Positive finding
+  partial: Partial finding
+  negative: Negative finding

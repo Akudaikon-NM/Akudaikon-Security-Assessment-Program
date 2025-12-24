@@ -1,0 +1,45 @@
+module_id: governance
+title: Governance and Board Oversight
+
+primary_requirements:
+  - GLBA 501(b)
+  - 12 CFR 748.0(b)(2)
+  - 12 CFR 748.1(a)
+
+guidance_alignment:
+  - NCUA Information Security Guidance (formerly Appendix A)
+
+control_objective: >
+  The credit union maintains effective governance and board oversight
+  over the information security program.
+
+evaluation_criteria:
+  - The board has approved the written security program
+  - Management provides periodic security reporting to the board
+  - The program is reviewed and updated at least annually
+  - Roles and responsibilities are clearly defined
+
+required_evidence:
+  - Board minutes
+  - Information Security Program document
+  - Annual security report to the board
+  - Risk assessment summary
+
+finding_templates:
+  positive: >
+    The credit union demonstrates effective governance and oversight
+    of its information security program. The board approves the security
+    program and receives regular updates from management, ensuring
+    alignment with regulatory requirements under 12 CFR 748.0(b)(2).
+  partial: >
+    The credit union has established some governance structures for
+    information security, but gaps exist in board oversight or periodic
+    reviews. Management should strengthen reporting and approval processes
+    to fully meet 12 CFR 748.0(b)(2) requirements.
+  negative: >
+    The credit union has not demonstrated effective governance and
+    oversight of its information security program as required under
+    12 CFR 748.0(b)(2). Management did not provide sufficient evidence
+    that the board reviews and approves the program on a periodic basis,
+    increasing the risk that security controls may not be aligned with
+    identified risks.

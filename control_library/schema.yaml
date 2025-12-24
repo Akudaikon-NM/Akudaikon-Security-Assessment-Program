@@ -1,0 +1,19 @@
+# Schema for control modules
+# Required fields for each module YAML
+
+module_schema:
+  module_id: string  # Unique module identifier
+  title: string  # Module title
+  primary_requirements:  # List of enforceable requirements
+    - string
+  guidance_alignment:  # List of guidance references
+    - string
+  control_objective: string  # What must exist
+  evaluation_criteria:  # List of how adequacy is determined
+    - string
+  required_evidence:  # List of evidence needed
+    - string
+  finding_templates:  # Templates for positive/partial/negative
+    positive: string
+    partial: string
+    negative: string

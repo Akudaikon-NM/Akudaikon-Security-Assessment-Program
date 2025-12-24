@@ -1,0 +1,30 @@
+title: "Policies and Procedures"
+description: "Written policies and procedures for information security."
+control_objective: >
+  Comprehensive written policies and procedures must exist to establish a foundation for information security governance and ensure consistent implementation of security controls across the credit union.
+
+evaluation_criteria:
+  - Policies cover all required security areas
+  - Procedures are documented and accessible
+  - Policies are reviewed and approved by management
+  - Procedures are updated as needed
+
+required_evidence:
+  - Information Security Policy document
+  - Security procedures manual
+  - Policy approval records
+  - Procedure update logs
+
+questions:
+  - id: "pp1"
+    prompt: "Are there written policies and procedures for information security?"
+    evidence_requests:
+      - "Policy documents."
+    primary_citations:
+      - "12 CFR § 748.1(c)"
+    guidance_alignment:
+      - "NCUA Guidance: Policies"
+    finding_patterns:
+      - "Policies are comprehensive."
+      - "Partial policies."
+      - "No policies."

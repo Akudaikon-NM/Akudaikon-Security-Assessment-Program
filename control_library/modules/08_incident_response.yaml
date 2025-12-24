@@ -1,0 +1,21 @@
+module_id: module08
+title: Module 08
+
+primary_requirements:
+  - Placeholder requirement
+
+guidance_alignment:
+  - Placeholder guidance
+
+control_objective: Placeholder objective
+
+evaluation_criteria:
+  - Placeholder criteria
+
+required_evidence:
+  - Placeholder evidence
+
+finding_templates:
+  positive: Positive finding
+  partial: Partial finding
+  negative: Negative finding
