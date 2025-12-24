@@ -10,3 +10,6 @@ __pycache__/
 
 # Streamlit
 .streamlit/
+__pycache__/
+*.py[cod]
+.venv/
