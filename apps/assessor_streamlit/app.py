@@ -147,8 +147,12 @@ def render_assessor_mode():
             st.text_area("Report", report, height=400)
         return
 
-    responses = {}
-    notes = {}
+    responses[qid] = {
+    "response": selected_value,      # "Yes" / "Partial" / "No" / "N/A"
+    "explanation": explanation_text, # optional
+    "evidence": evidence_text,       # optional
+}
+
 
     with st.form(key=f"assess_form_{module_stem}"):
         for i, q in enumerate(questions, start=1):
