@@ -170,10 +170,27 @@ def render_assessor_mode():
         submitted = st.form_submit_button("Assess")
 
     if submitted:
-        assessment_input = {"responses": responses, "notes": notes}
-        scorecard = generate_scorecard(module, assessment_input)
-        findings = generate_findings(module, scorecard)
-        report = generate_report(scorecard, findings)
+    # Ensure every response entry is in the {"response": "..."} dict format
+    normalized_responses = {}
+    for qid, item in (responses or {}).items():
+        if isinstance(item, dict):
+            # If your UI stored the response under some other key, map it here:
+            if "response" not in item and "answer" in item:
+                item["response"] = item.get("answer")
+            normalized_responses[qid] = item
+        else:
+            # If the UI stored a raw string, wrap it
+            normalized_responses[qid] = {"response": item}
+
+    assessment_input = {
+        "responses": normalized_responses,
+        "notes": notes,
+    }
+
+    scorecard = generate_scorecard(module, assessment_input)
+
+    # ... rest of your code
+
 
         st.success("Assessment generated.")
         st.text_area("Assessment Report", report, height=450)
