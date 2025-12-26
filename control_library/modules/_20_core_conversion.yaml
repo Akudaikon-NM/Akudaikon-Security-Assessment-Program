@@ -1,0 +1,176 @@
+module_id: CCV-19
+title: Core Conversion Management
+section_name: Core Banking System Conversion and Implementation
+regulatory_anchor: "Appendix A to Part 748, Title 12, Sections III(A), III(C), III(D), III(E)"
+
+control_category: System Development and Change Management
+control_objective: >
+  Ensure that core system conversions are managed through a formal project lifecycle that includes
+  comprehensive planning, third-party oversight, testing, data assurance, training, and a robust
+  contingency strategy to minimize operational, financial, and compliance risk.
+
+description: >
+  This control requires a formal project plan, governance structure, and oversight for all core system
+  conversions. Critical elements include data integrity validation, comprehensive testing, vendor readiness
+  assessment, a Go/No-Go decision gate, and a detailed conversion rollback strategy.
+
+key_entities:
+  - Core Conversion Project Plan
+  - Data Integrity Validation Reports
+  - Go/No-Go Decision Authority
+  - Conversion Rollback Strategy
+  - Project Steering Committee
+
+domain_id: GOVERN
+domain_name: Govern
+domain_weight: 0.20
+
+primary_requirements:
+  - "A formal, approved project plan and governance structure exists for the conversion."
+  - "Comprehensive testing (UAT, security, performance) and staff training are completed and documented."
+  - "Vendor readiness and controls are assessed prior to conversion."
+  - "Formal data integrity validation is performed to confirm data accuracy and completeness."
+  - "A formal Go/No-Go decision process is executed and approved before cutover."
+  - "A documented conversion failure and rollback strategy exists and is approved."
+  - "Post-conversion issues are formally tracked and resolved."
+  - "Post-implementation review and outcomes are reported to management/Board."
+
+evaluation_criteria:
+  - criterion_id: CCV-01
+    description: "A formal, documented project plan and governance structure exists for the conversion defining scope, timelines, roles, and milestones, and is approved by senior management or the Board (GOV-01 linkage)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Formal core conversion project plan and approval records"
+      - "Project governance charter or structure"
+    regulatory_reference: "Appendix A III(A)(1), III(C)(1)"
+
+  - criterion_id: CCV-02
+    description: "Comprehensive testing (UAT, security, performance) and adequate staff training plans are developed, executed, and documented prior to conversion."
+    scoring_weight: 4
+    expected_evidence:
+      - "UAT scripts, sign-off records, and security testing results"
+      - "Training plans, materials, and completion logs"
+    regulatory_reference: "Appendix A III(D), III(B)(4)"
+
+  - criterion_id: CCV-03
+    description: "The conversion vendor's controls and readiness are assessed through formal due diligence, contract review, and oversight procedures (TP-09 linkage)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Vendor due diligence reports (e.g., SOC reports)"
+      - "Contract review documentation and vendor readiness sign-offs"
+    regulatory_reference: "Appendix A III(F)"
+
+  - criterion_id: CCV-04
+    description: "Formal data integrity validation procedures are performed and documented, comparing pre-conversion and post-conversion data to confirm accuracy and completeness (DG-18 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Data integrity validation procedures"
+      - "Pre- and post-conversion reconciliation reports (e.g., control totals, record counts)"
+      - "Management sign-off on validation results"
+    regulatory_reference: "Appendix A III(A)(3), III(D)"
+
+  - criterion_id: CCV-05
+    description: "A formal Go/No-Go decision is documented and approved by key stakeholders (including Board/Senior Management, IT, and Business Owner) immediately prior to system cutover."
+    scoring_weight: 5
+    expected_evidence:
+      - "Go/No-Go decision document with stakeholder approvals"
+      - "Pre-cutover readiness checklist"
+    regulatory_reference: "Appendix A III(C)(1), III(A)(3)"
+
+  - criterion_id: CCV-06
+    description: "A documented conversion failure and rollback strategy exists, including defined trigger points, decision authority, resource allocation, and communication procedures (BCP-22 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Conversion rollback or fallback plan"
+      - "Defined trigger thresholds and resource/staffing plan for rollback"
+    regulatory_reference: "Appendix A III(E), III(A)(3)"
+
+  - criterion_id: CCV-07
+    description: "Post-conversion issue management is formally defined, implemented, and tracked to resolution, with regular reporting provided to management (ACT-06 linkage)."
+    scoring_weight: 3
+    expected_evidence:
+      - "Post-conversion issue tracking log (with prioritization/status)"
+      - "Issue resolution documentation and management reporting"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: CCV-08
+    description: "A final compliance and post-implementation review is completed, including lessons learned, and reported to senior management and/or the board (GOV-01 linkage)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Post-implementation review and lessons learned documentation"
+      - "Management or board reporting on conversion outcomes and findings"
+    regulatory_reference: "Appendix A III(C)(1), III(D)"
+
+required_evidence:
+  - "Core conversion project plan and approvals."
+  - "UAT, security testing, performance testing, and training completion records."
+  - "Vendor due diligence and readiness documentation."
+  - "Formal Data Integrity Validation and Reconciliation Reports (pre- and post-conversion)."
+  - "Go/No-Go Decision Document with stakeholder approvals."
+  - "Conversion Rollback or Fallback Strategy (plan and triggers)."
+  - "Post-conversion issue tracking logs and resolution records."
+  - "Post-implementation review report and Board/Management communication."
+
+questions:
+  - id: CCV-19-Q1
+    prompt: "Is there a Board or management approved project plan and governance structure for the core conversion?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(A)(1), III(C)(1)"
+    evidence_requests:
+      - "Core conversion project plan and approvals"
+
+  - id: CCV-19-Q2
+    prompt: "Are comprehensive testing (UAT, security) and staff training completed and documented before conversion?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(D), III(B)(4)"
+    evidence_requests:
+      - "UAT, security testing, and training records"
+
+  - id: CCV-19-Q3
+    prompt: "Are formal data integrity validation and reconciliation performed pre- and post-conversion (CCV-04 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(A)(3), III(D)"
+    evidence_requests:
+      - "Data Integrity Validation and Reconciliation Reports"
+
+  - id: CCV-19-Q4
+    prompt: "Is there a documented Go/No-Go decision approved by key stakeholders before cutover (CCV-05 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1), III(A)(3)"
+    evidence_requests:
+      - "Go/No-Go Decision Document with stakeholder approvals"
+
+  - id: CCV-19-Q5
+    prompt: "Does a documented rollback strategy exist with defined trigger points, decision authority, and resource plans (CCV-06 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(E), III(A)(3)"
+    evidence_requests:
+      - "Conversion Rollback or Fallback Strategy"
+
+  - id: CCV-19-Q6
+    prompt: "Was a post-implementation review completed, and were the outcomes and lessons learned reported to management or the Board (CCV-08 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1), III(D)"
+    evidence_requests:
+      - "Post-implementation review report and management/Board communication"
+
+finding_templates:
+  positive: >
+    The institution demonstrates strong Core Conversion Management through a formal project lifecycle, comprehensive planning, testing, and vendor oversight. The conversion process includes the critical controls of formal data integrity validation (CCV-04), a Go/No-Go decision gate (CCV-05), and a documented rollback strategy (CCV-06), minimizing operational risk and ensuring data accuracy in alignment with Appendix A requirements.
+  partial: >
+    The Core Conversion Management process exists but lacks one or more critical control components. Deficiencies may include missing formal data integrity reconciliation, an undocumented Go/No-Go decision gate, or an untested/incomplete rollback strategy (CCV-04, CCV-05, or CCV-06), increasing operational risk.
+  negative: >
+    The core conversion management process is materially deficient. Critical controls for data assurance and contingency planning (CCV-04, CCV-05, CCV-06) were not implemented or documented, severely increasing operational and financial risk and resulting in non-compliance with Appendix A requirements.
+
+scoring_logic:
+  response_weights:
+    Yes: 1.0
+    Partial: 0.5
+    No: 0.0
+    N/A: null
+  mapping:
+    pass_threshold: 0.85
+    partial_threshold: 0.60
+
+version: "1.0"
+status: "demo"

@@ -1,20 +1,73 @@
-
-# Python
+# Data files (but allow sample/fixture data)
+# ================================
+# Python / build artifacts
+# ================================
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
 
-# Virtualenv
-.venv/
+# ================================
+# Testing
+# ================================
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/
+*.cover
 
-# Streamlit
-.streamlit/
-__pycache__/
-*.py[cod]
+# ================================
+# Virtual environments
+# ================================
 .venv/
-__pycache__/
-*.pyc
+venv/
+
+# ================================
+# Secrets & credentials
+# ================================
+.env
+.env.*
+.envrc
+*.pem
+*.key
+credentials.json
+secrets.yaml
+.streamlit/secrets.toml
+
+# ================================
+# OS / IDE
+# ================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.code-workspace
+
+# ================================
+# Streamlit cache/artifacts
+# ================================
+.streamlit/cache/
+.streamlit/artifacts/
+
+# ================================
+# Data / outputs (ignore bulk, keep curated lookup)
+# ================================
+output/
+logs/
+*.parquet
+*.xlsx
+*.pkl
+*.tmp
+
+# If you store big/raw data locally:
+data/raw/
+datasets/
+
+# Keep the small lookup your app needs
+!data/veris_to_cis_lookup.csv
+!data/README.md
 .venv/
-outputs/
-docs/source_pdfs_placeholders/

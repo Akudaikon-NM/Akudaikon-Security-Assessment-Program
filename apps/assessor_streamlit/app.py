@@ -61,7 +61,10 @@ st.write(module.get("control_objective", "⚠️ control_objective missing in YA
 
 st.markdown("### Evaluation Criteria")
 for crit in module.get("evaluation_criteria", []):
-    st.write(f"- {crit}")
+    if isinstance(crit, dict):
+        st.write(f"- **{crit.get('criterion_id','')}**: {crit.get('description','')}")
+    else:
+        st.write(f"- {crit}")
 
 st.markdown("### Required Evidence")
 for ev in module.get("required_evidence", []):

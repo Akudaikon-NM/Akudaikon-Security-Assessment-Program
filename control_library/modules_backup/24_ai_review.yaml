@@ -1,0 +1,187 @@
+module_id: AI-22
+title: Artificial Intelligence (AI) Governance, Risk, and Compliance
+section_name: AI Governance and Oversight
+regulatory_anchor: "12 CFR 748.0; 12 CFR 748.1; Appendix A to Part 748 (Sections II, III(A)–III(E)); Appendix B to Part 748; GLBA (12 CFR Part 1016); Regulation B (12 CFR Part 1002)"
+
+control_category: Emerging Technology Governance
+control_objective: >
+  Ensure the institution establishes a comprehensive governance, risk management, and compliance
+  framework for the use of artificial intelligence (AI) that safeguards member information, ensures
+  ethical and explainable outcomes, complies with applicable regulations, and maintains effective board
+  and management oversight.
+
+description: >
+  This control requires a formal AI governance framework defining acceptable use, risk assessment,
+  oversight, model validation, and continuous monitoring throughout the AI lifecycle. It focuses on
+  mitigating specific risks related to data privacy, cybersecurity, bias, and regulatory compliance,
+  especially regarding fair lending (Regulation B).
+
+key_entities:
+  - AI Usage Policy and Framework
+  - AI Risk Assessment
+  - AI Oversight Committee / Governance Structure
+  - AI Models and Validation Reports
+  - Training and Ethical Use Programs
+
+domain_id: GOVERN
+domain_name: Govern
+domain_weight: 0.20
+
+primary_requirements:
+  - "A formal, approved AI Usage Policy is in place (GOV-01 linkage)."
+  - "An inventory of all AI tools and applications is maintained."
+  - "AI-specific risk assessments are conducted for bias, data privacy, and compliance risks (RM-03 linkage)."
+  - "AI governance roles are defined, supported by an AI Oversight Committee."
+  - "Data used by AI systems is protected via encryption, anonymization, and access controls (DP-17 linkage)."
+  - "AI models are designed for transparency, explainability, and undergo validation/continuous monitoring (MRM linkage)."
+  - "AI systems are included in cybersecurity controls (IR-14 linkage) and compliance audits (IA-21 linkage)."
+
+evaluation_criteria:
+  - criterion_id: AI-01
+    description: "A formal AI usage policy exists that defines acceptable uses, prohibited uses, scope, and risk considerations, and is approved by management or the board."
+    scoring_weight: 5
+    expected_evidence:
+      - "AI usage policy document"
+      - "Policy approval records (Management/Board)"
+    regulatory_reference: "12 CFR 748.0; Appendix A II(A), III(A)"
+
+  - criterion_id: AI-02
+    description: "An inventory of all AI tools and applications in use or planned for use is maintained, including their function, data usage, and risk tier, and is reviewed periodically."
+    scoring_weight: 4
+    expected_evidence:
+      - "AI tool inventory (e.g., spreadsheet, GRC module)"
+      - "Periodic review/update records"
+    regulatory_reference: "Appendix A III(A)(1)"
+
+  - criterion_id: AI-03
+    description: "A documented AI-specific risk assessment identifies, ranks, and mitigates risks related to data privacy, cybersecurity, bias, operational integrity, and legal compliance (e.g., Regulation B Fair Lending)."
+    scoring_weight: 5
+    expected_evidence:
+      - "AI risk assessment documentation"
+      - "Risk ranking and mitigation plans for identified risks (e.g., model drift, bias)"
+    regulatory_reference: "Appendix A III(B)"
+
+  - criterion_id: AI-04
+    description: "Roles, responsibilities, and governance structures for AI oversight are defined, including an AI Oversight Committee with a formal charter and scheduled meeting minutes."
+    scoring_weight: 4
+    expected_evidence:
+      - "AI Governance charter and RACI documentation"
+      - "AI Oversight Committee membership and meeting minutes"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: AI-05
+    description: "Controls are implemented to protect data used by AI systems, including access controls, anonymization or masking, encryption, and continuous monitoring (DP-17 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Data protection standards and controls for AI training/inference data"
+      - "Access control configurations (RBAC) and monitoring logs"
+    regulatory_reference: "Appendix A III(C)(1), III(C)(3); GLBA"
+
+  - criterion_id: AI-06
+    description: "AI models are designed to be transparent and explainable, with documentation of model logic, parameters, training data, and member impact explanations where applicable (Regulation B compliant notices)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Model documentation/design documents"
+      - "Explainability artifacts (SHAP, LIME) or adverse action notices (Regulation B 1002.9)"
+    regulatory_reference: "Appendix A III(B); Regulation B 1002.9"
+
+  - criterion_id: AI-07
+    description: "AI models undergo pre-deployment validation and continuous monitoring for accuracy, bias, drift, and performance, with a defined schedule for periodic revalidation."
+    scoring_weight: 5
+    expected_evidence:
+      - "Model validation reports (pre-deployment sign-off)"
+      - "Monitoring dashboards and alerts for model drift or bias detection"
+      - "Revalidation schedules and reports"
+    regulatory_reference: "Appendix A III(B), III(C)(1)"
+
+  - criterion_id: AI-08
+    description: "Cybersecurity controls specific to AI systems are implemented, including vulnerability assessments, MFA, RBAC, and AI-specific incident response procedures (IR-14 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Cybersecurity assessment reports for AI infrastructure"
+      - "Incident response plans detailing AI-related incident handling"
+    regulatory_reference: "Appendix A III(C)(2), III(E)"
+
+  - criterion_id: AI-09
+    description: "AI activities and compliance status are formally included in internal compliance reviews and audit plans, with results reported to management and the board (IA-21 linkage)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Audit reports covering AI systems and governance"
+      - "Compliance review findings and board reporting packages"
+    regulatory_reference: "Appendix A III(C)(1); Appendix B II(C)"
+
+  - criterion_id: AI-10
+    description: "Training programs exist to educate relevant staff (e.g., developers, risk, business users) on AI compliance, security, ethics, and responsible AI use."
+    scoring_weight: 3
+    expected_evidence:
+      - "AI governance and ethics training materials"
+      - "Training completion records"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+required_evidence:
+  - "AI usage policy and management/board approval records."
+  - "AI tools inventory and scope documentation."
+  - "AI risk assessment, ranking, and mitigation plans."
+  - "AI governance charters and committee minutes."
+  - "Data protection and access control evidence for AI data."
+  - "AI model documentation, validation reports, and monitoring dashboards."
+  - "Cybersecurity assessments and incident response plans for AI systems."
+  - "Audit/compliance reports and board reporting on AI activities."
+  - "AI-related training records."
+
+questions:
+  - id: AI-22-Q1
+    prompt: "Is there a formally approved AI usage policy defining acceptable and prohibited uses (AI-01 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "12 CFR 748.0; Appendix A III(A)"
+    evidence_requests:
+      - "AI usage policy and approval records"
+
+  - id: AI-22-Q2
+    prompt: "Has a documented AI-specific risk assessment been conducted and are mitigation plans in place for risks like bias, data privacy, and compliance (AI-03 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(B)"
+    evidence_requests:
+      - "AI risk assessment and mitigation plans"
+
+  - id: AI-22-Q3
+    prompt: "Are AI models validated before deployment and continuously monitored for accuracy, bias, and drift (AI-07 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(B), III(C)(1)"
+    evidence_requests:
+      - "Model validation and continuous monitoring reports"
+
+  - id: AI-22-Q4
+    prompt: "Are data protection controls (e.g., encryption, access controls) and specific cybersecurity measures in place for AI systems (AI-05, AI-08 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1), III(E); GLBA"
+    evidence_requests:
+      - "Data protection standards and cybersecurity assessment reports for AI systems"
+
+  - id: AI-22-Q5
+    prompt: "Are AI activities included in compliance audits/reviews, and are the results reported to the board (AI-09 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1); Appendix B II(C)"
+    evidence_requests:
+      - "AI audit/compliance reports and board reporting"
+
+finding_templates:
+  positive: >
+    The institution demonstrates a comprehensive AI governance and compliance framework by maintaining formal policies (AI-01), specific risk assessments (AI-03), robust data and cybersecurity controls (AI-05/08), and transparent, validated models (AI-07). Active board oversight and inclusion in compliance audits (AI-09) ensure responsible and compliant AI use, aligning with 12 CFR Part 748 and related regulatory expectations.
+  partial: >
+    An AI governance framework is emerging, but security or compliance controls are incomplete. Deficiencies may include a lack of formal model validation (AI-07), inconsistent monitoring for bias and drift, or a failure to formally integrate AI risks into the enterprise risk assessment (AI-03), potentially increasing regulatory and operational risks.
+  negative: >
+    The institution lacks a formal AI governance framework. Significant weaknesses were identified in policy development (AI-01), risk assessment (AI-03), and model oversight (AI-07), leaving AI systems and the data they use exposed to unmitigated regulatory risks (e.g., fair lending, data privacy) and resulting in non-compliance with 12 CFR Part 748.
+
+scoring_logic:
+  response_weights:
+    Yes: 1.0
+    Partial: 0.5
+    No: 0.0
+    N/A: null
+  mapping:
+    pass_threshold: 0.85
+    partial_threshold: 0.60
+
+version: "1.0"
+status: "demo"

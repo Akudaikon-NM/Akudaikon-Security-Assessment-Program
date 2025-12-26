@@ -1,18 +1,10 @@
 {
   "category_label": "YAML",
-  "title": "08 Incident Response",
   "standardized_control_area": "Incident Response Program",
   "section_name": "Incident Response (Detection, Response, Notification, and Recovery)",
   "regulatory_anchor": "12 CFR 748.0(b); 12 CFR 748.1(c)–(e); Appendix A to Part 748, Sections III(A), III(B), III(C); Appendix B to Part 749",
   "control_category": "Incident Response and Resilience",
   "control_objective": "Ensure the credit union maintains a comprehensive, tested, and continuously improved Incident Response Program (IRP) capable of detecting, containing, responding to, reporting, and recovering from security incidents involving member information, in compliance with regulatory notification, reporting, and record-retention requirements.",
-  "required_evidence": [
-    "Incident Response Plan",
-    "Incident response policies and procedures",
-    "Incident response testing records",
-    "Incident logs and investigation records",
-    "Regulatory notification records"
-  ],
   "evaluation_criteria": [
     {
       "criterion_id": "IR-01",

@@ -1,0 +1,160 @@
+module_id: IA-21
+title: Internal Audit Program
+section_name: Internal Audit (Governance, Independence, and Effectiveness)
+regulatory_anchor: "12 CFR 748.0; Appendix A to Part 748, Title 12, Sections III(A), III(C)(1); FFIEC IT Examination Handbook – Audit"
+
+control_category: Independent Assurance and Oversight
+control_objective: >
+  Ensure the institution maintains an independent, risk-based internal audit program that provides
+  ongoing assurance over information security, technology, and operational controls, with timely
+  reporting, follow-up, and board oversight.
+
+description: >
+  The internal audit function must be independent, governed by a formal charter, and execute a
+  risk-based audit plan approved by the Board or Audit Committee. The process requires documented
+  work programs, formal reporting of findings with management responses, secure work paper
+  retention, and a disciplined follow-up process to track all audit issues to resolution.
+
+key_entities:
+  - Internal Audit Charter
+  - Risk-Based Audit Plan and Schedule
+  - Board/Audit Committee
+  - Audit Reports and Management Responses
+  - Issue Tracking and Follow-up Process
+
+domain_id: GOVERN
+domain_name: Govern
+domain_weight: 0.20
+
+primary_requirements:
+  - "The internal audit function maintains independence and reports directly to the Board/Audit Committee (GOV-01 linkage)."
+  - "The audit plan is formal, risk-based, and approved by the Board/Audit Committee."
+  - "Audit work programs are documented, defining scope, objectives, and methodology."
+  - "Audit reports are formal, include management responses, and are communicated to the Board/Audit Committee."
+  - "A formal follow-up process tracks all audit findings to resolution."
+  - "Audit staff maintain appropriate qualifications and continuing education."
+
+evaluation_criteria:
+  - criterion_id: IA-01
+    description: "An internal audit function exists, either in-house or outsourced, with defined roles, documented independence, and reporting lines established in an audit charter or policy."
+    scoring_weight: 5
+    expected_evidence:
+      - "Internal Audit charter or policy"
+      - "Organizational chart detailing reporting lines"
+      - "Outsourcing contracts and independence attestations (if applicable)"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: IA-02
+    description: "A formal, risk-based audit plan and schedule is developed, approved by the board or audit committee, and is explicitly aligned with the institution’s risk assessment (GOV-02 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Board/Audit Committee-approved audit plan (annual/multi-year)"
+      - "Underlying Risk Assessment or risk mapping documentation"
+    regulatory_reference: "Appendix A III(A)(1)"
+
+  - criterion_id: IA-03
+    description: "Audit work programs exist for each audit area and are documented, defining the audit scope, objectives, testing methodology, and resources to be used."
+    scoring_weight: 4
+    expected_evidence:
+      - "Detailed audit work programs/checklists"
+      - "Testing procedures and documentation standards"
+    regulatory_reference: "Appendix A III(A)(3)"
+
+  - criterion_id: IA-04
+    description: "Written audit reports are issued that clearly identify risks and weaknesses, describe testing performed, and include timely management responses and corrective action timelines."
+    scoring_weight: 5
+    expected_evidence:
+      - "Recent audit reports (e.g., IT Audit, IS Program Audit)"
+      - "Management responses with committed remediation dates"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: IA-05
+    description: "Audit reports, including high- and medium-risk findings, are formally communicated to the board or audit committee, with evidence of review and discussion."
+    scoring_weight: 4
+    expected_evidence:
+      - "Board or Audit Committee meeting minutes referencing audit reports"
+      - "Audit reporting packages presented to the board"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: IA-06
+    description: "A formal follow-up process exists to track audit findings to resolution, validate closure, and report status and aging of issues to management and the board (ACT-06 linkage)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Issue tracking logs (e.g., in GRC system or spreadsheet)"
+      - "Follow-up audit reports demonstrating validation of closure"
+      - "Reporting packages showing issue status to the Board"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: IA-07
+    description: "Audit staff (in-house or outsourced) possess and maintain appropriate qualifications, certifications, and participate in ongoing professional development and continuing education."
+    scoring_weight: 3
+    expected_evidence:
+      - "Audit staff training plans and completion records"
+      - "Relevant professional certifications (e.g., CISA, CISSP)"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+required_evidence:
+  - "Internal Audit charter or policy demonstrating independence."
+  - "Risk-based audit plan and Board/Audit Committee approval records."
+  - "Audit work programs/testing procedures."
+  - "Recent audit reports, including management responses and remediation timelines."
+  - "Board or Audit Committee minutes referencing audit report review."
+  - "Issue tracking and follow-up reports showing status and closure validation."
+  - "Audit staff training and certification records."
+
+questions:
+  - id: IA-21-Q1
+    prompt: "Does an internal audit function exist with documented independence, reporting directly to the board or audit committee (IA-01 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1)"
+    evidence_requests:
+      - "Audit charter or policy"
+
+  - id: IA-21-Q2
+    prompt: "Is there a formally approved, risk-based audit plan aligned with the institution’s risk assessment (IA-02 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(A)(1)"
+    evidence_requests:
+      - "Risk-based audit plan and approval records"
+
+  - id: IA-21-Q3
+    prompt: "Do audit reports clearly identify risks, findings, management responses, and remediation timelines (IA-04 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1)"
+    evidence_requests:
+      - "Recent audit reports and management responses"
+
+  - id: IA-21-Q4
+    prompt: "Are audit reports formally presented to and reviewed by the board or audit committee (IA-05 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1)"
+    evidence_requests:
+      - "Board or audit committee minutes"
+
+  - id: IA-21-Q5
+    prompt: "Is there a formal process to track and report the resolution of all audit findings to management and the board (IA-06 linkage)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1)"
+    evidence_requests:
+      - "Issue tracking and follow-up reports"
+
+finding_templates:
+  positive: >
+    The institution maintains an independent, risk-based internal audit program supported by a formal audit charter, a Board-approved audit plan (IA-02), comprehensive work programs, and timely reporting. Audit findings are tracked through a disciplined follow-up process (IA-06) and reported to the Board, demonstrating strong governance and effective independent assurance over key risks.
+  partial: >
+    The internal audit program exists but has deficiencies in one or more core areas. Weaknesses may include inconsistent application of the risk-based planning methodology (IA-02), inadequate documentation of work programs, or an incomplete/inconsistent process for tracking audit findings to resolution (IA-06).
+  negative: >
+    The internal audit program is materially ineffective or lacking independence. Significant weaknesses were identified in audit planning (IA-02), reporting to the Board, or the formal follow-up process (IA-06), leading to unmitigated control failures and a failure to provide effective independent assurance.
+
+scoring_logic:
+  response_weights:
+    Yes: 1.0
+    Partial: 0.5
+    No: 0.0
+    N/A: null
+  mapping:
+    pass_threshold: 0.85
+    partial_threshold: 0.60
+
+version: "1.0"
+status: "demo"

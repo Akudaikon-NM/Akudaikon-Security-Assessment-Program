@@ -1,0 +1,893 @@
+---
+category_label: YAML
+template_id: P2_EXEC_SUMMARY_FY2026Q1
+template_version: 1.0
+effective_date: 2025-12-26
+
+report_title: Cybersecurity Risk Posture and Control Effectiveness
+report_subtitle: Board of Directors Quarterly Risk and Investment Analysis
+
+report_objective: |
+  Provide the Board with a quantitative overview of the cybersecurity program's 
+  effectiveness, measured by modeled risk reduction and Return on Security 
+  Investment (ROSI), and mapped to maturity-based control performance.
+
+reporting_period: FY 2026 Q1 Assessment
+
+regulatory_anchor:
+  - 12 CFR § 748.0 – Security Program
+  - 12 CFR § 748.1 – Filing of Reports
+
+prepared_by: Risk Management / CISO Office
+intended_audience: Board of Directors and Senior Management
+
+# ============================================================================
+# DATA SOURCES AND INTEGRATION
+# ============================================================================
+
+data_sources:
+  risk_model_outputs:
+    description: Quantitative cyber risk modeling results
+    inputs:
+      - Baseline (No Controls) simulation results
+      - Controlled (Selected Controls) simulation results
+      - Loss Exceedance Curve (LEC) outputs
+      - Control multipliers (lam_mult, p_any_mult, tail_mult)
+      - ROSI and ΔEAL-per-$ metrics
+      - Monte Carlo simulation iterations (10,000+ per scenario)
+    
+    source_system: Quantitative Cyber Risk Engine
+    data_quality: Validated through P1 calibration
+  
+  control_framework_outputs:
+    description: YAML-based control maturity assessments
+    inputs:
+      - YAML control domains and criteria
+      - Design Effectiveness scoring (1-5)
+      - Operating Effectiveness scoring (1-5)
+      - Evidence-based findings and remediation outputs
+      - Control-to-CFR mappings
+    
+    source_system: Akudaikon Security Assessment Program
+    data_quality: CFR-anchored with validated scoring methodology
+  
+  threat_taxonomies:
+    description: Industry-standard threat classification
+    inputs:
+      - VERIS fields (threat actions, vectors, results)
+      - MITRE ATT&CK tactics and techniques
+      - CIS Controls mappings
+    
+    usage: Enrich narratives and provide threat context for governance
+
+# ============================================================================
+# SECTION 1: CURRENT RISK PROFILE SUMMARY
+# ============================================================================
+
+section_1_current_risk_profile:
+  section_id: S1
+  section_name: Current Risk Profile Summary
+  
+  purpose: |
+    Translate Baseline and Controlled risk metrics into Board-ready financial 
+    terms that support governance oversight under 12 CFR § 748.0.
+  
+  table_schema:
+    table_title: Cybersecurity Risk Exposure - Baseline vs. Controlled
+    
+    columns:
+      - name: Metric
+        description: Risk measurement type
+        data_type: string
+      
+      - name: Baseline_Without_Controls
+        description: Modeled loss without any security controls
+        data_type: currency_USD
+        note: Theoretical maximum exposure
+      
+      - name: Controlled_With_Selected_Controls
+        description: Modeled loss with current control portfolio
+        data_type: currency_USD
+        note: Actual protected exposure
+      
+      - name: Risk_Reduction_Delta
+        description: Absolute reduction in modeled loss
+        data_type: currency_USD
+        calculation: Baseline - Controlled
+      
+      - name: Impact_on_Net_Worth
+        description: Risk as percentage of institution net worth
+        data_type: percentage
+        calculation: Metric / Net_Worth
+    
+    rows:
+      - row_id: R1
+        Metric: EAL (Expected Annual Loss)
+        description: Average annual loss from cyber events
+        Baseline_Without_Controls: "[INSERT: Baseline EAL from risk model]"
+        Controlled_With_Selected_Controls: "[INSERT: Controlled EAL from risk model]"
+        Risk_Reduction_Delta: |
+          ΔEAL = [CALCULATE: Baseline EAL - Controlled EAL]
+        Impact_on_Net_Worth: |
+          Baseline: [CALCULATE: Baseline EAL / Net Worth]%
+          Controlled: [CALCULATE: Controlled EAL / Net Worth]%
+          Reduction: [CALCULATE: ΔEAL / Net Worth]%
+        
+        interpretation: |
+          EAL represents the expected value of annual cyber losses. Controls 
+          reduce this by ΔEAL, demonstrating measurable program effectiveness 
+          under 12 CFR § 748.0.
+      
+      - row_id: R2
+        Metric: VaR95 (1-in-20 Year Loss)
+        description: Loss exceeded 5% of the time (95th percentile)
+        Baseline_Without_Controls: "[INSERT: Baseline VaR95 from LEC]"
+        Controlled_With_Selected_Controls: "[INSERT: Controlled VaR95 from LEC]"
+        Risk_Reduction_Delta: |
+          ΔVaR95 = [CALCULATE: Baseline VaR95 - Controlled VaR95]
+        Impact_on_Net_Worth: |
+          Baseline: [CALCULATE: Baseline VaR95 / Net Worth]%
+          Controlled: [CALCULATE: Controlled VaR95 / Net Worth]%
+          Reduction: [CALCULATE: ΔVaR95 / Net Worth]%
+        
+        interpretation: |
+          VaR95 represents a severe but relatively frequent cyber event. 
+          Controls should significantly reduce this exposure to protect 
+          operational continuity.
+      
+      - row_id: R3
+        Metric: VaR99 (1-in-100 Year Loss)
+        description: Loss exceeded 1% of the time (99th percentile)
+        Baseline_Without_Controls: "[INSERT: Baseline VaR99 from LEC]"
+        Controlled_With_Selected_Controls: "[INSERT: Controlled VaR99 from LEC]"
+        Risk_Reduction_Delta: |
+          ΔVaR99 = [CALCULATE: Baseline VaR99 - Controlled VaR99]
+        Impact_on_Net_Worth: |
+          Baseline: [CALCULATE: Baseline VaR99 / Net Worth]%
+          Controlled: [CALCULATE: Controlled VaR99 / Net Worth]%
+          Reduction: [CALCULATE: ΔVaR99 / Net Worth]%
+        
+        interpretation: |
+          VaR99 represents catastrophic tail-risk events (e.g., ransomware 
+          with significant data exfiltration). Strong tail_mult controls are 
+          critical for capital preservation and solvency protection.
+    
+    net_worth_placeholder: "[INSERT: Institution Net Worth, e.g., $3.5B]"
+    
+    data_notes:
+      - All figures derived from Monte Carlo simulation (10,000+ iterations)
+      - Baseline scenario assumes no security controls
+      - Controlled scenario reflects current control portfolio
+      - Risk reduction validated through P1 scoring calibration
+  
+  key_takeaway_narrative_template: |
+    The selected controls reduced Expected Annual Loss (EAL) by ΔEAL = [INSERT], 
+    producing a Return on Security Investment (ROSI) of [INSERT]. Critically, 
+    the investment reduced 1-in-100 year tail exposure (VaR99) by ΔVaR99 = [INSERT], 
+    strengthening resilience against catastrophic events and supporting the 
+    effectiveness of the Security Program required by 12 CFR § 748.0.
+  
+  board_discussion_prompts:
+    - |
+      Is the current VaR99 exposure acceptable relative to net worth and 
+      risk appetite?
+    - |
+      Does the ΔEAL justify continued investment in the control portfolio, 
+      or should resources be reallocated?
+    - |
+      Are there high-impact, low-probability events (tail risks) that require 
+      additional Board attention or insurance consideration?
+
+# ============================================================================
+# SECTION 2: CONTROL INVESTMENT AND ROI ANALYSIS
+# ============================================================================
+
+section_2_control_investment_roi:
+  section_id: S2
+  section_name: Control Investment and ROI Analysis
+  
+  purpose: |
+    Justify security budget and prioritize spending using quantified loss 
+    reduction and Return on Security Investment (ROSI).
+  
+  table_schema:
+    table_title: Security Investment Performance and Prioritization
+    
+    columns:
+      - name: Control_Bundle_or_Control
+        description: Control or control group
+        data_type: string
+      
+      - name: Total_Annual_Cost
+        description: Annual implementation and maintenance cost
+        data_type: currency_USD
+      
+      - name: Total_Delta_EAL
+        description: Expected annual loss reduction
+        data_type: currency_USD
+        calculation: Baseline EAL - Controlled EAL (attributable to control)
+      
+      - name: ROSI
+        description: Return on Security Investment
+        data_type: decimal
+        calculation: (ΔEAL - Cost) / Cost
+        interpretation: |
+          ROSI > 0 indicates positive return
+          ROSI = 1.0 means $1 investment yields $2 total value ($1 cost + $1 net benefit)
+          ROSI = 2.5 means $1 investment yields $3.50 total value
+      
+      - name: Delta_EAL_per_Dollar
+        description: Expected loss reduction per dollar spent
+        data_type: decimal
+        calculation: ΔEAL / Cost
+        interpretation: Higher values indicate more efficient risk reduction
+    
+    rows:
+      - row_id: ROW_BUNDLE
+        Control_Bundle_or_Control: "Selected Controls (Portfolio Bundle)"
+        Total_Annual_Cost: "[INSERT: Total annual cost of all selected controls]"
+        Total_Delta_EAL: "[INSERT: Total ΔEAL from portfolio]"
+        ROSI: "[CALCULATE: (Total ΔEAL - Total Cost) / Total Cost]"
+        Delta_EAL_per_Dollar: "[CALCULATE: Total ΔEAL / Total Cost]"
+        
+        interpretation: |
+          Portfolio-level metrics demonstrate overall program ROI and support 
+          budget justification to Board and senior management.
+      
+      - row_id: ROW_TOP_PERFORMER
+        Control_Bundle_or_Control: |
+          [INSERT: Individual control with highest ROSI]
+          Example: "Data Governance - Media Encryption (DG-06)"
+        Total_Annual_Cost: "[INSERT: Control-specific cost]"
+        Total_Delta_EAL: "[INSERT: Control-specific ΔEAL]"
+        ROSI: "[INSERT: Control-specific ROSI]"
+        Delta_EAL_per_Dollar: "[INSERT: Control-specific ΔEAL/$]"
+        
+        interpretation: |
+          Best-performing control demonstrates where investment has strongest 
+          impact. Consider expanding similar controls.
+      
+      - row_id: ROW_UNDERPERFORMER
+        Control_Bundle_or_Control: |
+          [INSERT: Control with lowest ROSI or negative ROSI]
+          Example: "Control with low measured effectiveness"
+        Total_Annual_Cost: "[INSERT: Control-specific cost]"
+        Total_Delta_EAL: "[INSERT: Control-specific ΔEAL]"
+        ROSI: "[INSERT: Control-specific ROSI, potentially negative]"
+        Delta_EAL_per_Dollar: "[INSERT: Control-specific ΔEAL/$]"
+        
+        interpretation: |
+          Controls with negative ROSI may be justified for regulatory compliance 
+          (12 CFR § 748.0) but require cost optimization review.
+  
+  rosi_interpretation_guidance:
+    methodology: |
+      ROSI = (Risk Reduction Value - Control Cost) / Control Cost
+      
+      Where:
+      • Risk Reduction Value = ΔEAL (reduction in expected annual loss)
+      • Control Cost = Annual implementation and maintenance cost
+    
+    interpretation_table:
+      - rosi_range: "> 2.0"
+        label: Excellent Return
+        board_message: |
+          Control provides greater than 3:1 value. Strong candidate for 
+          expansion or enhancement.
+      
+      - rosi_range: "1.0 - 2.0"
+        label: Strong Positive Return
+        board_message: |
+          Control is cost-justified with good financial return. Maintain 
+          investment.
+      
+      - rosi_range: "0.0 - 1.0"
+        label: Positive Return
+        board_message: |
+          Control provides positive return but moderate ROI. Review for 
+          optimization opportunities.
+      
+      - rosi_range: "< 0.0"
+        label: Negative Return (Cost > Benefit)
+        board_message: |
+          Control cost exceeds quantifiable risk reduction. May be justified 
+          for regulatory compliance under 12 CFR § 748.0 but requires cost 
+          review or performance improvement.
+  
+  prioritization_framework:
+    methodology: |
+      Priority Score = (Operating Effectiveness Gap) × (ROSI) × (Risk Rating Weight)
+      
+      Where:
+      • Operating Effectiveness Gap = (5 - Current Operating Score)
+      • ROSI = Return on Security Investment (decimal)
+      • Risk Rating Weight: High = 3, Medium = 2, Low = 1
+    
+    interpretation: |
+      Higher Priority Scores indicate investments with:
+      • Large performance gaps (low Operating Effectiveness)
+      • Strong financial returns (high ROSI)
+      • High risk reduction potential
+      
+      Use to guide FY2026 remediation and enhancement budget allocation.
+
+# ============================================================================
+# SECTION 3: CONTROL EFFECTIVENESS AND MATURITY (YAML INTEGRATION)
+# ============================================================================
+
+section_3_control_effectiveness_maturity:
+  section_id: S3
+  section_name: Control Effectiveness and Maturity (YAML Integration)
+  
+  purpose: |
+    Map quantitative threat/risk reduction to maturity-based control performance 
+    and demonstrate governance alignment to 12 CFR § 748.0.
+  
+  table_schema:
+    table_title: Control Maturity and Threat Mitigation Performance
+    
+    columns:
+      - name: Control_Area_YAML
+        description: YAML control domain
+        data_type: string
+      
+      - name: Primary_Regulatory_Anchor
+        description: CFR requirement addressed
+        data_type: string
+        values: ["12 CFR § 748.0", "12 CFR § 748.1"]
+      
+      - name: Threat_Tactic_Mitigated
+        description: MITRE ATT&CK tactics addressed
+        data_type: string
+        examples: ["Initial Access", "Exfiltration", "Impact"]
+      
+      - name: Design_Score_1_5
+        description: Governance maturity score
+        data_type: integer
+        range: 1-5
+        interpretation: |
+          5 = Comprehensive policy, oversight, and documentation
+          3 = Adequate policy with minor gaps
+          1 = Minimal or ineffective governance
+      
+      - name: Operating_Score_1_5
+        description: Technical effectiveness score
+        data_type: integer
+        range: 1-5
+        interpretation: |
+          Derived from control multipliers:
+          5 = Combined multiplier < 0.20 (Fully Effective)
+          3 = Combined multiplier 0.40-0.60 (Partially Effective)
+          1 = Combined multiplier > 0.80 (Ineffective)
+      
+      - name: Key_Effectiveness_Multiplier
+        description: Primary risk reduction mechanism
+        data_type: string
+        values: 
+          - "lam_mult (Frequency reduction)"
+          - "p_any_mult (Loss probability reduction)"
+          - "tail_mult (Severity/tail risk reduction)"
+      
+      - name: Control_Objective_Link
+        description: Specific YAML control criteria
+        data_type: string
+        examples: ["DG-06", "CCM-02", "AI-08"]
+    
+    rows:
+      - row_id: CTRL_DG
+        Control_Area_YAML: Data Governance (DG)
+        Primary_Regulatory_Anchor: 12 CFR § 748.0
+        Threat_Tactic_Mitigated: "Exfiltration, Impact (Ransomware)"
+        Design_Score_1_5: "[INSERT: DG Design Effectiveness score]"
+        Operating_Score_1_5: |
+          [INSERT: Derived from tail_mult and p_any_mult]
+          Example: If combined_mult for DG controls = 0.35, score = 4
+        Key_Effectiveness_Multiplier: |
+          tail_mult (Severity reduction)
+          Strong encryption and DLP reduce worst-case data loss magnitude
+        Control_Objective_Link: |
+          [INSERT: DG control IDs]
+          Examples: DG-06 (Encryption), DG-08 (DLP), DG-10 (Data Destruction)
+        
+        narrative: |
+          Data Governance controls demonstrate [INSERT: Design Score] governance 
+          maturity and [INSERT: Operating Score] technical effectiveness. Strong 
+          tail_mult performance reduces catastrophic data exfiltration risk, 
+          supporting § 748.0 Security Program obligations.
+      
+      - row_id: CTRL_CCM
+        Control_Area_YAML: Change and Configuration Management (CCM)
+        Primary_Regulatory_Anchor: 12 CFR § 748.0
+        Threat_Tactic_Mitigated: "Privilege Escalation, Exploit Vulnerability, Impact"
+        Design_Score_1_5: "[INSERT: CCM Design Effectiveness score]"
+        Operating_Score_1_5: |
+          [INSERT: Derived from lam_mult]
+          Example: If lam_mult for CCM controls = 0.25, score = 5
+        Key_Effectiveness_Multiplier: |
+          lam_mult (Frequency reduction)
+          Strong configuration management prevents unauthorized changes and 
+          reduces exploit opportunities
+        Control_Objective_Link: |
+          [INSERT: CCM control IDs]
+          Examples: CCM-02 (Baselines), CCM-05 (Drift Detection), CCM-06 (Change Approval)
+        
+        narrative: |
+          Change and Configuration Management controls demonstrate [INSERT: Design] 
+          governance and [INSERT: Operating] technical performance. Strong lam_mult 
+          indicates effective prevention of unauthorized system changes.
+      
+      - row_id: CTRL_AI
+        Control_Area_YAML: AI Governance (AI)
+        Primary_Regulatory_Anchor: 12 CFR § 748.0
+        Threat_Tactic_Mitigated: |
+          [INSERT: Applicable ATT&CK tactics]
+          Examples: "Data Manipulation, Model Poisoning, Privacy Violation"
+        Design_Score_1_5: "[INSERT: AI Design Effectiveness score]"
+        Operating_Score_1_5: |
+          [INSERT: Derived from p_any_mult and/or lam_mult]
+          Note: AI controls may focus on monitoring and detection
+        Key_Effectiveness_Multiplier: |
+          p_any_mult (Loss probability reduction) and/or lam_mult (Frequency)
+          AI governance reduces risks from model drift, bias, and unauthorized access
+        Control_Objective_Link: |
+          [INSERT: AI control IDs]
+          Examples: AI-08 (Model Monitoring), AI-11 (Access Controls), AI-14 (Ethics Review)
+        
+        narrative: |
+          AI Governance controls demonstrate [INSERT: Design] maturity and 
+          [INSERT: Operating] effectiveness in managing emerging AI/ML risks 
+          under the § 748.0 Security Program framework.
+      
+      - row_id: CTRL_MON
+        Control_Area_YAML: Monitoring and Detection (MON)
+        Primary_Regulatory_Anchor: "12 CFR § 748.0, § 748.1"
+        Threat_Tactic_Mitigated: "All tactics (Detection and Response)"
+        Design_Score_1_5: "[INSERT: MON Design Effectiveness score]"
+        Operating_Score_1_5: |
+          [INSERT: Derived from p_any_mult]
+          Strong p_any_mult indicates effective detection before loss occurs
+        Key_Effectiveness_Multiplier: |
+          p_any_mult (Loss probability reduction)
+          Early detection reduces probability that an event results in material loss
+        Control_Objective_Link: |
+          [INSERT: MON control IDs]
+          Examples: MON-03 (SIEM), MON-07 (Network Analysis), MON-09 (Threat Intelligence)
+        
+        narrative: |
+          Monitoring controls are critical for § 748.1 incident reporting readiness. 
+          Strong p_any_mult demonstrates effective detection capability, reducing 
+          time-to-discovery and supporting 72-hour reporting compliance.
+  
+  effectiveness_narrative_template: |
+    Operating Effectiveness performance is driven by measured control multipliers:
+    
+    • Lower tail_mult values indicate strong severity (tail-risk) reduction
+    • Lower lam_mult values indicate meaningful frequency reduction
+    • Lower p_any_mult values indicate effective detection and containment
+    
+    Where Operating Effectiveness lags despite adequate Design Effectiveness, 
+    management should prioritize:
+    • Operating control improvements (execution, consistency)
+    • Evidence production and documentation
+    • Sustainment activities (training, monitoring, testing)
+    
+    This ensures continued § 748.0 Security Program effectiveness and readiness 
+    for § 748.1 incident reporting obligations.
+  
+  maturity_interpretation:
+    combined_maturity_approach: |
+      Overall control maturity = MIN(Design Score, Operating Score)
+      
+      Rationale: A control cannot be fully effective if either governance or 
+      technical execution is deficient.
+    
+    gap_patterns:
+      - pattern: "Design = 5, Operating = 2"
+        interpretation: |
+          Strong governance but poor execution. Policy exists but is not 
+          operationalized. Common post-implementation of new controls.
+        remediation: Focus on technical implementation, training, and automation
+      
+      - pattern: "Design = 2, Operating = 5"
+        interpretation: |
+          Technically effective but lacks governance oversight. Risk of 
+          inconsistency and inability to demonstrate compliance to examiners.
+        remediation: Formalize policies, establish oversight, document procedures
+      
+      - pattern: "Design = 3, Operating = 3"
+        interpretation: |
+          Moderate maturity in both dimensions. Adequate but requires improvement 
+          to achieve full § 748.0 effectiveness.
+        remediation: Address both governance and technical gaps in parallel
+
+# ============================================================================
+# SECTION 4: VISUAL SUMMARY (LOSS EXCEEDANCE CURVE)
+# ============================================================================
+
+section_4_visual_summary:
+  section_id: S4
+  section_name: Visual Summary (Loss Exceedance Curve)
+  
+  purpose: |
+    Provide a Board-ready visualization showing tail risk reduction and the 
+    separation between baseline and controlled loss distributions.
+  
+  visual_requirements:
+    chart_type: Log-Log Loss Exceedance Curve (LEC)
+    description: |
+      Displays the probability of exceeding a given loss amount for both 
+      baseline (no controls) and controlled scenarios.
+    
+    axes:
+      x_axis:
+        label: Loss Amount (USD)
+        scale: Logarithmic
+        range: "[Dynamic based on simulation results]"
+      
+      y_axis:
+        label: Annual Exceedance Probability
+        scale: Logarithmic
+        range: "0.001 to 1.0 (0.1% to 100%)"
+        interpretation: |
+          Probability that annual loss will exceed the corresponding x-axis value
+    
+    series:
+      - series_id: BASELINE
+        label: Baseline (No Controls)
+        color: Red
+        line_style: Dashed
+        description: Modeled loss distribution without security controls
+      
+      - series_id: CONTROLLED
+        label: With Controls (Current Portfolio)
+        color: Blue
+        line_style: Solid
+        description: Modeled loss distribution with current control portfolio
+    
+    annotations:
+      - annotation_id: VAR95_BASELINE
+        type: Point label
+        position: Intersection of Baseline curve and y=0.05 line
+        label: "VaR95 Baseline = [INSERT]"
+      
+      - annotation_id: VAR95_CONTROLLED
+        type: Point label
+        position: Intersection of Controlled curve and y=0.05 line
+        label: "VaR95 Controlled = [INSERT]"
+      
+      - annotation_id: VAR99_BASELINE
+        type: Point label
+        position: Intersection of Baseline curve and y=0.01 line
+        label: "VaR99 Baseline = [INSERT]"
+      
+      - annotation_id: VAR99_CONTROLLED
+        type: Point label
+        position: Intersection of Controlled curve and y=0.01 line
+        label: "VaR99 Controlled = [INSERT]"
+      
+      - annotation_id: DELTA_VAR95
+        type: Callout
+        content: "ΔVaR95 = [CALCULATE: VaR95 Baseline - VaR95 Controlled]"
+        description: Reduction in 1-in-20 year loss
+      
+      - annotation_id: DELTA_VAR99
+        type: Callout
+        content: "ΔVaR99 = [CALCULATE: VaR99 Baseline - VaR99 Controlled]"
+        description: Reduction in 1-in-100 year loss (tail risk)
+    
+    board_takeaway_caption_template: |
+      The separation between the Baseline and With Controls curves demonstrates 
+      measurable reduction in tail risk exposure (VaR99) and supports risk-based 
+      justification for security investment under 12 CFR § 748.0. The controlled 
+      curve's lower position across all probability levels indicates comprehensive 
+      program effectiveness.
+  
+  alternative_visualizations:
+    heatmap_control_coverage:
+      title: ATT&CK Tactic Coverage Heatmap
+      purpose: Show breadth of threat coverage across attack lifecycle
+      rows: MITRE ATT&CK tactics (Initial Access, Execution, etc.)
+      columns: Control domains (DG, CCM, MON, IR, etc.)
+      cell_values: Coverage score (0-5) based on control effectiveness
+      interpretation: |
+        Gaps in coverage highlight areas requiring investment to improve 
+        defense-in-depth posture.
+    
+    scatter_plot_rosi_vs_gap:
+      title: Investment Prioritization Matrix
+      purpose: Guide remediation budget allocation
+      x_axis: Operating Effectiveness Gap (5 - Current Score)
+      y_axis: ROSI (Return on Security Investment)
+      points: Individual controls or control bundles
+      quadrants:
+        - High ROSI, High Gap: Priority investments
+        - High ROSI, Low Gap: Maintain and enhance
+        - Low ROSI, High Gap: Optimize cost or improve effectiveness
+        - Low ROSI, Low Gap: Monitor and sustain
+
+# ============================================================================
+# REPORT CONCLUSION AND RECOMMENDATIONS
+# ============================================================================
+
+report_conclusion:
+  template: |
+    Conclusion: The cybersecurity program demonstrates measurable risk reduction 
+    and positive Return on Security Investment (ROSI), with the greatest governance 
+    value reflected in tail-risk (VaR99) reduction. Maturity-based YAML scoring 
+    confirms where controls are strong in both design and operation, and highlights 
+    where operating performance must be improved to sustain Security Program 
+    effectiveness under 12 CFR § 748.0 and maintain readiness to meet incident 
+    reporting obligations under 12 CFR § 748.1.
+  
+  key_findings:
+    - finding_id: F1
+      category: Risk Reduction
+      statement: |
+        Selected controls reduced Expected Annual Loss (EAL) by ΔEAL = [INSERT], 
+        demonstrating measurable program effectiveness.
+    
+    - finding_id: F2
+      category: Investment Performance
+      statement: |
+        Portfolio ROSI of [INSERT] indicates [positive/moderate/strong] financial 
+        return on security investment, justifying continued Board support.
+    
+    - finding_id: F3
+      category: Tail Risk Management
+      statement: |
+        VaR99 reduction of ΔVaR99 = [INSERT] strengthens resilience against 
+        catastrophic cyber events and supports capital preservation.
+    
+    - finding_id: F4
+      category: Control Maturity
+      statement: |
+        [INSERT: % of controls] score 4-5 in Operating Effectiveness, while 
+        [INSERT: % of controls] require remediation to achieve full § 748.0 compliance.
+  
+  recommendations:
+    - recommendation_id: R1
+      priority: High
+      action: |
+        Prioritize remediation for controls with high Operating Effectiveness gaps 
+        and strong ROSI potential using Priority Score framework.
+      rationale: Maximizes risk reduction per dollar invested
+      owner: CISO / Risk Management
+      timeline: FY2026 Q2-Q3
+    
+    - recommendation_id: R2
+      priority: Medium
+      action: |
+        Review controls with negative ROSI for cost optimization opportunities 
+        while maintaining § 748.0 compliance.
+      rationale: Improves overall program efficiency
+      owner: CFO / CISO
+      timeline: FY2026 Q3
+    
+    - recommendation_id: R3
+      priority: High
+      action: |
+        Enhance monitoring and detection controls (MON) to support § 748.1 
+        72-hour incident reporting readiness.
+      rationale: |
+        Strong p_any_mult in detection controls directly supports regulatory 
+        reporting compliance
+      owner: CISO / Operations
+      timeline: FY2026 Q2
+    
+    - recommendation_id: R4
+      priority: Low
+      action: |
+        Continue quarterly Board reporting using this integrated quantitative 
+        and qualitative framework.
+      rationale: Provides consistent, data-driven governance oversight
+      owner: Risk Management / Board Relations
+      timeline: Ongoing
+
+# ============================================================================
+# AUTOMATION FIELDS FOR REPORT GENERATION
+# ============================================================================
+
+automation_fields:
+  placeholders_to_populate:
+    risk_metrics:
+      - Baseline EAL
+      - Controlled EAL
+      - ΔEAL
+      - Baseline VaR95
+      - Controlled VaR95
+      - ΔVaR95
+      - Baseline VaR99
+      - Controlled VaR99
+      - ΔVaR99
+      - Net Worth
+    
+    financial_metrics:
+      - Total Control Cost (portfolio)
+      - Portfolio ROSI
+      - Portfolio ΔEAL per $
+      - Individual control costs
+      - Individual control ROSI values
+    
+    maturity_scores:
+      - Design Effectiveness scores by domain (DG, CCM, AI, MON, etc.)
+      - Operating Effectiveness scores by domain
+      - Control objective links (DG-06, CCM-02, etc.)
+    
+    threat_context:
+      - ATT&CK tactic mappings by control area
+      - VERIS fields mitigated by top controls
+      - CIS Control alignments
+  
+  scoring_rule_reference:
+    operating_effectiveness_derivation: |
+      Operating Effectiveness scores (1-5) are derived from control multiplier 
+      thresholds defined in RISK_MODEL_YAML_INTEGRATION.yaml:
+      
+      Combined Multiplier = (lam_mult × p_any_mult × tail_mult)^(1/3)
+      
+      Score 5: Combined < 0.20
+      Score 4: Combined 0.20-0.40
+      Score 3: Combined 0.40-0.60
+      Score 2: Combined 0.60-0.80
+      Score 1: Combined > 0.80
+    
+    design_effectiveness_assessment: |
+      Design Effectiveness scores (1-5) are assessed qualitatively based on:
+      • Policy comprehensiveness and currency
+      • Governance oversight and accountability
+      • Documentation quality and completeness
+      • Alignment to 12 CFR § 748.0 requirements
+    
+    traceability_to_yaml: |
+      All scores and control objective links are mapped to YAML control framework 
+      in control_library/modules/ for full audit traceability.
+
+# ============================================================================
+# TEMPLATE USAGE INSTRUCTIONS
+# ============================================================================
+
+template_usage:
+  data_collection_workflow:
+    step_1:
+      action: Extract risk model outputs
+      source: Quantitative Cyber Risk Engine API
+      fields: |
+        GET /simulation/baseline → Baseline EAL, VaR95, VaR99
+        GET /simulation/controlled → Controlled EAL, VaR95, VaR99
+        GET /controls/{id}/multipliers → lam_mult, p_any_mult, tail_mult
+        GET /controls/{id}/rosi → ROSI, ΔEAL, cost
+    
+    step_2:
+      action: Extract YAML control assessments
+      source: Akudaikon Security Assessment Program
+      fields: |
+        Load control_library/modules/*.yaml
+        Extract Design Effectiveness scores
+        Calculate Operating Effectiveness from multipliers
+        Map control_objective_link identifiers
+    
+    step_3:
+      action: Populate template placeholders
+      method: String replacement or templating engine
+      validation: Ensure all [INSERT] and [CALCULATE] fields are resolved
+    
+    step_4:
+      action: Generate visualizations
+      tools: Matplotlib, Plotly, or BI tool (Power BI, Tableau)
+      outputs: LEC chart, ATT&CK heatmap, ROSI scatter plot
+    
+    step_5:
+      action: Generate final report
+      format: PDF, PowerPoint, or web dashboard
+      distribution: Board of Directors, Audit Committee, Senior Management
+  
+  llm_integration_approach:
+    narrative_generation:
+      purpose: |
+        Use LLM to generate Board-friendly narratives from quantitative data
+      inputs:
+        - Template narrative structures
+        - Populated risk metrics
+        - Control effectiveness scores
+        - VERIS/ATT&CK context
+      outputs:
+        - Executive summary
+        - Key takeaways per section
+        - Findings and recommendations
+      validation: |
+        Human review required for regulatory accuracy and Board tone
+    
+    findings_enrichment:
+      purpose: |
+        Enhance findings with threat intelligence and regulatory citations
+      example: |
+        Input: "DG-06 Operating Score = 3, tail_mult = 0.25"
+        Output: "Data Governance controls demonstrate Partially Effective 
+        performance (score 3) with strong tail risk reduction (75%). While 
+        encryption materially reduces catastrophic data exfiltration events, 
+        the control does not prevent media loss events. Recommend enhancement 
+        with Data Loss Prevention (DLP) capabilities to improve frequency 
+        reduction and achieve Fully Effective status, supporting § 748.0 
+        Security Program obligations."
+
+# ============================================================================
+# VERSION CONTROL AND GOVERNANCE
+# ============================================================================
+
+template_governance:
+  version: 1.0
+  effective_date: 2025-12-26
+  review_frequency: Quarterly
+  
+  change_control:
+    approval_required_for:
+      - Scoring methodology changes
+      - Regulatory anchor modifications
+      - Table schema restructuring
+      - Visual requirements changes
+    
+    approval_authority: |
+      CISO, Chief Risk Officer, Compliance Officer
+    
+    version_history:
+      - version: 1.0
+        date: 2025-12-26
+        changes: Initial template creation
+        approved_by: CISO, CRO, Compliance
+  
+  next_enhancements:
+    - priority: P1
+      enhancement: |
+        Automate report generation with direct API integration to risk engine 
+        and YAML framework
+      timeline: Q1 2026
+    
+    - priority: P2
+      enhancement: |
+        Develop interactive web dashboard for real-time Board access to metrics
+      timeline: Q2 2026
+    
+    - priority: P3
+      enhancement: |
+        Integrate peer benchmarking data for industry comparison
+      timeline: Q3 2026
+
+# ============================================================================
+# APPENDIX: REGULATORY CITATIONS
+# ============================================================================
+
+regulatory_citations:
+  cfr_748_0:
+    citation: 12 CFR § 748.0 – Security Program
+    requirement: |
+      Each federally insured credit union must adopt and implement a written 
+      security program that ensures the security and confidentiality of member 
+      information, protects against anticipated threats to the security or 
+      integrity of such information, and protects against unauthorized access 
+      to or use of such information that could result in substantial harm or 
+      inconvenience to any member.
+    
+    assessment_alignment: |
+      This template demonstrates Security Program effectiveness through:
+      • Quantitative risk reduction metrics (EAL, VaR)
+      • Maturity-based control scoring (Design + Operating Effectiveness)
+      • Evidence-based findings and remediation tracking
+  
+  cfr_748_1:
+    citation: 12 CFR § 748.1 – Filing of Reports
+    requirement: |
+      Credit unions must report cyber incidents to NCUA within 72 hours if the 
+      incident is expected to materially disrupt operations for four hours or more.
+    
+    assessment_alignment: |
+      Monitoring and Detection controls (MON) with strong p_any_mult demonstrate 
+      capability to detect incidents rapidly, supporting timely § 748.1 reporting 
+      compliance.
+
+# ============================================================================
+# END OF TEMPLATE
+# ============================================================================
+
+template_status: Production-Ready
+deployment_date: 2025-12-26
+next_review: 2026-03-31

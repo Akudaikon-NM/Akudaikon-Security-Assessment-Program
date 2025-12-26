@@ -1,0 +1,142 @@
+module_id: SBC-24
+title: Information Security Baseline Controls (Core Technical Checklist)
+section_name: Foundational Cybersecurity Controls
+regulatory_anchor: "12 CFR 748.0; Appendix A to Part 748 (Sections III(C), III(E)); FFIEC IT Examination Handbook – Information Security; NIST Cybersecurity Framework"
+
+control_category: Core Technical Security
+control_objective: >
+  Ensure core technical controls are implemented consistently across the environment to establish
+  a minimum security baseline that protects critical systems and member data from common attack
+  vectors, particularly focusing on access, data integrity, and real-time detection.
+
+description: >
+  This control validates the operational effectiveness of high-priority security functions, including
+  mandatory multi-factor authentication (MFA) for privileged and remote access, immutable and
+  segregated backups to defend against ransomware, ubiquitous deployment of Endpoint Detection
+  and Response (EDR), and mandatory encryption for sensitive data both at rest and in transit.
+
+key_entities:
+  - Multi-Factor Authentication (MFA) System
+  - Backup and Recovery Infrastructure
+  - Endpoint Detection and Response (EDR) Solution
+  - Encryption Key Management
+  - Cloud Security Posture Management (CSPM)
+
+domain_id: PROTECT
+domain_name: Protect
+domain_weight: 0.25
+
+primary_requirements:
+  - "Multi-Factor Authentication (MFA) is enforced for all privileged and remote access (AC-13 linkage)."
+  - "Backups are immutable and segregated to withstand ransomware attacks (BC-10 linkage)."
+  - "EDR is deployed on all endpoints for real-time threat detection."
+  - "Sensitive data is encrypted at rest and in transit (DP-15 linkage)."
+  - "Cloud configurations are managed via security posture tools (CS-31 linkage)."
+
+evaluation_criteria:
+  - criterion_id: SBC-24-01
+    description: "Multi-Factor Authentication (MFA) is enforced for all privileged accounts and for all remote access methods into the environment (Question 1.1, 1.4)."
+    scoring_weight: 5
+    expected_evidence:
+      - "MFA policy documentation"
+      - "System configurations (e.g., Active Directory, VPN, Cloud Console) showing MFA enforcement"
+      - "MFA audit logs for privileged and remote access"
+    regulatory_reference: "Appendix A III(C)(1)"
+
+  - criterion_id: SBC-24-02
+    description: "Backups for critical systems are configured to be immutable (WORM storage) and logically segregated (air-gapped or separate network zone) from the primary network (Question 2.1)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Backup solution configuration screenshots demonstrating immutability"
+      - "Network diagrams and access controls showing backup segregation"
+      - "Restoration test reports (Question 2.2)"
+    regulatory_reference: "FFIEC BCDR Handbook"
+
+  - criterion_id: SBC-24-03
+    description: "An Endpoint Detection and Response (EDR) solution is deployed across all endpoints, including servers and workstations, and is integrated with incident response (Question 3.1, 3.4)."
+    scoring_weight: 4
+    expected_evidence:
+      - "EDR deployment coverage report"
+      - "Integration log/screenshots with SIEM or Incident Response systems"
+    regulatory_reference: "Appendix A III(B), III(E)"
+
+  - criterion_id: SBC-24-04
+    description: "All sensitive member and business data is encrypted at rest using strong algorithms, and all sensitive data transmitted externally uses secure protocols (Question 7.1, 7.3)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Data classification policy and inventory"
+      - "Database configuration settings (TDE, Column Encryption)"
+      - "SSL/TLS validation reports for external facing services"
+    regulatory_reference: "GLBA; Appendix A III(C)(3)"
+
+  - criterion_id: SBC-24-05
+    description: "A Cloud Security Posture Management (CSPM) tool or equivalent configuration management process is used to continuously assess and remediate security misconfigurations in cloud environments (Question 11.1, 11.2)."
+    scoring_weight: 3
+    expected_evidence:
+      - "CSPM dashboard screenshots or configuration review reports"
+      - "Remediation tracking logs for identified cloud misconfigurations"
+    regulatory_reference: "FFIEC Cloud Computing Guidance"
+
+required_evidence:
+  - "MFA policy and configuration evidence for privileged/remote access."
+  - "Backup solution configuration for immutability and segregation."
+  - "EDR deployment coverage report and integration with alerting systems."
+  - "Data encryption configuration evidence (at rest and in transit)."
+  - "Cloud Security Posture Management (CSPM) reports."
+
+questions:
+  - id: SBC-24-Q1
+    prompt: "Is MFA enforced for all privileged accounts and remote access, and is the solution monitored for anomalies (Q1.1, Q1.3)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(1)"
+    evidence_requests:
+      - "MFA configuration and monitoring logs"
+
+  - id: SBC-24-Q2
+    prompt: "Are backups for critical systems configured to be immutable and segregated from the primary network (Q2.1)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "FFIEC BCDR"
+    evidence_requests:
+      - "Backup configuration and network segregation evidence"
+
+  - id: SBC-24-Q3
+    prompt: "Is an EDR solution deployed across all endpoints, including servers, and are EDR alerts integrated into the incident response process (Q3.1, Q3.4)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(B), III(E)"
+    evidence_requests:
+      - "EDR deployment report and alert integration evidence"
+
+  - id: SBC-24-Q4
+    prompt: "Is sensitive member and business data encrypted both at rest and in transit, with appropriate key management in place (Q7.1, Q7.3)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "GLBA; Appendix A III(C)(3)"
+    evidence_requests:
+      - "Encryption configuration evidence and key management documentation"
+
+  - id: SBC-24-Q5
+    prompt: "Are cloud environments actively monitored and managed via a CSPM tool or equivalent to prevent security misconfigurations (Q11.1)?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "FFIEC Cloud Guidance"
+    evidence_requests:
+      - "CSPM reports or cloud configuration review documentation"
+
+finding_templates:
+  positive: >
+    The institution maintains a strong Information Security Baseline, with critical technical controls (MFA, immutable backups, EDR) consistently enforced across the environment. Configuration management and data protection standards meet or exceed regulatory expectations, demonstrating a robust defense against modern attack vectors.
+  partial: >
+    The institution has implemented core security controls, but enforcement is inconsistent. Deficiencies were noted in the scope of MFA enforcement (SBC-24-01), lack of immutability for critical backups (SBC-24-02), or incomplete EDR deployment, leaving portions of the environment vulnerable to common attack methods.
+  negative: >
+    The Information Security Baseline is severely deficient. Critical controls such as MFA, immutable backups, or EDR are missing or ineffective. This failure to implement foundational safeguards creates high-risk exposure to data loss, unauthorized access, and non-compliance with FFIEC and NCUA security requirements.
+
+scoring_logic:
+  response_weights:
+    Yes: 1.0
+    Partial: 0.5
+    No: 0.0
+    N/A: null
+  mapping:
+    pass_threshold: 0.85
+    partial_threshold: 0.60
+
+version: "1.0"
+status: "demo"

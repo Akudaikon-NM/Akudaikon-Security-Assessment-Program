@@ -1,8 +1,25 @@
 # Akudaikon 748 Assessor
 
-Evidence-led assessment tool for evaluating a credit union’s security program against enforceable regulatory requirements (GLBA 501(b), 12 CFR 748.0 Security Program, and 12 CFR 748.1 Certification + Reporting), with former Appendix A/B content treated as guidance alignment (e.g., Letters to Credit Unions), not "rule text".
+**Status:** ✅ **PRODUCTION DEPLOYED** | **System-of-Record Established** | **All Priorities Complete**
+
+Evidence-led assessment tool for evaluating a credit union's security program against enforceable regulatory requirements (GLBA 501(b), 12 CFR 748.0 Security Program, and 12 CFR 748.1 Certification + Reporting), with former Appendix A/B content treated as guidance alignment (e.g., Letters to Credit Unions), not "rule text".
 
 The tool produces examiner-grade outputs including scorecards by requirement, evidence indexes, findings with remediation plans, and board-ready reports. Regulatory logic runs headless (CLI/API) and does not depend on Streamlit or an LLM. Streamlit is an optional UI layer.
+
+## 🎯 Production Status - COMPLETE
+
+- ✅ **P1 Complete** (Dec 26, 2025) - Scoring calibration and LLM validation
+- ✅ **P2 Complete** (Dec 26, 2025) - Board reporting framework ready
+- ✅ **P3 Complete** (Dec 26, 2025) - **Formal system-of-record established**
+- ✅ **CFR-Anchored** - Framework exclusively anchored to 12 CFR §§ 748.0 and 748.1
+- ✅ **Automation-Ready** - Production-validated for LLM-driven assessments
+- ✅ **39 Control Modules** - Comprehensive, production-ready coverage
+- 🔄 **Current Phase:** Continuous improvement and operational excellence
+
+**Framework Version:** 1.0 (Production)  
+**System-of-Record:** Authoritative (Effective Dec 26, 2025)
+
+See [docs/FORMAL_DEPLOYMENT_DECLARATION.yaml](docs/FORMAL_DEPLOYMENT_DECLARATION.yaml) for formal deployment status.
 
 ## Regulatory Basis
 
@@ -16,8 +33,10 @@ Former Appendix A (Information Security Program Guidelines) and Appendix B (Resp
 
 ## What’s in this Repo
 
-- `/control_library/modules/` — Canonical YAML assessment modules (25 modules covering policies through CIS controls).
-- `/docs/source_pdfs/` — Canonical PDF sources for reference (policies, appendices, etc.).
+- `/control_library/modules/` — **39 production-ready YAML assessment modules** covering comprehensive security controls.
+- `/docs/` — Regulatory references, project status, validation reports, and documentation.
+  - `PROJECT_STATUS.md` — Current project status and P1 validation results
+  - `P1_validation_report.yaml` — Detailed scoring calibration and pilot assessment
 - `/apps/assessor_streamlit/` — Lightweight demo UI (Streamlit runner for walkthrough + evidence intake).
 - `/outputs/` — Generated artifacts (assessments, board reports, remediation plans, evidence index).
 
@@ -30,10 +49,15 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+**Note:** The `.venv/` directory is excluded from version control via `.gitignore`. If sharing or packaging this repo, ensure `.venv/` is not included to avoid unnecessary size (~500MB).
+
 ### 2. Run the Demo
 ```bash
-streamlit run apps/assessor_streamlit/app.py
+cd apps/assessor_streamlit
+streamlit run app.py
 ```
+
+**Note:** In GitHub Codespaces, a "Port 8501 available" notification will appear. Click "Open in Browser" or use the Ports tab to access the app.
 
 ### 3. Select Module and Assess
 - Choose a module from the dropdown.

@@ -1,0 +1,153 @@
+module_id: LOG-17
+title: Security Logging and Audit Trail Management
+section_name: Logging and Audit Trail Management
+regulatory_anchor: "Appendix A to Part 748, Title 12, Sections III(A), III(B), III(C)(2)"
+
+control_category: Security Monitoring and Logging
+control_objective: >
+  Ensure comprehensive security logging and audit trail management is implemented across all critical
+  systems and applications to support security monitoring, incident investigation, and compliance
+  with retention, integrity, and confidentiality requirements.
+
+description: >
+  This module assesses the completeness and security of the audit trail management program,
+  ensuring logs are generated, securely stored, protected from tampering, retained for the minimum
+  required period, and reviewed to support organizational security.
+
+key_entities:
+  - Log Management System (SIEM)
+  - Security Operations Center (SOC)
+  - System Owners
+  - Compliance Officer
+
+domain_id: DETECT
+domain_name: Detect
+domain_weight: 0.15
+
+primary_requirements:
+  - "Audit logging is enabled on all critical systems and applications."
+  - "Logs are securely stored in a centralized, protected repository."
+  - "Logs are retained for a minimum period (e.g., 90 days)."
+  - "Logs are periodically reviewed to detect suspicious activity."
+  - "Third-party vendor logs are collected and monitored."
+  - "Secure log disposition procedures are in place."
+
+evaluation_criteria:
+  - criterion_id: LOG-01
+    description: "Audit logging is formally defined and enabled on all critical systems, applications, and network devices to capture security-relevant events (e.g., access, configuration changes, user activities)."
+    scoring_weight: 5
+    expected_evidence:
+      - "Logging policy and procedures"
+      - "Log source inventory and configuration settings from critical systems"
+    regulatory_reference: "Appendix A III(C)(2)"
+
+  - criterion_id: LOG-02
+    description: "Audit logs are securely stored in a centralized log management system with encryption and access controls to prevent unauthorized modification or deletion (i.e., log integrity)."
+    scoring_weight: 5
+    expected_evidence:
+      - "SIEM/Log Aggregator configuration showing integrity controls"
+      - "Access control lists for log repository"
+    regulatory_reference: "Appendix A III(C)(2)"
+
+  - criterion_id: LOG-03
+    description: "Audit logs are retained for a minimum period of 90 days to meet regulatory and incident investigation requirements, with longer retention periods defined for significant incidents."
+    scoring_weight: 4
+    expected_evidence:
+      - "Log retention policy"
+      - "SIEM storage configuration and retention reports"
+    regulatory_reference: "Appendix A III(B)"
+
+  - criterion_id: LOG-04
+    description: "Audit logs are regularly reviewed and analyzed (e.g., by the SOC or automated tools) to detect suspicious activities and potential security incidents (MON-16 linkage)."
+    scoring_weight: 4
+    expected_evidence:
+      - "Log review schedules or procedures"
+      - "Audit reports or records demonstrating log analysis activities"
+    regulatory_reference: "Appendix A III(C)(2)"
+
+  - criterion_id: LOG-05
+    description: "Logs from third-party vendors (where applicable) are collected, secured, and monitored in alignment with internal logging standards and contractual SLAs (TP-09 linkage)."
+    scoring_weight: 3
+    expected_evidence:
+      - "Third-party vendor agreements addressing logging"
+      - "SIEM ingestion reports for vendor logs"
+    regulatory_reference: "Appendix A III(A)(2)"
+
+  - criterion_id: LOG-06
+    description: "Secure disposition procedures exist and are followed for audit logs after the retention period has expired, ensuring that deleted logs cannot be recovered or reconstructed."
+    scoring_weight: 3
+    expected_evidence:
+      - "Log disposition procedures"
+      - "Secure deletion records or audit trails"
+    regulatory_reference: "Appendix A III(A)(3)"
+
+required_evidence:
+  - "Security logging and audit trail management policy and procedures."
+  - "Log source inventory for all critical systems and applications."
+  - "SIEM/Log Aggregator configuration and integrity control documentation."
+  - "Log retention and secure disposition procedures."
+  - "Records of log review/analysis activities and vendor log monitoring."
+
+questions:
+  - id: LOG-17-Q1
+    prompt: "Is audit logging formally defined and enabled on all critical systems, applications, and network devices?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(2)"
+    evidence_requests:
+      - "Logging policy and critical system logging configurations"
+
+  - id: LOG-17-Q2
+    prompt: "Are audit logs securely stored in a centralized system with integrity controls (encryption, access control) to prevent tampering?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(2)"
+    evidence_requests:
+      - "SIEM configuration and access control lists for the log repository"
+
+  - id: LOG-17-Q3
+    prompt: "Are audit logs retained for a minimum of 90 days, with longer retention periods defined for incident investigation purposes?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(B)"
+    evidence_requests:
+      - "Log retention policy and SIEM retention reports"
+
+  - id: LOG-17-Q4
+    prompt: "Are audit logs regularly reviewed and analyzed (e.g., by the SOC or automated tools) to detect suspicious activity?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(C)(2)"
+    evidence_requests:
+      - "Records or audit reports of log review/analysis activities"
+
+  - id: LOG-17-Q5
+    prompt: "Are logs from third-party vendors collected, secured, and monitored in alignment with internal standards?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(A)(2)"
+    evidence_requests:
+      - "Third-party vendor agreements and SIEM ingestion reports for vendor logs"
+
+  - id: LOG-17-Q6
+    prompt: "Are secure disposition procedures in place and followed for audit logs after the retention period has expired?"
+    response_type: "Yes/Partial/No/N/A"
+    reference: "Appendix A III(A)(3)"
+    evidence_requests:
+      - "Log disposition procedures and secure deletion records"
+
+finding_templates:
+  positive: >
+    The institution maintains a formal, comprehensive logging program that ensures audit logs are generated on all critical systems, centrally stored with integrity controls (encryption/access control), retained for the required period (min. 90 days), and are actively monitored and reviewed, consistent with Appendix A to Part 748. Third-party vendor logs are also incorporated and monitored.
+  partial: >
+    Logging controls exist but are incomplete or inconsistently implemented. This may include missing logging from non-critical but relevant systems, inconsistent log retention periods, or a lack of formal log integrity controls, increasing the difficulty of incident investigation.
+  negative: >
+    The institution's logging and audit trail management is materially deficient. Critical systems lack proper audit logging, logs are not centrally or securely stored, or log retention periods (e.g., min 90 days) are not met, severely hindering incident investigation and resulting in non-compliance with Appendix A to Part 748.
+
+scoring_logic:
+  response_weights:
+    Yes: 1.0
+    Partial: 0.5
+    No: 0.0
+    N/A: null
+  mapping:
+    pass_threshold: 0.85
+    partial_threshold: 0.60
+
+version: "1.0"
+status: "demo"

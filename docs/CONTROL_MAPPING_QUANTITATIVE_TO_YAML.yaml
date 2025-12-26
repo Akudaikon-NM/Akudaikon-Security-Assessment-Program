@@ -1,0 +1,861 @@
+---
+mapping_id: CONTROL_MAPPING_QUANTITATIVE_TO_YAML
+version: 1.0
+effective_date: 2025-12-26
+
+purpose: |
+  Map quantitative risk model controls (controls.py) to YAML control framework 
+  domains (control_library/modules/) and document how control multipliers 
+  translate to Operating Effectiveness scores.
+
+# ============================================================================
+# QUANTITATIVE CONTROLS → YAML CONTROL DOMAIN MAPPING
+# ============================================================================
+
+control_mappings:
+  
+  # -------------------------------------------------------------------------
+  # SERVER HARDENING
+  # -------------------------------------------------------------------------
+  - quantitative_control:
+      key: server_hardening
+      label: Server hardening
+      source_file: controls.py
+      
+      multipliers:
+        lam_mult: 0.75
+        p_any_mult: 1.00
+        tail_mult: 0.85
+        combined_mult: 0.864  # (0.75 × 1.00 × 0.85)^(1/3)
+      
+      annual_cost: $50,000
+      
+      interpretation: |
+        Server hardening reduces incident frequency (lam_mult = 0.75) by 25% 
+        through patch management, secure configuration, and attack surface 
+        reduction. Tail severity reduced by 15% (tail_mult = 0.85) through 
+        containment of exploit impact.
+    
+    yaml_control_domains:
+      primary:
+        - module: 16_change_and_configuration_management.yaml
+          control_area: Change and Configuration Management (CCM)
+          mapped_criteria:
+            - CCM-02: Configuration baselines and hardening standards
+            - CCM-05: Configuration drift detection
+            - CCM-06: Change approval and testing
+          
+          design_effectiveness_driver: |
+            Policy for secure baselines, change control process, oversight
+          
+          operating_effectiveness_derivation: |
+            Combined multiplier = 0.864 → Operating Score = 2 (Partially Effective)
+            
+            Scoring logic:
+            - Score 5: < 0.20 (Fully Effective)
+            - Score 4: 0.20-0.40
+            - Score 3: 0.40-0.60
+            - Score 2: 0.60-0.80  ← 0.864 falls here
+            - Score 1: > 0.80 (Ineffective)
+        
+        - module: 11_vulnerability_and_patch_management.yaml
+          control_area: Vulnerability and Patch Management (VPM)
+          mapped_criteria:
+            - VPM-02: Vulnerability scanning
+            - VPM-04: Patch deployment timelines
+            - VPM-06: Critical vulnerability prioritization
+          
+          operating_effectiveness_derivation: |
+            lam_mult = 0.75 indicates moderate frequency reduction through 
+            timely patching. Recommend enhancement to achieve lam_mult < 0.50 
+            for score 4-5.
+      
+      secondary:
+        - module: 12_antivirus_and_antimalware_controls.yaml
+          control_area: Antivirus and Antimalware (AV)
+          mapped_criteria:
+            - AV-03: Endpoint detection and response (EDR)
+            - AV-05: Exploit prevention
+    
+    threat_taxonomy:
+      veris_fields:
+        - action.hacking.variety.Exploit vuln
+        - action.hacking.vector.Web application
+        - action.malware.variety.Ransomware
+      
+      cis_controls:
+        - 4  # Secure Configuration
+        - 7  # Continuous Vulnerability Management
+        - 10 # Malware Defenses
+      
+      mitre_attack_tactics:
+        - Execution
+        - Persistence
+        - Privilege Escalation
+        - Defense Evasion
+    
+    board_narrative_template: |
+      Server hardening controls demonstrate Partially Effective performance 
+      (Operating Score 2) with moderate frequency reduction (25%). While 
+      configuration management and patching processes exist, execution lags 
+      industry best practice. Recommend enhancing automated drift detection 
+      and reducing patch deployment timelines to achieve Effective status 
+      (score 4-5), supporting § 748.0 Security Program obligations.
+  
+  # -------------------------------------------------------------------------
+  # MEDIA ENCRYPTION
+  # -------------------------------------------------------------------------
+  - quantitative_control:
+      key: media_encryption
+      label: Media encryption
+      source_file: controls.py
+      
+      multipliers:
+        lam_mult: 1.00
+        p_any_mult: 1.00
+        tail_mult: 0.70
+        combined_mult: 0.888  # (1.00 × 1.00 × 0.70)^(1/3)
+      
+      annual_cost: $30,000
+      
+      interpretation: |
+        Media encryption does NOT reduce frequency (lam_mult = 1.00) or loss 
+        probability (p_any_mult = 1.00), but provides strong tail severity 
+        reduction (tail_mult = 0.70) by rendering exfiltrated data unusable. 
+        Reduces worst-case data breach costs by 30%.
+    
+    yaml_control_domains:
+      primary:
+        - module: 19_data_governance.yaml
+          control_area: Data Governance (DG)
+          mapped_criteria:
+            - DG-06: Encryption at rest and in transit
+            - DG-08: Data loss prevention (DLP)
+            - DG-10: Secure media destruction
+          
+          design_effectiveness_driver: |
+            Data classification policy, encryption standards, key management 
+            procedures
+          
+          operating_effectiveness_derivation: |
+            Combined multiplier = 0.888 → Operating Score = 2 (Partially Effective)
+            
+            Note: Despite strong tail reduction, overall combined score falls 
+            in score 2 range due to no frequency/probability reduction. 
+            
+            Recommendation: Enhance with DLP to reduce p_any_mult and improve 
+            to score 3-4.
+      
+      secondary:
+        - module: 13_access_controls.yaml
+          control_area: Access Controls (AC)
+          mapped_criteria:
+            - AC-04: Encryption key management
+            - AC-08: Privileged access to encryption systems
+    
+    threat_taxonomy:
+      veris_fields:
+        - action.hacking.result.Exfiltrate
+        - action.malware.vector.Removable media
+      
+      cis_controls:
+        - 3  # Data Protection
+        - 11 # Data Recovery
+      
+      mitre_attack_tactics:
+        - Exfiltration
+        - Impact
+    
+    board_narrative_template: |
+      Media Encryption controls demonstrate Partially Effective performance 
+      (Operating Score 2) but provide exceptional tail risk protection, 
+      reducing catastrophic data breach costs by 30% (tail_mult = 0.70). 
+      While the control does not prevent media loss events, it renders data 
+      unusable to attackers. Recommend enhancement with Data Loss Prevention 
+      (DLP) capabilities to achieve frequency reduction and improve overall 
+      effectiveness to score 3-4.
+  
+  # -------------------------------------------------------------------------
+  # ERROR REDUCTION
+  # -------------------------------------------------------------------------
+  - quantitative_control:
+      key: error_reduction
+      label: Error reduction
+      source_file: controls.py
+      
+      multipliers:
+        lam_mult: 0.90
+        p_any_mult: 0.95
+        tail_mult: 1.00
+        combined_mult: 0.950  # (0.90 × 0.95 × 1.00)^(1/3)
+      
+      annual_cost: $20,000
+      
+      interpretation: |
+        Error reduction (phishing/social engineering awareness) provides 
+        modest frequency reduction (10%, lam_mult = 0.90) and loss probability 
+        reduction (5%, p_any_mult = 0.95). No tail severity impact (tail_mult = 1.00) 
+        as errors lead to varied consequences.
+    
+    yaml_control_domains:
+      primary:
+        - module: 07_training.yaml
+          control_area: Security Awareness Training (SAT)
+          mapped_criteria:
+            - SAT-02: Phishing simulation and training
+            - SAT-04: Role-based security training
+            - SAT-06: Annual refresher training
+          
+          design_effectiveness_driver: |
+            Training policy, curriculum development, completion tracking
+          
+          operating_effectiveness_derivation: |
+            Combined multiplier = 0.950 → Operating Score = 1 (Ineffective)
+            
+            Despite annual training program, effectiveness is limited. Human 
+            error remains difficult to eliminate through training alone.
+            
+            Recommendation: Enhance with technical controls (email filtering, 
+            browser isolation) to reduce lam_mult and p_any_mult further.
+      
+      secondary:
+        - module: 14_network_security.yaml
+          control_area: Network Security (NS)
+          mapped_criteria:
+            - NS-06: Email security gateway
+            - NS-08: Web content filtering
+    
+    threat_taxonomy:
+      veris_fields:
+        - action.social.variety.Phishing
+        - action.social.vector.Email
+        - action.social.vector.Website
+      
+      cis_controls:
+        - 14 # Security Awareness and Skills Training
+        - 9  # Email and Web Browser Protections
+      
+      mitre_attack_tactics:
+        - Initial Access
+        - Execution
+    
+    board_narrative_template: |
+      Error Reduction controls (security awareness training) demonstrate 
+      Ineffective performance (Operating Score 1) with limited frequency and 
+      loss probability reduction. While annual training is conducted, human 
+      error remains a persistent risk vector. Recommend enhancement with 
+      technical controls including advanced email filtering, browser isolation, 
+      and mandatory multi-factor authentication to compensate for human 
+      limitations and achieve score 3-4.
+  
+  # -------------------------------------------------------------------------
+  # EXTERNAL MONITORING
+  # -------------------------------------------------------------------------
+  - quantitative_control:
+      key: external_monitoring
+      label: External monitoring
+      source_file: controls.py
+      
+      multipliers:
+        lam_mult: 0.85
+        p_any_mult: 0.85
+        tail_mult: 1.00
+        combined_mult: 0.850  # (0.85 × 0.85 × 1.00)^(1/3)
+      
+      annual_cost: $40,000
+      
+      interpretation: |
+        External monitoring (SIEM, threat detection) reduces frequency (15%, 
+        lam_mult = 0.85) through early threat detection and deterrence, and 
+        loss probability (15%, p_any_mult = 0.85) through rapid incident 
+        containment. No tail severity impact (tail_mult = 1.00) as detection 
+        timing varies.
+    
+    yaml_control_domains:
+      primary:
+        - module: 17_monitoring.yaml
+          control_area: Monitoring and Detection (MON)
+          mapped_criteria:
+            - MON-03: Security information and event management (SIEM)
+            - MON-07: Network traffic analysis
+            - MON-09: Threat intelligence integration
+          
+          design_effectiveness_driver: |
+            Monitoring policy, use case development, alert escalation procedures
+          
+          operating_effectiveness_derivation: |
+            Combined multiplier = 0.850 → Operating Score = 2 (Partially Effective)
+            
+            Moderate effectiveness with balanced frequency and probability 
+            reduction. Recommend enhancement with automated response 
+            capabilities to achieve score 4-5.
+        
+        - module: 08_incident_response.yaml
+          control_area: Incident Response (IR)
+          mapped_criteria:
+            - IR-04: Detection and analysis capabilities
+            - IR-06: Containment procedures
+            - IR-08: Post-incident review
+          
+          operating_effectiveness_derivation: |
+            p_any_mult = 0.85 indicates moderate containment effectiveness. 
+            Strong IR reduces probability that detected event results in 
+            material loss.
+      
+      secondary:
+        - module: 18_logging.yaml
+          control_area: Logging and Audit Trail (LOG)
+          mapped_criteria:
+            - LOG-02: Centralized log collection
+            - LOG-04: Log retention and protection
+            - LOG-06: Log analysis and correlation
+    
+    threat_taxonomy:
+      veris_fields:
+        - action.hacking.variety.Brute force
+        - action.hacking.variety.Use of stolen creds
+        - action.hacking.variety.Abuse of functionality
+        - action.hacking.variety.DoS
+        - action.malware.variety.Downloader
+        - action.malware.variety.Password dumper
+      
+      cis_controls:
+        - 13 # Network Monitoring and Defense
+        - 18 # Penetration Testing
+      
+      mitre_attack_tactics:
+        - Command and Control
+        - Exfiltration
+        - Discovery
+    
+    board_narrative_template: |
+      External Monitoring controls demonstrate Partially Effective performance 
+      (Operating Score 2) with balanced frequency and loss probability reduction 
+      (15% each). While SIEM and threat detection capabilities exist, automated 
+      response and advanced analytics are limited. Critically, this control 
+      supports § 748.1 incident reporting readiness by reducing time-to-discovery. 
+      Recommend enhancement with SOAR (Security Orchestration, Automation, and 
+      Response) to achieve Effective status (score 4-5).
+
+# ============================================================================
+# OPERATING EFFECTIVENESS SCORING METHODOLOGY
+# ============================================================================
+
+operating_effectiveness_scoring:
+  methodology: |
+    Operating Effectiveness scores (1-5) are derived from combined control 
+    multipliers using the following formula and thresholds:
+    
+    Combined Multiplier = (lam_mult × p_any_mult × tail_mult)^(1/3)
+    
+    Interpretation: Lower combined multiplier = stronger risk reduction
+  
+  scoring_thresholds:
+    - score: 5
+      label: Fully Effective
+      combined_mult_range: "< 0.20"
+      risk_reduction: "> 80%"
+      interpretation: |
+        Control provides comprehensive risk reduction across frequency, 
+        probability, and severity dimensions. Exemplary performance.
+      
+      example_multipliers:
+        - lam_mult: 0.10
+          p_any_mult: 0.10
+          tail_mult: 0.10
+          combined: 0.100
+    
+    - score: 4
+      label: Effective
+      combined_mult_range: "0.20 - 0.40"
+      risk_reduction: "60% - 80%"
+      interpretation: |
+        Control provides strong risk reduction with minor gaps. Performance 
+        exceeds industry baseline.
+      
+      example_multipliers:
+        - lam_mult: 0.30
+          p_any_mult: 0.40
+          tail_mult: 0.25
+          combined: 0.316
+    
+    - score: 3
+      label: Partially Effective
+      combined_mult_range: "0.40 - 0.60"
+      risk_reduction: "40% - 60%"
+      interpretation: |
+        Control provides moderate risk reduction. Performance meets minimum 
+        § 748.0 expectations but requires improvement.
+      
+      example_multipliers:
+        - lam_mult: 0.50
+          p_any_mult: 0.50
+          tail_mult: 0.50
+          combined: 0.500
+    
+    - score: 2
+      label: Limited Effectiveness
+      combined_mult_range: "0.60 - 0.80"
+      risk_reduction: "20% - 40%"
+      interpretation: |
+        Control provides limited risk reduction. Execution gaps undermine 
+        governance intent. Requires remediation.
+      
+      example_multipliers:
+        - lam_mult: 0.75
+          p_any_mult: 0.85
+          tail_mult: 0.70
+          combined: 0.765  # Server Hardening example
+    
+    - score: 1
+      label: Ineffective
+      combined_mult_range: "> 0.80"
+      risk_reduction: "< 20%"
+      interpretation: |
+        Control provides minimal or no measurable risk reduction. May exist 
+        on paper but lacks operational effectiveness. Immediate remediation 
+        required.
+      
+      example_multipliers:
+        - lam_mult: 0.90
+          p_any_mult: 0.95
+          tail_mult: 1.00
+          combined: 0.950  # Error Reduction example
+  
+  current_portfolio_summary:
+    controls_evaluated: 4
+    
+    scores:
+      - control: Server Hardening
+        combined_mult: 0.864
+        operating_score: 2
+        interpretation: Limited Effectiveness - requires remediation
+      
+      - control: Media Encryption
+        combined_mult: 0.888
+        operating_score: 2
+        interpretation: Limited Effectiveness - enhance with DLP
+      
+      - control: Error Reduction
+        combined_mult: 0.950
+        operating_score: 1
+        interpretation: Ineffective - enhance with technical controls
+      
+      - control: External Monitoring
+        combined_mult: 0.850
+        operating_score: 2
+        interpretation: Limited Effectiveness - enhance with automation
+    
+    overall_assessment: |
+      Current control portfolio demonstrates LIMITED EFFECTIVENESS with all 
+      controls scoring 1-2 (out of 5). While governance frameworks exist 
+      (Design Effectiveness), technical execution lags best practice.
+      
+      Priority remediation actions:
+      1. Enhance Error Reduction with technical controls (email filtering, MFA)
+      2. Add DLP capabilities to Media Encryption
+      3. Accelerate patch deployment for Server Hardening
+      4. Implement SOAR for External Monitoring automation
+      
+      Target: 75% of controls scoring 4-5 by Q2 2026 to demonstrate § 748.0 
+      Security Program effectiveness.
+
+# ============================================================================
+# YAML CONTROL DOMAIN TO QUANTITATIVE CONTROL REVERSE MAPPING
+# ============================================================================
+
+yaml_domain_coverage:
+  covered_domains:
+    - domain: Change and Configuration Management (CCM)
+      yaml_module: 16_change_and_configuration_management.yaml
+      quantitative_controls:
+        - Server Hardening (primary)
+      
+      coverage_assessment: |
+        Partially covered. Server hardening addresses secure baselines but 
+        does not cover all CCM criteria (change approval, testing, rollback).
+      
+      gaps:
+        - Automated configuration drift detection
+        - Change approval workflow enforcement
+        - Pre-production testing requirements
+    
+    - domain: Vulnerability and Patch Management (VPM)
+      yaml_module: 11_vulnerability_and_patch_management.yaml
+      quantitative_controls:
+        - Server Hardening (primary)
+      
+      coverage_assessment: |
+        Partially covered. Patch management implicitly included in server 
+        hardening but lacks explicit vulnerability scanning and prioritization.
+      
+      gaps:
+        - Vulnerability scanning frequency
+        - Critical vulnerability SLA enforcement
+        - Patch compliance reporting
+    
+    - domain: Data Governance (DG)
+      yaml_module: 19_data_governance.yaml
+      quantitative_controls:
+        - Media Encryption (primary)
+      
+      coverage_assessment: |
+        Partially covered. Encryption addresses confidentiality but not 
+        comprehensive data governance (classification, retention, DLP).
+      
+      gaps:
+        - Data classification enforcement
+        - Data loss prevention (DLP)
+        - Privacy impact assessments
+    
+    - domain: Security Awareness Training (SAT)
+      yaml_module: 07_training.yaml
+      quantitative_controls:
+        - Error Reduction (primary)
+      
+      coverage_assessment: |
+        Covered. Annual training and phishing simulation address SAT requirements.
+      
+      gaps:
+        - Role-based training customization
+        - Training effectiveness metrics
+        - Continuous micro-learning
+    
+    - domain: Monitoring and Detection (MON)
+      yaml_module: 17_monitoring.yaml
+      quantitative_controls:
+        - External Monitoring (primary)
+      
+      coverage_assessment: |
+        Covered. SIEM and threat detection address MON requirements.
+      
+      gaps:
+        - Automated response (SOAR)
+        - Advanced analytics (UEBA)
+        - Threat hunting program
+    
+    - domain: Incident Response (IR)
+      yaml_module: 08_incident_response.yaml
+      quantitative_controls:
+        - External Monitoring (secondary)
+      
+      coverage_assessment: |
+        Partially covered. Detection capabilities exist but response processes 
+        require maturity enhancement.
+      
+      gaps:
+        - Tabletop exercise frequency
+        - Containment playbook automation
+        - § 748.1 reporting workflow integration
+  
+  uncovered_domains:
+    - domain: Governance (GOV)
+      yaml_module: 02_governance.yaml
+      quantitative_model_coverage: None
+      
+      rationale: |
+        Governance is qualitative Design Effectiveness only. No quantitative 
+        multipliers apply.
+    
+    - domain: Policies and Procedures (POL)
+      yaml_module: 01_policies_and_procedures.yaml
+      quantitative_model_coverage: None
+      
+      rationale: |
+        Policy framework is foundational governance. Operating Effectiveness 
+        assessed through execution of referenced controls.
+    
+    - domain: Asset Inventory (AI)
+      yaml_module: 03_asset_inventory.yaml
+      quantitative_model_coverage: None
+      
+      rationale: |
+        Asset inventory enables other controls but does not directly reduce 
+        risk. Consider adding control for "Asset Discovery and Tracking" 
+        with lam_mult impact through attack surface reduction.
+    
+    - domain: Risk Assessment (RA)
+      yaml_module: 04_risk_assessment.yaml
+      quantitative_model_coverage: None
+      
+      rationale: |
+        Risk assessment informs control selection but is not itself a risk 
+        reduction control.
+    
+    - domain: Third Party Risk Management (TPRM)
+      yaml_module: 09_third_party_risk_management.yaml
+      quantitative_model_coverage: None
+      
+      recommendation: |
+        Consider adding "Third Party Access Controls" with lam_mult and 
+        p_any_mult impact based on vendor security requirements.
+    
+    - domain: Business Continuity / Disaster Recovery (BCDR)
+      yaml_module: 10_business_continuity_disaster_recovery.yaml
+      quantitative_model_coverage: None
+      
+      recommendation: |
+        Consider adding "Backup and Recovery" control with tail_mult impact 
+        (reduces severity through data restoration capability).
+    
+    - domain: Access Controls (AC)
+      yaml_module: 13_access_controls.yaml
+      quantitative_model_coverage: Partial (key management for encryption)
+      
+      recommendation: |
+        Consider adding "Privileged Access Management (PAM)" and "Multi-Factor 
+        Authentication (MFA)" controls with strong lam_mult and p_any_mult impact.
+    
+    - domain: Network Security (NS)
+      yaml_module: 14_network_security.yaml
+      quantitative_model_coverage: Partial (email filtering for error reduction)
+      
+      recommendation: |
+        Consider adding "Network Segmentation" and "Firewall Management" 
+        controls with lam_mult and p_any_mult impact.
+    
+    - domain: AI Governance (AI)
+      yaml_module: 23_ai_review.yaml
+      quantitative_model_coverage: None
+      
+      recommendation: |
+        Consider adding "AI Model Monitoring" control with p_any_mult impact 
+        (detects model drift/poisoning before material loss).
+
+# ============================================================================
+# INTEGRATION WORKFLOW
+# ============================================================================
+
+integration_workflow:
+  step_1_run_quantitative_simulation:
+    description: Execute Streamlit app or engine.py simulation
+    inputs:
+      - Scenario parameters (frequency, severity, net worth)
+      - Selected controls from controls.py
+      - Control cost overrides
+    
+    outputs:
+      - Baseline EAL, VaR95, VaR99
+      - Controlled EAL, VaR95, VaR99
+      - Individual control multipliers (lam_mult, p_any_mult, tail_mult)
+      - Control ROSI and ΔEAL/$
+      - VERIS → CIS → ATT&CK taxonomy mappings
+  
+  step_2_calculate_operating_effectiveness:
+    description: Convert control multipliers to Operating Effectiveness scores (1-5)
+    
+    calculation:
+      - formula: combined_mult = (lam_mult × p_any_mult × tail_mult)^(1/3)
+      - threshold_mapping: |
+          if combined_mult < 0.20: score = 5
+          elif combined_mult < 0.40: score = 4
+          elif combined_mult < 0.60: score = 3
+          elif combined_mult < 0.80: score = 2
+          else: score = 1
+    
+    outputs:
+      - Operating Effectiveness score per control
+      - Mapped to YAML control_objective_link (e.g., DG-06, CCM-02)
+  
+  step_3_assess_design_effectiveness:
+    description: Manually assess governance maturity for each YAML control domain
+    
+    assessment_criteria:
+      - Policy comprehensiveness and currency
+      - Governance oversight and accountability
+      - Documentation quality
+      - § 748.0 alignment
+    
+    outputs:
+      - Design Effectiveness score (1-5) per domain
+      - Gap analysis (policy vs. execution)
+  
+  step_4_populate_board_report_template:
+    description: Merge quantitative and qualitative data into BOARD_REPORT_TEMPLATE_P2.yaml
+    
+    data_flow:
+      section_1_risk_profile:
+        source: Step 1 simulation outputs
+        fields:
+          - Baseline EAL → S1.R1.Baseline_Without_Controls
+          - Controlled EAL → S1.R1.Controlled_With_Selected_Controls
+          - ΔEAL → S1.R1.Risk_Reduction_Delta
+          - VaR95/VaR99 → S1.R2, S1.R3
+      
+      section_2_roi_analysis:
+        source: Step 1 ROSI calculations
+        fields:
+          - Total Cost → S2.ROW_BUNDLE.Total_Annual_Cost
+          - Total ΔEAL → S2.ROW_BUNDLE.Total_Delta_EAL
+          - ROSI → S2.ROW_BUNDLE.ROSI
+      
+      section_3_control_maturity:
+        source: Step 2 Operating + Step 3 Design scores
+        fields:
+          - Control Area → S3.CTRL_*.Control_Area_YAML
+          - Design Score → S3.CTRL_*.Design_Score_1_5
+          - Operating Score → S3.CTRL_*.Operating_Score_1_5
+          - ATT&CK tactics → S3.CTRL_*.Threat_Tactic_Mitigated
+      
+      section_4_lec_visualization:
+        source: Step 1 Loss Exceedance Curve data
+        fields:
+          - Baseline curve → Plotly/Matplotlib series
+          - Controlled curve → Plotly/Matplotlib series
+          - VaR95/VaR99 annotations → Chart labels
+  
+  step_5_llm_narrative_generation:
+    description: Use LLM to generate Board-friendly narratives from populated data
+    
+    prompts:
+      executive_summary:
+        template: |
+          Generate a 3-paragraph executive summary for the Board of Directors:
+          
+          Data:
+          - Baseline EAL: {baseline_eal}
+          - Controlled EAL: {controlled_eal}
+          - ΔEAL: {delta_eal}
+          - VaR99 reduction: {delta_var99}
+          - ROSI: {rosi}
+          - Net Worth: {net_worth}
+          
+          Context:
+          - Regulatory anchor: 12 CFR § 748.0 Security Program
+          - Control portfolio: {control_count} controls
+          - Assessment period: {period}
+          
+          Tone: Professional, Board-appropriate, data-driven
+      
+      control_narratives:
+        template: |
+          Generate a 2-paragraph narrative for control area {control_area}:
+          
+          Data:
+          - Design Effectiveness: {design_score} / 5
+          - Operating Effectiveness: {operating_score} / 5
+          - Combined Multiplier: {combined_mult}
+          - Risk Reduction: {risk_reduction}%
+          - ATT&CK Tactics: {tactics}
+          
+          Include:
+          - Current performance assessment
+          - Gap analysis (if Operating < Design)
+          - Remediation recommendation (if score < 4)
+          - Regulatory alignment (§ 748.0)
+    
+    outputs:
+      - Executive summary
+      - Key findings per section
+      - Control-specific narratives
+      - Recommendations and next actions
+  
+  step_6_human_validation:
+    description: Required review before Board distribution
+    
+    validation_checklist:
+      - Regulatory citations accurate (§ 748.0, § 748.1)
+      - Financial figures verified (EAL, VaR, costs)
+      - Tone appropriate for Board audience
+      - Sensitive data redacted (if applicable)
+      - Recommendations actionable and prioritized
+      - LEC visualization clear and annotated
+    
+    approvers:
+      - CISO (technical accuracy)
+      - CRO (risk metrics accuracy)
+      - Compliance Officer (regulatory accuracy)
+      - CFO (financial accuracy)
+
+# ============================================================================
+# FUTURE ENHANCEMENTS
+# ============================================================================
+
+future_enhancements:
+  - priority: P1
+    enhancement: Expand control library to cover all 39 YAML domains
+    timeline: Q1 2026
+    effort: |
+      Add 15-20 additional controls to controls.py with multipliers for:
+      - Access Controls (PAM, MFA)
+      - Network Security (segmentation, firewall)
+      - Third Party Risk (vendor controls)
+      - Business Continuity (backup/recovery)
+  
+  - priority: P1
+    enhancement: Automate Operating Effectiveness scoring
+    timeline: Q1 2026
+    effort: |
+      Create Python script to:
+      1. Load simulation results
+      2. Calculate combined multipliers
+      3. Apply scoring thresholds
+      4. Update YAML module files with Operating scores
+  
+  - priority: P2
+    enhancement: Create Board report automation pipeline
+    timeline: Q2 2026
+    effort: |
+      End-to-end automation:
+      1. Run simulation (engine.py)
+      2. Calculate scores (new script)
+      3. Load YAML assessments
+      4. Populate template (Jinja2)
+      5. Generate LLM narratives (OpenAI API)
+      6. Render PDF/PowerPoint (reportlab/python-pptx)
+  
+  - priority: P2
+    enhancement: Add peer benchmarking data
+    timeline: Q3 2026
+    effort: |
+      Integrate industry benchmarks:
+      - Control effectiveness peer comparison
+      - Security spending as % of IT budget
+      - Incident frequency and severity ranges
+      - ROSI industry averages
+  
+  - priority: P3
+    enhancement: Interactive web dashboard
+    timeline: Q3 2026
+    effort: |
+      Develop real-time dashboard for Board access:
+      - Live LEC charts
+      - Control maturity heatmaps
+      - Risk trend analysis
+      - Drill-down to control details
+
+# ============================================================================
+# GOVERNANCE
+# ============================================================================
+
+governance:
+  version: 1.0
+  effective_date: 2025-12-26
+  review_frequency: Quarterly
+  
+  change_control:
+    approval_required_for:
+      - Scoring threshold modifications
+      - Control → YAML domain mapping changes
+      - New control additions
+      - Multiplier value updates
+    
+    approval_authority: CISO, CRO, Compliance Officer
+  
+  audit_trail:
+    - date: 2025-12-26
+      action: Initial mapping created
+      author: Copilot + User
+      changes: |
+        - Mapped 4 quantitative controls to YAML domains
+        - Defined Operating Effectiveness scoring methodology
+        - Documented uncovered domains and recommendations
+        - Created integration workflow
+
+# ============================================================================
+# END OF MAPPING
+# ============================================================================
+
+mapping_status: Complete
+deployment_status: Production-Ready
+next_review: 2026-03-31

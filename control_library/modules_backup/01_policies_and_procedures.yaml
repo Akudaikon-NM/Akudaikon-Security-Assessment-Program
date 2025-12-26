@@ -35,80 +35,80 @@ evaluation_criteria:
     description: "The Board of Directors formally approves the ISP, demonstrating strong governance and oversight."
     scoring_weight: 5
     expected_evidence:
-      - "Meeting minutes or board resolutions approving the ISP."
-    regulatory_reference: "Appendix A, Section III(C)(1)"
+      - [cite_start]"Meeting minutes or board resolutions approving the ISP[cite: 15, 13]."
+    [cite_start]regulatory_reference: "Appendix A, Section III(C)(1)" [cite: 13]
 
   - criterion_id: PP-02
     description: "Roles and responsibilities for the ISP are clearly defined and assigned to ensure accountability."
     scoring_weight: 5
     expected_evidence:
-      - "Organizational charts or role definitions reflecting security responsibilities."
-    regulatory_reference: "Appendix A, Section III(A)(2)"
+      - [cite_start]"Organizational charts or role definitions reflecting security responsibilities[cite: 103, 106, 229]."
+    [cite_start]regulatory_reference: "Appendix A, Section III(A)(2)" [cite: 103]
 
   - criterion_id: PP-03
     description: "Policies, standards, and procedures are documented, regularly updated, and address key risks."
     scoring_weight: 4
     expected_evidence:
-      - "Policy documents and revision history."
-      - "Evidence of policy compliance and effectiveness."
-    regulatory_reference: "Appendix A, Section III(C)(1)"
+      - [cite_start]"Policy documents and revision history[cite: 163, 160]."
+      - [cite_start]"Evidence of policy compliance and effectiveness[cite: 164]."
+    [cite_start]regulatory_reference: "Appendix A, Section III(C)(1)" [cite: 160]
 
   - criterion_id: PP-04
     description: "Staff receives regular training on safeguarding member information and organizational security policies."
     scoring_weight: 3
     expected_evidence:
-      - "Training schedules, materials, and attendance records"
-    regulatory_reference: "Appendix A, Section III(C)(1)(f)" 
+      - [cite_start]"Training schedules, materials, and attendance records[cite: 133, 136]."
+    [cite_start]regulatory_reference: "Appendix A, Section III(C)(1)(f)" [cite: 133]
 
   - criterion_id: PP-05
     description: "The ISP is reviewed and updated regularly to address changes in technology, threats, and business processes."
     scoring_weight: 3
     expected_evidence:
-      - "Program revision history and risk assessments"
-    regulatory_reference: "Appendix A, Section III(C)(1)(e)" 
+      - [cite_start]"Program revision history and risk assessments[cite: 176, 173]."
+    [cite_start]regulatory_reference: "Appendix A, Section III(C)(1)(e)" [cite: 173]
 
 required_evidence:
-  - "Board meeting minutes or resolutions approving the ISP"
-  - "Organizational charts and role documentation for security program responsibility"
-  - "Information security policies, standards, and revision history"
-  - "Training schedules, materials, and attendance records"
-  - "Records of ISP adjustments addressing emerging threats"
+  - [cite_start]"Board meeting minutes or resolutions approving the ISP[cite: 15]."
+  - [cite_start]"Organizational charts and role documentation for security program responsibility[cite: 106, 123]."
+  - [cite_start]"Information security policies, standards, and revision history[cite: 163, 270]."
+  - [cite_start]"Training schedules, materials, and attendance records[cite: 136]."
+  - [cite_start]"Records of ISP adjustments addressing emerging threats[cite: 177]."
 
 questions:
   - id: PP-01-Q1
     prompt: "Has the Board of Directors formally approved the information security program?"
     response_type: "Yes/Partial/No/N/A"
-    reference: "Appendix A, Section III(C)(1)" 
+    [cite_start]reference: "Appendix A, Section III(C)(1)" [cite: 13]
     evidence_requests:
-      - "Review meeting minutes or board resolutions for formal approval"
+      - [cite_start]"Review meeting minutes or board resolutions for formal approval[cite: 13]."
 
   - id: PP-02-Q1
     prompt: "Is there a clearly documented assignment of responsibility for implementing and maintaining the security program?"
     response_type: "Yes/Partial/No/N/A"
-    reference: "Appendix A, Section III(A)(2)" 
+    [cite_start]reference: "Appendix A, Section III(A)(2)" [cite: 103]
     evidence_requests:
-      - "Review organizational charts or role definitions"
+      - [cite_start]"Review organizational charts or role definitions[cite: 103]."
 
   - id: PP-03-Q1
     prompt: "Are information security policies, standards, and procedures documented, regularly updated, and aligned with best practices?"
     response_type: "Yes/Partial/No/N/A"
-    reference: "Appendix A, Section III(C)(1)" 
+    [cite_start]reference: "Appendix A, Section III(C)(1)" [cite: 160]
     evidence_requests:
-      - "Review policy documents and revision history"
+      - [cite_start]"Review policy documents and revision history[cite: 160]."
 
   - id: PP-04-Q1
     prompt: "Is staff regularly trained on safeguarding member information and the organization's security policies?"
     response_type: "Yes/Partial/No/N/A"
-    reference: "Appendix A, Section III(C)(1)(f)" 
+    [cite_start]reference: "Appendix A, Section III(C)(1)(f)" [cite: 133]
     evidence_requests:
-      - "Review training schedules, materials, and attendance records"
+      - [cite_start]"Review training schedules, materials, and attendance records[cite: 133]."
 
   - id: PP-05-Q1
     prompt: "Is the information security program reviewed and updated regularly to address changes in technology, threats, and business processes?"
     response_type: "Yes/Partial/No/N/A"
-    reference: "Appendix A, Section III(C)(1)(e)" 
+    [cite_start]reference: "Appendix A, Section III(C)(1)(e)" [cite: 173]
     evidence_requests:
-      - "Review program revision history, risk assessments, and updates"
+      - [cite_start]"Review program revision history, risk assessments, and updates[cite: 173]."
 
 finding_templates:
   positive: >
